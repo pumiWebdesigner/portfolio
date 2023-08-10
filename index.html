@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <!-- マテリアルシンボル（レスポンシブのメニューアイコン -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- googlefonts　ロゴのフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+JP&display=swap"
+        rel="stylesheet">
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+</head>
+
+<body>
+
+    <section class="progres-report">
+        <p class="progres-report-text">学習リンク等</p>
+        <ul class="progres-report-list">
+            <li class="progres-report-item">
+                <a class="progres-report-link" href="https://www.daily-trial.com/app/dashboard" target="_blank">
+                    <button class="progres-report-btn" type="button" height="300px">
+                        デイトラ
+                    </button>
+                </a>
+            </li>
+            <li class="progres-report-item">
+                <a class="progres-report-link" href="https://twitter.com/notifications" target="_blank">
+                    <button class="progres-report-btn" type="button" height="300px">
+                        twitter
+                    </button>
+                </a>
+            </li>
+            <li class="progres-report-item">
+                <a class="progres-report-link" href="https://libecity.com/room_list?room_id=ii6YQHfbRjZSePMe2W3D" target="_blank">
+                    <button class="progres-report-btn" type="button" height="300px">
+                        リベ大
+                    </button>
+                </a>
+            </li>
+            <li class="progres-report-item">
+                <a class="progres-report-link" href="https://www.notion.so/Code-Stock-aa23414da8b646b6ab18c9e985583fb7" target="_blank">
+                    <button class="progres-report-btn" type="button" height="300px">
+                        code stock
+                    </button>
+                </a>
+            </li>
+            <li class="progres-report-item">
+                <a class="progres-report-link" href="https://www.notion.so/cfdd60a7d81b400cad2db26c065be6ea" target="_blank">
+                    <button class="progres-report-btn" type="button" height="300px">
+                        notionデイトラ
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <img id="bgimg" src="img/summer_bluesky.jpg" alt="背景画像">
+    <header>
+        <div class="container">
+            <!-- 左上表示のロゴ -->
+            <h1><a href="#">Pumi's Portfolio</a></h1>
+            <!-- （ｽﾏﾎ以外）ﾒﾆｭｰを画面右上ﾍｯﾀﾞ内に横並び表示-->
+            <!-- （ｽﾏﾎのみ）ﾒﾆｭｰを画面右側に縦並び表示-->
+            <nav id="header_menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Works">Works</a></li>
+                    <!-- <li><a href="#Service">Service</a></li> -->
+                    <li><a href="#Profile">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- （ｽﾏﾎ以外）ﾊﾝﾊﾞｰｶﾞﾎﾞﾀﾝ非表示-->
+            <!-- （ｽﾏﾎのみ）ﾊﾝﾊﾞｰｶﾞﾎﾞﾀﾝ表示【open,closeどちらか片方のみ表示】-->
+            <button id="ham_btn">
+                <!-- （ﾎﾞﾀﾝｸﾘｯｸ前）表示 -->
+                <!-- （ﾎﾞﾀﾝｸﾘｯｸ後）非表示 -->
+                <span class="material-symbols-outlined" id="h_open">
+                    menu
+                </span>
+                <!-- （ﾎﾞﾀﾝｸﾘｯｸ前）非表示 -->
+                <!-- （ﾎﾞﾀﾝｸﾘｯｸ後）表示 -->
+                <span class="material-symbols-outlined" id="h_close">
+                    close
+                </span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section id="Works">
+            <div class="space_for_header"></div>
+            <div class="section_wrapper">
+                <div class="section_header">
+                    <h2 class="vertical_slide_target">
+                        Works
+                    </h2>
+                </div>
+                <div class="section_body">
+                    <div id="carousel">
+                        <div class="container">
+                            <ul id="carousel_images_container">
+                                <li><img src="img\hokkyoku.jpg" alt="hokkyoku"></li>
+                                <li><img src="img\kansyoku.jpg" alt="hokkyokukansyoku"></li>
+                                <li><img src="img\taketora.jpg" alt="taketora"></li>
+                                <li><img src="img\jirou_keiseiookubo.png" alt="jiro"></li>
+                            </ul>
+                            <button id="prev">&laquo;</button>
+                            <button id="next">&raquo;</button>
+                        </div>
+                        <nav id="carousel_dots_container"></nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Profile">
+            <div class="space_for_header"></div>
+            <div class="section_wrapper">
+                <div class="section_header">
+                    <h2 class="vertical_slide_target">
+                        Profile
+                    </h2>
+                </div>
+                <div class="section_body">
+                    <div id="About-me">
+                        <div class="container">
+                            <table class="vertical_slide_target">
+                                <tbody>
+                                    <tr>
+                                        <th>出身地</th>
+                                        <td>
+                                            岩手県
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>経歴</th>
+                                        <td>
+                                            地元の金融機関にて営業店およびシステム部門で10年経験を積み、<br>
+                                            東京都の金融システム会社にて4年、仕様調整や要件検討に携わりました。<br>
+                                            お客様の背景やニーズを理解し期待される以上の対応を<br>
+                                            常に考え実行してきたと自負しております。<br>
+
+
+                                            また、期日管理に対しても厳しく意識しており、<br>
+                                            納品期限の厳守は当然として状況報告も必要に応じて行います。<br>
+
+                                            お客様との信頼関係の構築が提供するサービスの品質にとって<br>
+                                            一番大切なものであると認識しており、
+                                            円滑なコミュニケーションや適切な報告・連絡・相談には手を抜きません。<br>
+
+                                            私のスキルと経験が、ご満足いただけるウェブサイト作成に<br>
+                                            貢献できると確信しております。<br>
+                                            一緒に素敵なウェブサイトを作り上げましょう！
+
+                                            ご要望・ご相談などありましたら、お気軽にご連絡ください。<br>
+                                            私はお客様に満足いただける結果を提供するために、<br>
+                                            一層の努力を惜しまないことをお約束します。<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>対応可能業務</th>
+                                        <td>
+                                            HTML / CSS(SASS) / JavaScript(jQuery) を使用したホームページ作成
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="space_for_header"></div>
+            <div class="section_wrapper">
+                <div class="section_header">
+                    <h2 class="vertical_slide_target">
+                        お問い合わせ
+                    </h2>
+                </div>
+                <div class="section_body">
+                    <form action="submit-form.php" method="POST" class="vertical_slide_target">
+                        <div class="item">
+                            <label class="label" for="name">お名前</label>
+                            <input class="inputs" id="name" type="text" name="name" placeholder="山田　太郎" required>
+                        </div>
+                        <div class="item">
+                            <label class="label" for="email">メールアドレス</label>
+                            <input class="inputs" id="email" type="email" name="email" placeholder="xxx@～" required>
+                        </div>
+                        <div class="item">
+                            <label class="label" for="message">メッセージ</label>
+                            <textarea class="inputs" id="message" name="message" placeholder="ご意見はこちらにお願いします"
+                                required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">送信</button>
+                            <button type="reset">リセット</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <p id="thanksMessage">最後までご覧いただき、ありがとうございました！</p>
+    <footer>
+        <small>&copy; 2023 プミのポートフォリオ. All rights reserved.</small>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+<!-- font-awesome -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+<!-- jQueryのCDN -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" -->
+<!-- integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+<!-- swiperのCDN -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+<!-- JavaScript -->
+
+<!-- <section id="Works-botu">
+
+            <div class="space_for_header"></div>
+            <div class="section_wrapper">
+                <div class="section_header">
+                    <h2 class="vertical_slide_target">
+                        Works-botu
+                    </h2>
+                </div>
+                <div class="section_body">
+                    <div id="slide-show">
+                        <img src="MySlideshow\pic0.png" id="main-image" alt="メイン実績画像">
+                        <div class="container">
+                            <button id="ss-prev">←</button>
+                            <button id="ss-next">→</button>
+                        </div>
+                        <div class="container">
+                            <img src="MySlideshow\pic0.png" class="thumbnail active" alt="サブ実績画像1">
+                            <img src="MySlideshow\pic1.png" class="thumbnail" alt="サブ実績画像2">
+                            <img src="MySlideshow\pic2.png" class="thumbnail" alt="サブ実績画像3">
+                        </div>
+
+                        <p class="vertical_slide_target">
+                            実績は以下の通りです
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+<!-- <section id="Service">
+    <div class="space_for_header"></div>
+    <div class="section_wrapper">
+        <div class="section_header">
+            <h2 class="vertical_slide_target">
+                Service
+            </h2>
+        </div>
+        <div class="section_body">
+            <p class="vertical_slide_target">
+                ｻｰﾋﾞｽは以下の通りです
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio rem culpa ipsam eum
+                possimus,
+                quod
+                quaerat nobis reprehenderit animi reiciendis! Ducimus soluta dignissimos distinctio dicta
+                voluptates
+                repellendus a laudantium.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio rem culpa ipsam eum
+                possimus,
+                quod
+                quaerat nobis reprehenderit animi reiciendis! Ducimus soluta dignissimos distinctio dicta
+                voluptates
+                repellendus a laudantium.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio rem culpa ipsam eum
+                possimus,
+                quod
+                quaerat nobis reprehenderit animi reiciendis! Ducimus soluta dignissimos distinctio dicta
+                voluptates
+                repellendus a laudantium.
+            </p>
+        </div>
+    </div>
+</section> -->

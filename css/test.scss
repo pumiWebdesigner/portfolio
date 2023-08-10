@@ -1,0 +1,102 @@
+@charset "UTF-8";
+// headerのサイズ、カラー
+$header-height: 50px;
+$header-top-bgcolor: #333;
+$header-top-fontcolor: white;
+$header-nottop-bgcolor: rgb(255, 255, 255, .8);
+$header-nottop-fontcolor: #333;
+$contact-label-width: 155px; //不要
+// y方向の各要素間のパディング
+$elements-padding: 25px;
+
+@mixin sp {
+  @media screen and (max-width: 670px) {
+    @content;
+  }
+}
+
+
+
+
+
+
+// x方向の設定
+// y方向の設定
+// z方向の設定
+
+//     // show時の設定
+//     opacity: 1;
+//     pointer-events: auto;
+
+//     li {
+//       opacity: 1;
+//       transform: none;
+
+//       &:nth-child(1) {
+//         transition-delay: .1s;
+//       }
+
+//       &:nth-child(2) {
+//         transition-delay: .2s;
+//       }
+
+//       &:nth-child(3) {
+//         transition-delay: .3s;
+//       }
+
+//       &:nth-child(4) {
+//         transition-delay: .4s;
+//       }
+//     }
+//   }
+// }
+
+// input[type="text"],
+// input[type="email"] {
+// }
+
+#slide-show {
+  $main-image-width: 50vw;
+  $image-aspect: calc(192 / 256);
+  // x方向の設定
+  width: $main-image-width;
+  margin: 0 auto;
+  text-align: center;
+
+  #main-image {
+    width: 100%;
+    height: calc($main-image-width * $image-aspect);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    // gap: 8px;
+    margin-top: 8px;
+  }
+
+  button {
+    // width: 124px;
+    width: 100vw * 0.2;
+    height: 100vh * 0.05;
+    border: 1px solid grey;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .thumbnail {
+    width: 100vw * 0.2;
+    height: 100vh * 0.1;
+    // width: 80px;
+    // height: 64px;
+    cursor: pointer;
+    opacity: 0.4;
+
+    &.active {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+}
+

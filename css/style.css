@@ -1,0 +1,328 @@
+.progres-report {
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+}
+.progres-report .progres-report-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: center;
+}
+.progres-report .progres-report-btn {
+  background-color: red;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 160px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 2px 2px black;
+}
+.progres-report .progres-report-btn:hover {
+  opacity: 0.7;
+}
+
+#bgimg {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: fixed;
+  top: 50px;
+  z-index: -1;
+  background-size: cover;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  z-index: 1;
+  background-color: rgb(33, 33, 33);
+  color: white;
+}
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+header .container {
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+}
+header .container h1 {
+  margin-right: auto;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+  background-image: url(../img/summer_bluesky.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+header .container #header_menu {
+  margin-left: auto;
+}
+header .container #header_menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .container #header_menu ul li {
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  display: block;
+  cursor: pointer;
+}
+@media screen and (max-width: 670px) {
+  header .container #header_menu {
+    display: none;
+  }
+  header .container #header_menu.show {
+    display: block;
+  }
+  header .container #header_menu.show ul {
+    background-color: gray;
+    position: fixed;
+    right: 0;
+    width: 33.3333333333vw;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    animation: show_ham 1s;
+  }
+  header .container #header_menu.show ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    scale: 1;
+  }
+}
+header .container #ham_btn {
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 16px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 670px) {
+  header .container #ham_btn {
+    display: block;
+  }
+  header .container #ham_btn #h_open {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    align-items: center;
+  }
+  header .container #ham_btn #h_open.hidden {
+    display: none;
+  }
+  header .container #ham_btn #h_close {
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    align-items: center;
+  }
+  header .container #ham_btn #h_close.show {
+    display: block;
+  }
+}
+
+main section .space_for_header {
+  height: 50px;
+}
+main section .section_wrapper {
+  background: white;
+}
+main section .section_wrapper .section_header {
+  text-align: center;
+  padding-top: 25px;
+  color: darkblue;
+  font-size: 32px;
+}
+main section .section_wrapper .section_body {
+  padding: 25px 0;
+}
+
+#Works #carousel {
+  width: 80%;
+  margin: 16px auto;
+}
+#Works #carousel .container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border: 1px red solid;
+}
+#Works #carousel .container #carousel_images_container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s;
+  animation: carousel_auto_show 5s infinite linear 1s both;
+}
+#Works #carousel .container #carousel_images_container:hover {
+  animation-play-state: paused;
+}
+#Works #carousel .container #carousel_images_container li {
+  height: 100%;
+  min-width: 100%;
+}
+#Works #carousel .container #carousel_images_container li img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#Works #carousel #prev {
+  left: 0;
+}
+#Works #carousel #next {
+  right: 0;
+}
+#Works #carousel #prev,
+#Works #carousel #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 24px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+#Works #carousel #prev:hover,
+#Works #carousel #next:hover {
+  opacity: 0.7;
+}
+#Works #carousel #carousel_dots_container {
+  margin-top: 10px;
+  text-align: center;
+}
+#Works #carousel #carousel_dots_container button {
+  border: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  cursor: pointer;
+}
+#Works #carousel #carousel_dots_container button + button {
+  margin-left: 18px;
+}
+#Works #carousel #carousel_dots_container .current {
+  background: #999;
+}
+
+#Profile #About-me {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#contact form {
+  width: 70%;
+  min-width: 460px;
+  margin: 0 auto;
+}
+#contact form .item {
+  margin-top: 20px;
+  display: flex;
+}
+#contact form .item .label {
+  width: 155px;
+  height: 40px;
+  line-height: 40px;
+  align-items: center;
+}
+#contact form .item .label:before {
+  border-left: 3px solid orange;
+  content: "";
+  padding-left: 20px;
+}
+#contact form .item .inputs {
+  width: calc(100% - 155px);
+  min-width: 300px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+#contact form .item .inputs#message {
+  min-height: 200px;
+}
+#contact form .button-area {
+  text-align: center;
+  margin-top: 25px;
+}
+#contact form .button-area button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px black;
+}
+#contact form .button-area button[type=submit] {
+  background-color: tomato;
+}
+#contact form .button-area button[type=reset] {
+  background-color: gray;
+}
+
+#thanksMessage {
+  width: 100vw;
+  transform: translateX(-100vw);
+  transition: all 1s ease-out;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  background: orange;
+}
+#thanksMessage.show {
+  transform: translateX(0);
+}
+#thanksMessage.kiran {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+#thanksMessage.kiran::before {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: -200px;
+  background: #fff;
+  opacity: 0;
+  content: "";
+  animation: kiran 1s linear 1;
+  animation-delay: 2s;
+}
+
+footer {
+  width: 100vw;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  color: white;
+  background-color: rgb(33, 33, 33);
+}/*# sourceMappingURL=style.css.map */
