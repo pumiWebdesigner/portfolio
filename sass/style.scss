@@ -1,0 +1,253 @@
+@use "sass:map";
+@use "./global" as *;
+@use "./blocks" as *;
+
+.wrapper {
+  display: flex;
+  @include mq(sp) {
+    display: block;
+  }
+}
+body {
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
+  color: map.get($color, cl-black);
+}
+.main {
+  flex-basis: 79.2%;
+}
+.fv {
+  position: relative;
+}
+.fv__contents {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+  height: 209px;
+  background: url(../img/sp/bg_fv-sp.png) center center/contain no-repeat;
+  background-size: 100% auto;
+  padding: 32px;
+  @include mq(pc) {
+    background: url(../img/bg_fv.png) center center/contain no-repeat;
+    bottom: 100px;
+    max-width: 627px;
+    height: 174px;
+    padding-top: 24px;
+    padding-left: 96px;
+  }
+  @include mq(tb) {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+.fv__heading-main {
+  display: block;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+.fv__heading-sub {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+}
+
+.service__list {
+  @include mq(pc) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+.service__item {
+  & + & {
+    margin-top: 40px;
+    @include mq(pc) {
+      margin-top: 0;
+    }
+  }
+}
+.service__item-img {
+  text-align: center;
+  margin-bottom: 14px;
+  height: 69px;
+}
+.service__item-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.service__item-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.works {
+  background-color: map.get($color, bg-light);
+}
+.works__list {
+  @include mq(pc) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+.works__item {
+  & + & {
+    margin-top: 40px;
+  }
+  @include mq(pc) {
+    height: 200px;
+    & + & {
+      margin-top: 0;
+    }
+  }
+}
+.works__item-img {
+  margin-bottom: 12px;
+  overflow: hidden;
+  img {
+    transition: 1s;
+    width: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+    box-shadow: 0 4px 15px 0 rgba(map.get($color, black), 0.15);
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.works__item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.works__item-link {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.about__container {
+  @include mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    justify-content: space-between;
+  }
+}
+.about__img {
+  margin-bottom: 32px;
+  max-width: 400px;
+  img {
+    box-shadow: 0 4px 15px 0 rgba(map.get($color, black), 0.15);
+  }
+}
+.about__text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+  & + & {
+    margin-top: 1em;
+  }
+}
+.flow {
+  background-color: map.get($color, bg-light);
+}
+.flow__list {
+  margin-top: 64px;
+  @include mq(pc) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  @include mq(tb) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 16px;
+  }
+}
+.flow__item {
+  position: relative;
+  border: 1px solid map.get($color, cl-border);
+  padding: 46px 16px 24px;
+  background: map.get($color, white);
+  & + & {
+    margin-top: 46px;
+    @include mq(pc) {
+      margin-top: 0;
+    }
+  }
+}
+.flow__item-num {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background-color: map.get($color, bg-dark);
+  color: map.get($color, white);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow__item-img {
+  text-align: center;
+  margin-bottom: 24px;
+  height: 69px;
+}
+.flow__item-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.flow__item-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.message__container {
+  @include mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+}
+.message__text-contents {
+  @include mq(pc) {
+    min-width: 280px;
+    margin: 0 auto 0 0;
+  }
+}
+.message__img {
+  margin-bottom: 32px;
+  max-width: 400px;
+  img {
+    box-shadow: 0 4px 15px 0 rgba(map.get($color, black), 0.15);
+  }
+}
+.message__text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+}
+.page-bottom {
+  color: map.get($color, white);
+  @include mq(pc) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.page-bottom__item {
+  padding: 40px;
+  @include mq(pc) {
+    padding: 54px 10px;
+  }
+}
+.page-bottom__item-contact {
+  background-color: map.get($color, bg-gray-l);
+}
+.page-bottom__item-twitter {
+  background-color: map.get($color, bg-dark);
+}
