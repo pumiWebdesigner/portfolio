@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "../global" as *;
+
+.header__hamburger--button {
+  @include mq(pc) {
+    display: none;
+  }
+  position: absolute;
+  top: 9px;
+  right: 15px;
+  width: 40px;
+  height: 70px;
+  z-index: 2;
+  display: block;
+  transition: 0.5s;
+  background-color: transparent;
+  border: none;
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    color: map.get($color, white);
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px; /* 220% */
+    content: "MENU";
+    .drawer-open & {
+      content: "CLOSE";
+    }
+  }
+}
+.drawer-bar {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: map.get($color, white);
+  border-radius: 1px;
+  transition: 0.3s;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      top: calc(14px * #{$i});
+    }
+  }
+
+  .drawer-open & {
+    width: 48px;
+    top: 28px;
+    right: -4px;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transform: rotate(calc(45deg + 90deg * #{$i}));
+      }
+    }
+  }
+}
+.drawer__nav {
+  @include mq(sp) {
+    display: block;
+    position: fixed;
+    z-index: 60;
+    padding-top: 60px;
+    height: calc(100vh - 88px);
+    top: 88px;
+    width: 100%;
+    background-color: map.get($color, black);
+    background: linear-gradient(to bottom, black, gray, blue);
+    right: -100%;
+    transition: 0.5s;
+    .drawer-open & {
+      right: 0;
+    }
+  }
+  // pcサイズは_header.scssのheader__navで設定
+}

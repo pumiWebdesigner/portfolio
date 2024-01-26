@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "../global" as *;
+
+.button {
+  // 背景・文字の設定
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 30px;
+  width: 160px;
+  margin: 0 auto;
+  background-color: transparent;
+  @include mq(pc) {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+    // hover時：contact以外は色反転
+    &:hover {
+      background-color: map.get($color, white);
+      .button__icon-path {
+        fill: map.get($color, bg-dark);
+      }
+      .button__text {
+        color: map.get($color, bg-dark);
+      }
+    }
+  }
+}
+
+// contactは背景反転
+.button-contact {
+  background-color: map.get($color, white);
+  @include mq(pc) {
+    // hover時：contact以外はopacity
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// twitterはボーダーあり
+.button-border {
+  border: 1px solid map.get($color, white);
+}
+
+// アイコンの設定
+.button__icon {
+  width: 24px;
+  // 中央寄せのためのflex
+  display: flex;
+  align-items: center;
+}
+
+// svg画像の色設定
+.button__icon-path {
+  fill: map.get($color, white);
+}
+
+// svg画像の色設定（contactは反転）
+.button__icon-path-contact {
+  fill: map.get($color, bg-dark);
+}
+
+// ボタンの文字設定
+.button__text {
+  margin-left: 10px;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: map.get($color, white);
+}
+
+// ボタンの文字設定（contactは別の色）
+.button__text-contact {
+  color: map.get($color, bg-dark);
+}

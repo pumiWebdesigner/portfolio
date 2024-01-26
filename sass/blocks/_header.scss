@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: map.get($color, black);
+  @include mq(pc) {
+    background: linear-gradient(to bottom, blue, gray, black);
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+  }
+}
+
+.header__container {
+  position: relative;
+  width: 100%;
+  @include mq(pc) {
+    width: 160px; // 768px*20.8%
+    margin: 0 auto;
+    position: sticky;
+    top: 50px;
+  }
+}
+.header__logo {
+  //ナビ要素は、他の要素に合わせるためにinline-block
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 20px;
+  color: map.get($color, white);
+  @include mq(pc) {
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    line-height: 1;
+  }
+}
+
+.header__nav {
+  @include mq(pc) {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    padding-top: 40px;
+  }
+  // spサイズは_drawer.scssのdrawer__navで設定
+}
+
+.header__nav-item {
+  & + & {
+    margin-top: 24px;
+  }
+}
