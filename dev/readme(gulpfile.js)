@@ -1,22 +1,51 @@
-const gulp = require("gulp");
+// gulp-sassというGulpプラグインとsassというNode.jsのSassコンパイラモジュールを同時に要求
+// gulp-sassを通じてSassファイルをCSSにコンパイルする機能をsassモジュールで実行している
+// sassというパッケージを読み込み、その読込結果をgulp-sassに渡して実行している
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss"); //cssの後処理を行うツール。autoprefixerを使うために必要
+
+//cssの後処理を行うツール。autoprefixerを使うために必要
+const postcss = require("gulp-postcss"); 
 //https://www.npmjs.com/package/gulp-postcss
-const autoprefixer = require("autoprefixer"); //ベンダープレフィックスを付加するプラグイン
+
+//ベンダープレフィックスを付加するプラグイン
+const autoprefixer = require("autoprefixer"); 
 //https://github.com/postcss/autoprefixer
 // どのブラウザがサポートされてるか確認
 // npx autoprefixer --info
-const cssSorter = require("css-declaration-sorter"); //cssのプロパティをソートするプラグイン（デフォルトでアルファベット順）
-const mmq = require("gulp-merge-media-queries"); // メディアクエリをまとめるプラグイン（容量圧縮に効果ある（見やすさも向上？）
 
-const browserSync = require("browser-sync"); // ブラウザの自動読み込み、リロード
-// const browserSync = require("browser-sync").create(); // ブラウザの自動読み込み、リロードChatGPT提案
-const cleanCss = require("gulp-clean-css"); //cssの圧縮
-const uglify = require("gulp-uglify"); //jsの圧縮
-const rename = require("gulp-rename"); //ファイル名変更
-const htmlBeautify = require("gulp-html-beautify"); //htmlの整形
-const gulpIf = require("gulp-if"); //gulpの条件分岐
-const ejs = require("gulp-ejs"); //ejsのコンパイル
+//cssのプロパティをソートするプラグイン（デフォルトでアルファベット順）
+const cssSorter = require("css-declaration-sorter");
+
+// メディアクエリをまとめるプラグイン（容量圧縮に効果ある（見やすさも向上？）
+const mmq = require("gulp-merge-media-queries"); 
+
+// ブラウザの自動読み込み、リロード
+const browserSync = require("browser-sync"); 
+
+// ブラウザの自動読み込み、リロードChatGPT提案
+// const browserSync = require("browser-sync").create(); 
+
+//cssの圧縮
+const cleanCss = require("gulp-clean-css");
+
+//jsの圧縮
+const uglify = require("gulp-uglify"); 
+
+//ファイル名変更
+const rename = require("gulp-rename"); 
+
+//htmlの整形
+const htmlBeautify = require("gulp-html-beautify"); 
+
+//gulpの条件分岐
+const gulpIf = require("gulp-if"); 
+
+//htmlの構文チェック
+const htmlhint = require("gulp-htmlhint"); 
+
+//ejsのコンパイル
+const ejs = require("gulp-ejs"); 
 
 // gulp-webpはESモジュールのためrequireで読み込めず、importで読み込む
 async function importWebp() {
@@ -50,7 +79,10 @@ async function copyImage() {
   );
 }
 
+
 function compileSass() {
+  // return　　gulp.ｓｒｃ("")：ソース（もととなるファイル）
+  // .pipe(gulp.dest("")：出力先のパスを指定
   return gulp
     .src("./src/assets/sass/**/*.scss") // sassフォルダ内のsassファイルすべてを対象とする
     .pipe(sass()) //sassコンパイルを実行
@@ -64,36 +96,24 @@ function compileSass() {
       })
     )
     .pipe(gulp.dest("./public/assets/css/")); // 出力ディレクトリに書き出し
+  // .pipe(browserSync.stream()); // 即座に反映 // 行 56-57
 }
 
 function watch() {
   gulp.watch("./src/**/*.html", gulp.series(formatHTML, browserReload)); // HTMLファイルの変更を監視
   gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload)); // Sassファイルの変更を監視
+  // gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass)); // ｃss処理側でリロードするので、ここではリロードしない
   gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload)); // jsファイルの変更を監視
+  // gulp.watch("./src/assets/js/**/*.js", gulp.series(normalJS, browserReload)); // jsファイルの変更を監視
   gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload)); // 画像ファイルの変更を監視
   gulp.watch("./src/**/*.ejs", gulp.series(compileEJS, browserReload)); // HTMLファイルの変更を監視
   // gulp.watch("../**/*.php", browserReload); // phpファイルの変更を監視
 }
 
-function browserInit(done) {
-  browserSync.init({
-    server: {
-      baseDir: "./public/",
-    },
-    // proxy: "http://localhost:8888/dev/",
-  });
-  done();
-}
-
-function browserReload(done) {
-  browserSync.reload();
-  done();
-}
 
 function minJS() {
   return gulp
     .src("./src/assets/js/**/*.js")
-    .pipe(gulp.dest("./public/assets/js/")) // 圧縮前ファイルを一旦出力ディレクトリに書き出し
     .pipe(uglify()) //jsの圧縮処理
     .pipe(
       rename({
@@ -101,6 +121,9 @@ function minJS() {
       })
     )
     .pipe(gulp.dest("./public/assets/js/"));
+}
+function normalJS() {
+  return gulp.src("./src/assets/js/**/*.js").pipe(gulp.dest("./public/assets/js/"));
 }
 
 function formatHTML() {
@@ -113,6 +136,12 @@ function formatHTML() {
       })
     )
     .pipe(gulp.dest("./public"));
+}
+function htmlHint() {
+  return gulp
+    .src("./src/**/*.html")
+    .pipe(htmlhint()) // htmlhintの実行
+    .pipe(htmlhint.reporter()); // 実行した結果をターミナルに表示
 }
 
 function compileEJS() {
@@ -128,6 +157,10 @@ function compileEJS() {
     )
     .pipe(gulp.dest("./public"));
 }
+
+// exports.実行子コマンド名 = 実行関数名
+exports.test777 = test;
+exports.hint = htmlHint;
 
 // wacthする前の初回出力ファイル作成
 exports.build = gulp.parallel(compileEJS, formatHTML, minJS, normalJS, compileSass, copyImage);

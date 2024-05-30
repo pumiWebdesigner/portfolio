@@ -1,0 +1,33 @@
+function watch() {
+  gulp.watch("./src/**/*.html", gulp.series(formatHTML, browserReload)); // HTMLファイルの変更を監視
+  gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload)); // Sassファイルの変更を監視
+  // gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass)); // ｃss処理側でリロードするので、ここではリロードしない
+  gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload)); // jsファイルの変更を監視
+  // gulp.watch("./src/assets/js/**/*.js", gulp.series(normalJS, browserReload)); // jsファイルの変更を監視
+  gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload)); // 画像ファイルの変更を監視
+  gulp.watch("./src/**/*.ejs", gulp.series(compileEJS, browserReload)); // HTMLファイルの変更を監視
+  // gulp.watch("../**/*.php", browserReload); // phpファイルの変更を監視
+}
+
+function normalJS() {
+  return gulp.src("./src/assets/js/**/*.js").pipe(gulp.dest("./public/assets/js/"));
+}
+
+const htmlhint = require("gulp-htmlhint"); //htmlの構文チェック
+
+function htmlHint() {
+  return gulp
+    .src("./src/**/*.html")
+    .pipe(htmlhint()) // htmlhintの実行
+    .pipe(htmlhint.reporter()); // 実行した結果をターミナルに表示
+}
+
+exports.hint = htmlHint;
+
+// exports.実行子コマンド名 = 実行関数名
+function test(done) {
+  console.log("Hello Gulp");
+  done();
+}
+
+exports.test777 = test;
