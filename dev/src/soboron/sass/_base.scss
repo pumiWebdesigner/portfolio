@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap");
+
+// 色
+$color-main: #3ea1d1;
+$color-active: #ff0000;
+$color-background-base: #ffffff;
+$color-text-base: #333333;
+$color-box-shadow: rgba(#606060, 0.16);
+$hover-opacity: 0.7;
+
+// 横幅
+$layout-width-inner: 1280px;
+
+// 階層
+$layer: (
+  modal: 100,
+  drawer: 40,
+  header: 20,
+  footer: 10,
+  default: 1,
+);
+
+// 余白
+$padding-pc: 40px;
+$padding-sp: 15px;
+
+// ヘッダー高さ
+$header-height-pc: 70px;
+$header-height-sp: 60px;
+
+//フォント種類：明朝フォント
+$font-family-default: "ヒラギノ明朝 ProN", serif;
+$font-family-base: $font-family-default;
+//フォントサイズ
+$font-size-base: 16px;
+$font-weight-base: 300;
+$line-height-base: 1.6;
+
+// ブレークポイント
+$sp-size: 767px;
+$breakpoints: (
+  "sp": "screen and (max-width: #{$sp-size})",
+  "pc": "screen and (min-width: #{($sp-size + 1px)})",
+) !default;
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  color: $color-text-base;
+  line-height: $line-height-base;
+  background: $color-background-base;
+  overflow-x: hidden;
+  overflow-wrap: break-word; //単語の境界でなくても強制的に改行
+}
+
+// 非表示設定
+.hidden-pc {
+  @include mq("pc") {
+    display: none;
+  }
+}
+
+.hidden-sp {
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+//共通部品
+.section {
+  padding-top: 160px;
+
+  @include mq("sp") {
+    padding-top: 96px;
+  }
+}
+.section__title {
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+  height: 56px;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    background: $color-main;
+    width: 60px;
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+// インナー（横方向の余白）
+.inner {
+  width: $layout-width-inner;
+  max-width: 100%;
+  margin: 0 auto;
+  height: inherit;
+  @include mq(pc) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+  @include mq(sp) {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+body {
+  padding-top: $header-height-pc; //fixedのheaderがある場合セット
+  @include mq(sp) {
+    padding-top: $header-height-sp;
+  }
+}
+.main_button {
+  text-align: center;
+  a {
+    border: 1px solid #3ea1d1;
+    display: inline-block;
+    padding: 16px 54px;
+    font-size: 14px;
+    color: #3ea1d1;
+    background: $color-background-base;
+    line-height: 1;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: $color-background-base;
+      background: #3ea1d1;
+    }
+  }
+}
+.scaleup__img {
+  overflow: hidden;
+  img {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.link-hover-opacity {
+  transition: all 0.3s ease 0s;
+  &:hover {
+    opacity: $hover-opacity;
+  }
+}

@@ -1,0 +1,126 @@
+@use "sass:map";
+@use "../global" as *;
+
+// $width-px: (); // 新しいmapを初期化
+// @each $name, $value in $width {
+//   $width-px: map-merge(
+//     $width-px,
+//     (
+//       $name: #{$value}px,
+//     )
+//   );
+// }
+// @mixin get-calc-width($min-size: 16, $max-size: 100, $min-width: var(--width-sp-comp), $max-width: var(--width-pc-comp)) {
+//   width: calc(#{$min-size}px + ($max-size - $min-size) * ((100vw - #{$min-width}px) / ($max-width - $min-width)));
+//   // width: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+// }
+
+// @mixin get-calc-padding-inline($min-size, $max-size, $min-width: var(--width-sp-comp, 375), $max-width: var(--width-pc-comp, 1440)) {
+//   padding-inline: calc(#{$min-size}px + ($max-size - $min-size) * ((100vw - #{$min-width}px) / ($max-width - $min-width)));
+//   // padding-inline: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+//   // padding-inline: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}px) / (var(--width-pc-comp) - var(--width-sp-comp))));
+//   font-weight: #{var(--width-sp-comp-px)};
+// }
+
+// @include get-calc-padding-inline(0, 200, 375, 1440);
+// @include get-calc-padding-inline(10, 200, var(--width-sp-comp, 375), var(--width-pc-comp, 1375));
+// , 375, var(--width-pc-comp));
+
+// @mixin responsive-padding-inline-custom($sp-width-var, $pc-width-var) {
+//   padding-inline: calc(200px + (1200 - 200) * ((100vw - #{$sp-width-var}px) / (#{$pc-width-var} - #{$sp-width-var})));
+// margin-inline: calc(200px + (1200 - 200)px * ((100vw - calc(var(--sp-comp) * 1px)) / (#{$pc-width-var} - #{$sp-width-var})));
+// margin-inline: calc(200px + ((1200px - 200px) / (#{$pc-width-var} - #{$sp-width-var})) * ((100vw - calc(var(--sp-comp)))));
+// margin-inline: calc((1200px - 200px) / (#{$pc-width-var} - #{$sp-width-var}) * 1px);
+// margin-inline: calc((1200px - 200px) / ($pc-width-var - $sp-width-var) * 1px);
+// margin-inline: calc(200px + (1200 - 200)px * ((100vw - calc(var(--sp-comp) )) / (#{$pc-width-var} - #{$sp-width-var})));
+// margin-inline: calc(200px + (1200 - 200) * ((100vw - calc(var(--sp-comp-px))) / (var(--pc-comp) - var(--sp-comp))));
+// どちらにも数値が入っていない場合（片方に数値が入った場合も含まれてしまうが、そのチェックは省略する）
+// @else {
+//   margin-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - calc(var(--sp-comp, 375) * 1px) / (var(--pc-comp, 1440) - var(--sp-comp, 375))));
+// }
+// margin-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - calc(var(--sp-comp) * 1px) / (var(--pc-comp) - var(--sp-comp))));
+// margin-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - calc(var(--sp-comp) * 1px) / 900));
+// }
+
+// @mixin padding-inline-calc($min-size: null, $max-size: null, $sp-width-var: null, $pc-width-var: null) {
+//   // 全ての変数が入っている場合のみ
+//   @if $min-size != null and $max-size != null and $sp-width-var != null and $pc-width-var != null {
+//     margin-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - calc($sp-width-var * 1px)) / ($pc-width-var - $sp-width-var));
+//   }
+// }
+
+// 使用例
+// :root {
+//   --sp-comp: 320; // スマートフォン用の幅
+//   --pc-comp: 1440; // PC用の幅
+// }
+
+// .selector {
+//   padding-inline: calc(20px + (120 - 20) * ((100vw - #{var(--sp-comp)}px) / (var(--pc-comp) - var(--sp-comp))));
+// }
+
+// 画面幅に合わせてwidthを計算する
+// @mixin width-calc-by-vew($property, $min-size: null, $max-size: null, $min-width: null, $max-width: null) {
+//   // 1から4引数まで全ての変数が設定：変数を使ってサイズを計算する
+//   @if $min-size != null and $max-size != null {
+//     @if $min-width != null and $max-width != null {
+//       #{$property}: clamp($min-size, calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{$min-width}px) / ($max-width - $min-width)), $max-size);
+//     }
+// 1から2引数までの変数が設定：変数とカンプサイズを使ってサイズを計算する
+//     @else if $min-width == null and $max-width == null {
+//       #{$property}: clamp($min-size, calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp))), $max-size);
+//     }
+//   }
+// }
+
+// @if $min-size != null and $max-size != null {
+//   @if $min-width != null and $max-width != null {
+//   }
+//   1から2引数までの変数が設定：変数とカンプサイズを使ってサイズを計算する @else if $min-width == null and $max-width == null {
+//     @return clamp(#{$min-size}px, calc(#{$min-size}px + ($max-size - $min-size) * (100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp))), #{$max-size}px);
+//     @return clamp(#{$min-size}px, calc(#{$min-size}px + ($max-size - $min-size) * (100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp))), #{$max-size}px);
+//   }
+// }
+
+// この mixin は、指定された CSS プロパティ ($property) の値を、ビューポートの幅に応じて動的に計算します。
+// $min-size と $max-size は、ビューポートの最小幅および最大幅でのプロパティの値を指定します。
+// $min-width と $max-width はオプショナルで、特定のビューポート幅の範囲を指定するために使用します。
+// これらが指定されない場合、sp-comp (375px) と pc-comp (1440px) の値がデフォルトとして使用されます。
+// $width: (
+//   pc-comp: 1440,
+//   pc-comp-alt: 1280,
+//   tab-comp: 1024,
+//   sp-comp: 375,
+// );
+
+// @mixin width-calc-by-vew($property, $min-size: null, $max-size: null, $device-min: sp-comp, $device-max: pc-comp) {
+//   @if map.has($width, $device-min) and map.has($width, $device-max) {
+//     $min-width: map.get($width, $device-min);
+//     $max-width: map.get($width, $device-max);
+
+//     #{$property}: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{$min-width}px) / ($max-width - $min-width));
+//   } @else {
+//     @warn "The specified devices are not defined in the width map.";
+//   }
+// }
+
+// 画面幅に応じてpaddingを計算する
+// 1から4引数まで全ての変数が設定：変数を使ってサイズを計算する
+// 1から2引数までの変数が設定：変数とカンプサイズを使ってサイズを計算する
+// @mixin padding-inline-calc($min-size: null, $max-size: null, $min-width: null, $max-width: null) {
+//   @if $min-size != null and $max-size != null and $min-width != null and $max-width != null {
+//     padding-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{$min-width}px) / ($max-width - $min-width));
+//   }
+//   @if $min-size != null and $max-size != null and $min-width == null and $max-width == null {
+//     padding-inline: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp)));
+//   }
+// }
+// 画面幅に合わせてwidthを計算する
+// @mixin width-calc($min-size: null, $max-size: null, $min-width: null, $max-width: null) {
+//   @if $min-size != null and $max-size != null and $min-width != null and $max-width != null {
+//     width: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{$min-width}px) / ($max-width - $min-width));
+//   }
+//   @if $min-size != null and $max-size != null and $min-width == null and $max-width == null {
+//     width: calc(($min-size * 1px) + ($max-size - $min-size) * (100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp)));
+//   }
+// }

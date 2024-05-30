@@ -1,0 +1,462 @@
+@charset "utf-8";
+@use "base";
+
+.contact {
+  background: url(../img/contact-bg.png) no-repeat center center / cover;
+  @include base.mq(pc) {
+    margin-top: 120px;
+    padding: 60px 40px;
+  }
+  @include base.mq(sp) {
+    padding: 40px 16px;
+  }
+  input {
+    &[type="checkbox"] {
+      display: none;
+    }
+  }
+  .util-title {
+    color: base.$color-white;
+    text-align: center;
+  }
+}
+.contact-inner {
+  background-color: base.$color-white;
+  border-radius: 12px;
+  margin-inline: auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+
+.contact-header {
+  background-color: #000;
+  box-shadow: 0 0 4px #3e3e3e;
+  position: relative;
+
+  @include base.mq(pc) {
+    padding: 58px 0 54px;
+  }
+
+  @include base.mq(sp) {
+    padding: 38px 16px;
+  }
+
+  &:before {
+    background: url(../img/contact1.png) center center / cover;
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.contact-header-inner {
+  //opacityかけた画像より前面に表示させるためのposition設定
+  position: relative;
+}
+
+.util-subtitle {
+  color: base.$color-white;
+  @include base.mq(pc) {
+    font-size: 16px;
+    margin-top: 8px;
+    text-align: center;
+  }
+  @include base.mq(sp) {
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: calc(20 / 14);
+  }
+}
+
+.contact-content {
+  @include base.mq(pc) {
+    padding: 60px 120px;
+  }
+  @include base.mq(sp) {
+    padding: 36px 12px 38px;
+  }
+}
+
+.contact-list {
+  font-size: 16px;
+}
+
+.contact-item {
+  &:not(.contact-item-message) {
+    @include base.mq(pc) {
+      display: flex;
+    }
+  }
+
+  & + & {
+    margin-top: 26px;
+  }
+
+  select {
+    //ブラウザごとに初期値異なるので初期化
+    appearance: none; //ドロップダウンアイコン、境界線
+    background: transparent;
+    border: none;
+    border: 1px solid #3e3e3e;
+    border-radius: none;
+    color: base.$font-black;
+    font-family: inherit; //冗長な記述？
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    outline: none; //疑似要素のbox-shadowで代替
+    padding: 0 34px 0 8px;
+    transition: box-shadow 0.2s;
+    cursor: pointer; //基本的にデフォルトで設定されている
+
+    @include base.mq(pc) {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      width: 260px;
+
+      &:hover {
+        box-shadow: 0 0 4px #4973ff;
+      }
+    }
+    @include base.mq(sp) {
+      font-size: 14px;
+      height: 38px;
+      line-height: 38px;
+      width: 100%;
+    }
+  }
+
+  textarea {
+    //ブラウザごとに初期値異なるので初期化
+    border: solid 1px #3e3e3e;
+    border-radius: 0;
+    outline: none;
+    padding: 0.5em;
+    resize: vertical; //横方向は固定
+    transition: 0.2s;
+    width: 100%;
+    cursor: pointer; //基本的にデフォルトで設定されている
+
+    @include base.mq(pc) {
+      font-size: 21px;
+      margin-top: 3px;
+      height: 200px;
+      &:hover {
+        border-color: #4973ff;
+        box-shadow: 0 0 4px #4973ff;
+      }
+    }
+    @include base.mq(sp) {
+      font-size: 16px;
+      margin-top: 12px;
+      height: 160px;
+    }
+
+    &:focus {
+      border-color: #4973ff;
+      box-shadow: 0 0 4px #4973ff;
+    }
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"] {
+      //ブラウザごとに初期値異なるので初期化
+      border: none;
+      border-bottom: 1px solid #3e3e3e;
+      border-radius: 0;
+      font-weight: 400;
+      font-family: inherit;
+      letter-spacing: 0.03em;
+      position: relative;
+      width: 100%;
+      color: base.$font-black;
+
+      @include base.mq(pc) {
+        font-size: 16px;
+        padding: 3px 12px 2px;
+      }
+      @include base.mq(sp) {
+        font-size: 14px;
+        padding: 1px 0;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: #4973ff;
+        outline: none;
+        + .contact-focusLine {
+          opacity: 1;
+        }
+      }
+    }
+    &[type="radio"] {
+      display: none;
+      vertical-align: text-top;
+    }
+  }
+}
+
+.contact-input-box {
+  position: relative;
+  @include base.mq(pc) {
+    flex: 0 1 100%;
+  }
+  @include base.mq(sp) {
+    margin-top: 3px;
+    .contact-item-radio & {
+      margin-top: 7px;
+    }
+  }
+}
+
+.contact-select-box {
+  position: relative;
+  @include base.mq(sp) {
+    margin-top: 12px;
+  }
+
+  // select要素に疑似要素使えないので、親要素に対して疑似要素
+  &::after {
+    border-bottom: solid 2px #3e3e3e;
+    border-right: solid 2px #3e3e3e;
+    content: "";
+    height: 8px;
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    transform: rotate(45deg);
+    width: 8px;
+  }
+}
+.contact-focusLine {
+  bottom: 1px;
+  box-shadow: 0 2px 4px rgba(73, 115, 255, 0.6);
+  display: block;
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+.contact-item-title {
+  display: flex;
+  align-items: center;
+  flex: 0 0 188px;
+  font-weight: bold;
+}
+
+.contact-require-label {
+  background: #ff4646;
+  border-radius: 2px;
+  color: base.$color-white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px; //ラベル色の幅//中央寄せはalign-items:centerで実現
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  @include base.mq(pc) {
+    margin-left: 12px;
+  }
+  @include base.mq(sp) {
+    margin-left: 20px;
+  }
+}
+
+.contact-privacy {
+  display: inline-block;
+
+  @include base.mq(pc) {
+    margin-top: 32px;
+  }
+  @include base.mq(sp) {
+    margin-top: 26px;
+  }
+}
+.contact-privacy-label {
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding-left: 38px;
+  position: relative;
+  font-weight: bold;
+
+  @include base.mq(pc) {
+    font-size: 18px;
+    padding-left: 42px;
+  }
+  &:before {
+    background: #fff;
+    border: solid 1px #3e3e3e;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    transition: 0.2s;
+
+    @include base.mq(pc) {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include base.mq(sp) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  @include base.mq(pc) {
+    &:hover {
+      &:before {
+        border-color: #4973ff;
+        box-shadow: 0 0 4px #4973ff;
+      }
+    }
+
+    &:active {
+      &:before {
+        background-color: rgba(73, 115, 255, 0.2);
+        box-shadow: none;
+      }
+    }
+  }
+  &:after {
+    border-bottom: solid 2px #4973ff;
+    border-left: solid 2px #4973ff;
+    content: "";
+    display: block;
+    height: 6px;
+    opacity: 0;
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+    width: 12px;
+
+    @include base.mq(pc) {
+      left: 4px;
+      top: 8px;
+    }
+
+    @include base.mq(sp) {
+      left: 3px;
+      top: 6px;
+    }
+  }
+}
+
+input[type="checkbox"]:checked + .contact-privacy-label:after {
+  opacity: 1;
+}
+
+.contact-radio {
+  display: inline-block;
+  padding: 0;
+  & + & {
+    margin-left: 32px;
+  }
+}
+
+.contact-radio-label {
+  padding-left: 22px;
+  position: relative;
+  &:before {
+    background: #fff;
+    border: solid 1px #3e3e3e;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    transition: 0.2s;
+
+    @include base.mq(pc) {
+      height: 12px;
+      width: 12px;
+      top: 3px;
+    }
+
+    @include base.mq(sp) {
+      height: 12px;
+      width: 12px;
+      top: 2px;
+    }
+  }
+  @include base.mq(pc) {
+    &:hover {
+      &:before {
+        border-color: #4973ff;
+        box-shadow: 0 0 4px #4973ff;
+      }
+    }
+
+    &:active {
+      &:before {
+        background-color: rgba(73, 115, 255, 0.2);
+        box-shadow: none;
+      }
+    }
+  }
+  &:after {
+    background: #4973ff;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 6px;
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s;
+    width: 6px;
+
+    @include base.mq(pc) {
+      left: 3px;
+      top: 6px;
+    }
+
+    @include base.mq(sp) {
+      left: 3px;
+      top: 5px;
+    }
+  }
+}
+input[type="radio"]:checked + .contact-radio-label:after {
+  opacity: 1;
+}
+
+.contact-privacy-link {
+  color: base.$color-blue;
+  text-decoration: underline;
+}
+.contact-button {
+  @include base.mq(pc) {
+    margin-top: 38px;
+    width: 174px;
+  }
+
+  @include base.mq(sp) {
+    margin-top: 32px;
+    width: 165px;
+    font-size: 18px;
+    padding: 0 1.5em;
+  }
+
+  &:disabled {
+    background-color: base.$color-disable;
+  }
+}
+
+.contact-message {
+  text-align: center;
+  display: none;
+  color: #00f;
+  background: base.$color-white;
+  padding: 20px;
+  &.-error {
+    color: #f00;
+  }
+}

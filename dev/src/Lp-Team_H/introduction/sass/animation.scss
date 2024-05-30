@@ -1,0 +1,122 @@
+// keyframesの中でメディアクエリが動かないので、
+// ブレイクポイントごとに分けて記述
+
+@keyframes kirin-dash {
+  // キリンの向き（0degで右向き、180degで左向き）
+  $kirin-direction: 0deg;
+  // キリン左端
+  0%,
+  100% {
+    top: -173px;
+    left: 22px;
+    transform: rotate(0deg);
+  }
+  // キリン右端
+  50% {
+    top: -42px;
+    left: 562px;
+  }
+  // 5%～95%の間5%毎に傾き幅を反転
+  // 50%以上でキリンの向きを反転
+  @for $i from 1 through 19 {
+    @if $i >= 10 {
+      $kirin-direction: 180deg;
+    }
+    #{calc($i * 5%)} {
+      @if $i % 2 == 0 {
+        transform: rotate(calc(15deg * -1)) rotateY($kirin-direction);
+      } @else {
+        transform: rotate(calc(15deg * 1)) rotateY($kirin-direction);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  @keyframes kirin-dash {
+    $kirin-direction: 0deg;
+    0%,
+    100% {
+      top: 20px;
+      left: 22px;
+      transform: rotate(0deg);
+    }
+    50% {
+      top: 151px;
+      left: 562px;
+    }
+    @for $i from 1 through 19 {
+      @if $i >= 10 {
+        $kirin-direction: 180deg;
+      }
+      #{calc($i * 5%)} {
+        @if $i % 2 == 0 {
+          transform: rotate(calc(15deg * -1)) rotateY($kirin-direction);
+        } @else {
+          transform: rotate(calc(15deg * 1)) rotateY($kirin-direction);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  @keyframes kirin-dash {
+    $kirin-direction: 0deg;
+    0%,
+    100% {
+      top: 40px;
+      left: 5px;
+      transform: rotate(0deg);
+    }
+    // キリン右端
+    50% {
+      top: 105px;
+      left: 281px;
+    }
+    @for $i from 0 through 19 {
+      @if $i >= 10 {
+        $kirin-direction: 180deg;
+      }
+      #{calc($i * 5%)} {
+        @if $i % 2 == 0 {
+          transform: rotate(calc(15deg * -1)) rotateY($kirin-direction);
+        } @else {
+          transform: rotate(calc(15deg * 1)) rotateY($kirin-direction);
+        }
+      }
+    }
+  }
+}
+
+// 医者（男）画像のあしらいを上下にゆらす
+@keyframes star-fall {
+  // 上下に揺らす幅
+  $change-translate: 10px;
+  0%,
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(calc(0px + $change-translate));
+  }
+  75% {
+    transform: translateY(calc(0px - $change-translate));
+  }
+}
+// 医者（女）画像のあしらいを拡大縮小する
+@keyframes flower-scale {
+  // 拡大縮小幅
+  $change-scale: 0.1;
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(calc(1 + $change-scale));
+  }
+  75% {
+    transform: scale(calc(1 - $change-scale));
+  }
+}

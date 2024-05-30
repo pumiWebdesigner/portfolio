@@ -1,0 +1,76 @@
+@charset "utf-8";
+@use "base";
+
+.price {
+  @include base.mq(pc) {
+    margin: 118px auto 0;
+    max-width: 1040px;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  @include base.mq(sp) {
+    margin: 0 16px;
+    padding-top: 36px;
+  }
+
+  .util-title {
+    text-align: center;
+  }
+}
+
+.price-table {
+  border: 1px solid #707070;
+  width: 100%;
+  @include base.mq(pc) {
+    font-size: 18px;
+    margin-top: 54px;
+  }
+  @include base.mq(sp) {
+    font-size: 20px;
+    margin-top: 38px;
+  }
+  th,
+  td {
+    font-family: base.$font-family-english;
+
+    @include base.mq(pc) {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0.5em 1.6em;
+    }
+    @include base.mq(sp) {
+      font-weight: 500;
+      padding: 0.6em 20px;
+    }
+  }
+  th {
+    background: base.$color-black;
+    color: base.$font-white;
+    text-align: center;
+    width: 27.3%; // 27.3% = 100% * 262px / 960px
+    @include base.mq(sp) {
+      width: 29.3%;
+    }
+  }
+  td {
+    background: base.$color-white;
+  }
+  tr:not(:first-child) {
+    th {
+      border-top: solid 1px #ddd;
+    }
+    td {
+      border-top: solid 1px #707070;
+    }
+  }
+}
+.price-text {
+  font-size: 12px;
+  @include base.mq(pc) {
+    margin-top: 16px;
+  }
+  @include base.mq(sp) {
+    margin-top: 10px;
+  }
+}

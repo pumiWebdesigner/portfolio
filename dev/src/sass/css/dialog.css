@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prize__button-modalopen {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: auto;
+  position: absolute;
+  right: -1px;
+  bottom: -7px;
+  border-bottom-right-radius: 8px;
+}
+.prize__button-modalopen svg {
+  width: 40px;
+  height: 38px;
+}
+@media screen and (min-width: 1024px) {
+  .prize__button-modalopen svg {
+    width: 100px;
+    height: 100px;
+  }
+  .small .prize__button-modalopen svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.dialog__wrapper {
+  border: none;
+  padding: 0;
+  width: 90%;
+  border-radius: 24px;
+}
+.dialog__wrapper::-ms-backdrop {
+  background-color: rgba(0, 0, 255, 0.8);
+}
+.dialog__wrapper::backdrop {
+  background-color: rgba(0, 0, 255, 0.8);
+}
+
+.dialog__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  aspect-ratio: 3/2;
+  min-height: 200px;
+}
+.dialog__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dialog__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.dialog__button {
+  font-size: 16px;
+}
+.dialog__button .util-link {
+  margin-top: 16px;
+  padding: 6px 24px 8px;
+}
+@media screen and (min-width: 1024px) {
+  .dialog__button .util-link {
+    margin-top: 24px;
+  }
+}

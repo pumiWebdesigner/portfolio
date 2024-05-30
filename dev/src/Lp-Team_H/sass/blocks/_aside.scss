@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.aside__reserve-btn--list {
+  position: fixed;
+  z-index: 1000;
+  top: 190px;
+  right: 0;
+  z-index: 1000;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.aside__reserve-btn--item {
+  transition: 0.5s;
+  // ボタンの動く量を変数$btn-moveとする
+  $btn-move: 30px;
+  // ボタンサイズ＝100px＋ボタンの動く量
+  width: calc(100px + $btn-move);
+  // 動かす距離分、画面外に動かす
+  right: calc(-1 * $btn-move);
+  position: absolute;
+  border-radius: 20px 0px 0px 20px;
+  &:hover {
+    right: 0;
+  }
+  &.btn-orange {
+    background: #f28119;
+    height: 250px;
+    top: 0;
+    padding-left: 33px;
+    padding-top: 19px;
+  }
+  &.btn-blue {
+    background: #0462be;
+    height: 280px;
+    top: 256px;
+    padding-top: 10px;
+    padding-left: 13px;
+  }
+}
+
+.aside__reserve-btn--item-icon {
+  &.btn-blue {
+    padding-left: 16px;
+  }
+}
+
+.aside__reserve-btn--item-text {
+  color: #fff;
+  font-family: "001Shirokuma", sans-serif;
+  writing-mode: vertical-rl;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 3.9px;
+  .btn-orange & {
+    padding-left: 3px;
+  }
+  .btn-blue & {
+    // 予防接種と乳幼児健診予約の間の距離
+    line-height: 35px;
+    padding-top: 2px;
+  }
+}

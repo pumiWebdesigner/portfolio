@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "../global" as *;
+
+// 横スクロールチェック
+// * {
+//   outline: 1px solid red;
+//   border: 1px solid blue;
+// }
+
+.hidden-pc {
+  @media screen and (min-width: #{map.get($size,"pc-min")}) {
+    display: none;
+  }
+}
+.hidden-sp {
+  @media screen and (max-width: #{map.get($size,"sp-max")}) {
+    display: none;
+  }
+}
+.wrapper {
+  display: flex;
+  @include mq(sp) {
+    display: block;
+  }
+}
+body {
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
+  color: map.get($color, font);
+}
+.main {
+  @include mq(pc) {
+    width: calc(100% - map.get($header, pc-width));
+  }
+}
+.bg {
+  background: url("../img/img_fv.jpg") top center/cover no-repeat;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  @include mq(pc) {
+    width: calc(100vw - map.get($header, pc-width));
+  }
+}

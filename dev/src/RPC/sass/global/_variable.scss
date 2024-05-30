@@ -1,0 +1,74 @@
+:root {
+  //color
+  --Gray01: #565956;
+  --White: #fff;
+  --Gray03: #f2f4f1;
+  --green: #609484;
+  --gold: #948260;
+  --accent: #ee5a6d;
+  --hov-btn: #0060a0;
+  --Gray02: #b1b6af;
+  --font: #565956;
+
+  // 三角
+  --clip-triangle-top: polygon(50% 0, 100% 100%, 0 100%);
+  --clip-triangle-bottom: polygon(0 0, 100% 0, 50% 100%);
+  --clip-triangle-right: polygon(0 0, 100% 50%, 0 100%);
+  --clip-triangle-left: polygon(0 50%, 100% 0, 100% 100%);
+  --clip-triangle-lower-left: polygon(0 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-left: polygon(0 0, 100% 0, 0 100%);
+  --clip-triangle-lower-right: polygon(100% 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-right: polygon(0 0, 100% 0, 100% 100%);
+
+  // 階層
+  --layer-header: 100;
+  --layer-header-nav: 90;
+  --layer-header-mask: 80;
+  --layer-footer: 50;
+  --layer-default: 1;
+  --layer-background: -1;
+
+  // width
+  --width-pc-comp: 1440;
+  --width-tab-comp: 768;
+  --width-sp-comp: 375;
+
+  // height
+  --height-pc-header: 69.5px;
+  --height-sp-header: 48px;
+
+  // padding
+  --padding-pc-comp: 130;
+  --padding-tab-comp: 60;
+  --padding-sp-comp: 16;
+}
+
+// カラー
+$color: (
+  font: #565956,
+  main: #f2f4f1,
+  green: #609484,
+  gold: #948260,
+  accent: #ee5a6d,
+  hov-btn: #0060a0,
+);
+// 階層
+$layer: (
+  header: 100,
+  header-nav: 90,
+  header-mask: 80,
+  footer: 50,
+  default: 1,
+  background: -1,
+);
+
+$height: (
+  pc-header: 69.5px,
+  sp-header: 48px,
+);
+
+$padding: (
+  pc-comp: 130,
+  tab-comp: 60,
+  sp-comp: 16,
+);

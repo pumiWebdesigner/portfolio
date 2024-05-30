@@ -1,0 +1,403 @@
+// 低い改行
+.br-low {
+  display: block;
+  content: "";
+  height: 10px;
+}
+// スマホは非表示
+.hidden-sp {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+// PCは非表示
+.hidden-pc {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.introduction {
+  margin-top: 172px;
+  background: transparent url(../img/bg.png) no-repeat top center / contain;
+  position: relative;
+  padding-top: 88px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 111px;
+  }
+}
+
+.introduction__title {
+  font-family: "001Shirokuma", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.introduction__inner {
+  max-width: 1000px;
+  margin-inline: auto;
+  @media screen and (max-width: 1000px) {
+    padding-inline: 20px;
+  }
+}
+.introduction__doctor {
+  margin-top: 93px;
+  &.female-doctor {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
+.introduction__wrapper {
+  margin-left: -9px;
+  display: flex;
+  justify-content: space-between;
+  .female-doctor & {
+    flex-direction: row-reverse;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 0;
+    display: block;
+    padding-inline: 10px;
+  }
+}
+.introduction__profile {
+  .female-doctor & {
+    margin-right: -7px;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+    }
+  }
+}
+.introduction__profile--img {
+  width: 339px;
+  height: 339px;
+  margin-top: 21px;
+  margin-left: 13px;
+  position: relative;
+  .female-doctor & {
+    margin-top: 80px;
+    margin-right: 18px;
+    @media screen and (max-width: 1000px) {
+      margin-top: 0;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -11px;
+    width: 100px;
+    height: 95px;
+    background: url(../img/star.png) center/cover;
+    z-index: 1;
+    animation: star-fall 4s infinite linear forwards;
+    .female-doctor & {
+      animation: flower-scale 4s infinite linear forwards;
+    }
+    @media screen and (max-width: 767px) {
+      top: -7px;
+      left: -8px;
+      width: 66px;
+      height: 64px;
+    }
+    @media screen and (max-width: 374px) {
+      top: -5px;
+      left: -6px;
+      width: 50px;
+      height: 48px;
+    }
+    .female-doctor & {
+      top: -57px;
+      left: 24px;
+      width: 109px;
+      height: 115px;
+      background: url(../img/flower.png) center/cover;
+      @media screen and (max-width: 767px) {
+        top: -48px;
+        left: 17px;
+        width: 64px;
+        height: 76px;
+      }
+      @media screen and (max-width: 374px) {
+        top: -38px;
+        left: 14px;
+        width: 48px;
+        height: 58px;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 100%;
+    background: rgba(132, 198, 236, 0.3);
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    .female-doctor & {
+      background: rgba(240, 147, 146, 0.3);
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    margin-right: auto;
+    margin-left: auto;
+    .female-doctor & {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media screen and (max-width: 374px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+.introduction__profile--name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 200%;
+  margin-top: 36px;
+  margin-left: 54px;
+  .female-doctor & {
+    margin-top: 35px;
+    margin-left: 24px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.introduction__profile--field {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 200%;
+  margin-left: 54px;
+  margin-top: -1px;
+  .female-doctor & {
+    margin-left: 24px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.introduction__brief-history {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  .female-doctor & {
+    margin-left: 24px;
+    justify-content: normal;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+}
+.introduction__brief-history--title,
+.introduction__brief-history--text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 200%;
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
+.introduction__brief-history--title {
+  flex-shrink: 0;
+  width: 48px;
+  margin-left: 54px;
+  @media screen and (max-width: 1000px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .female-doctor & {
+    margin-left: -2px;
+    margin-right: 0px;
+    @media screen and (max-width: 1000px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+.introduction__brief-history--text-contents {
+}
+.introduction__brief-history--text {
+  white-space: nowrap;
+  @media screen and (max-width: 1000px) {
+    text-align: left;
+    white-space: normal;
+    &:not(:first-child) {
+      margin-top: 7px;
+    }
+  }
+  .female-doctor & {
+    &:not(:first-child) {
+      margin-top: -3px;
+    }
+    @media screen and (max-width: 1000px) {
+      &:not(:first-child) {
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+.introduction__message {
+  width: 613px;
+  margin-left: -136px;
+  .female-doctor & {
+    width: 610px;
+    margin-left: 12px;
+    margin-right: -40px;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    .female-doctor & {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 90%;
+    .female-doctor & {
+      width: 90%;
+    }
+  }
+}
+
+.introduction__message--main {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 158%;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+.introduction__message--sub {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 200%;
+  margin-top: 30px;
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+  }
+}
+.introduction__branch {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  img {
+    position: absolute;
+    top: -166px;
+    right: 0;
+    width: 360px;
+    height: auto;
+    @media screen and (max-width: 1000px) {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 120px;
+    }
+  }
+}
+
+.introduction__kirin-dash {
+  margin-top: 20px;
+  height: 170px;
+  position: relative;
+  @media screen and (max-width: 1000px) {
+    height: 350px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 200px;
+  }
+}
+.introduction__kirin-dash--kirin {
+  position: absolute;
+  top: -173px;
+  left: 22px;
+  width: 139px;
+  animation: kirin-dash 8s infinite linear forwards;
+
+  @media screen and (max-width: 1000px) {
+    top: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 60px;
+    top: 40px;
+    left: 5px;
+  }
+}
+
+.introduction__kirin-dash--footstep {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 685px;
+  @media screen and (max-width: 1000px) {
+    top: 53px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 342px;
+  }
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  margin-top: -14px;
+}
+
+.breadcrumb-list--text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    background: url("../img/breadcrumb-list-arrow.png");
+    width: 6px;
+    height: 8px;
+    content: "";
+    margin-top: -1px;
+  }
+}

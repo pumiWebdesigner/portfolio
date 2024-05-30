@@ -1,0 +1,99 @@
+@use "base";
+
+.header {
+  background: rgba(#fff, 0.1);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: #{map-get(base.$layer, header)};
+  //スクロールしたら、もっと見えるようにする
+  .add-scrolled & {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  @include base.mq(pc) {
+    height: base.$header-height-pc;
+    //子要素の文字配置を中央寄せにするための設定。
+    // ただし、今回はli要素がdisplay:list-itemでデフォルトでtext-align:centerが適用されているので意味はない
+    // inline要素の配置の中央寄せのためではない
+    text-align: center;
+    transition: 0.2s;
+  }
+  @include base.mq(sp) {
+    height: base.$header-height-sp;
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+.header-logo {
+  @include base.mq(pc) {
+    display: none;
+  }
+  @include base.mq(sp) {
+    margin: 20px 0 0 16px;
+    transition: opacity 0.3s;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: base.$font-family-english;
+  }
+}
+.header-nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  @include base.mq(pc) {
+    height: 100%;
+  }
+}
+.header-nav-list {
+  @include base.mq(pc) {
+    display: flex;
+  }
+}
+.header-nav-item {
+  @include base.mq(pc) {
+    & + & {
+      margin-left: 40px;
+    }
+  }
+  @include base.mq(sp) {
+    margin-top: 20px;
+  }
+}
+.header-nav-item-link {
+  color: base.$font-black;
+  font-family: base.$font-family-english;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.26px;
+  position: relative;
+
+  @include base.mq(sp) {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-align: center;
+    padding: 16px;
+  }
+  @include base.mq(pc) {
+    padding: 0.5em 0;
+    &::after {
+      background: base.$font-black;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+      width: 100%;
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+    @include base.mq(sp) {
+      font-size: 18px;
+    }
+  }
+}

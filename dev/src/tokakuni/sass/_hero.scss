@@ -1,0 +1,57 @@
+@charset "utf-8";
+@use "base";
+
+.hero {
+  background: url(../img/mv.png);
+  background-position: 24% center;
+  background-size: cover;
+  height: 648px;
+  position: relative;
+  @include base.mq(pc) {
+    background-position: center center;
+  }
+  @include base.mq(sp) {
+    height: 668px;
+  }
+}
+.hero-inner {
+  @include base.mq(pc) {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 228px 20px 0 0;
+    width: 100%;
+  }
+
+  @include base.mq(sp) {
+    padding: 220px 16px 0;
+    width: 100%;
+  }
+}
+.hero-message {
+  @include base.mq(pc) {
+    margin-left: auto;
+    max-width: 600px;
+  }
+}
+.hero-message-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: calc(40 / 24);
+  @include base.mq(pc) {
+    font-size: 32px;
+    line-height: calc(48 / 32);
+  }
+}
+.hero-message-text {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  line-height: 1.45;
+  margin-top: 30px;
+
+  @include base.mq(sp) {
+    font-size: 14px;
+    line-height: calc(20 / 16);
+    margin-top: 24px;
+  }
+}
