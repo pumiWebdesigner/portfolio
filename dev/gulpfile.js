@@ -130,7 +130,7 @@ function compileEJS() {
 }
 
 // wacthする前の初回出力ファイル作成
-exports.build = gulp.parallel(compileEJS, formatHTML, minJS, normalJS, compileSass, copyImage);
+exports.build = gulp.parallel(compileEJS, formatHTML, minJS, compileSass, copyImage);
 // 初回以外の出力ファイル作成
 // ブラウザ表示、変更監視まとめて実行
 exports.dev = gulp.parallel(browserInit, watch);
