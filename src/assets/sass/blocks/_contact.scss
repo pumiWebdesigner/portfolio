@@ -3,7 +3,7 @@
 
 // contact
 .contact {
-  margin-top: calc(map.get($header, sp-height) + 150px);
+  margin-top: calc(88px + 150px);
   @include mq(pc) {
     margin-top: 0;
   }

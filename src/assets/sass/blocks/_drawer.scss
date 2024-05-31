@@ -10,7 +10,7 @@
   right: 15px;
   width: 40px;
   height: 70px;
-  z-index: map.get($layer, hamburger);
+  z-index: --layer-hamburger;
   display: block;
   transition: 0.5s;
   background-color: transparent;
@@ -61,12 +61,12 @@
     display: block;
     position: fixed;
 
-    z-index: map.get($layer, drawer);
-    padding-top: map.get($header, sp-height);
+    z-index: --layer-drawer;
+    padding-top: 88px;
     height: 100vh;
     top: 0;
     width: 100%;
-    background: map.get($color, drawer-bg-sp);
+    background: --drawer-bg-sp;
 
     // background: linear-gradient(to bottom, black, gray, blue);
     right: -100%;

@@ -25,13 +25,9 @@
 }
 body {
   font-family: "Oswald", "Noto Sans JP", sans-serif;
-  color: map.get($color, font);
+  color: --font;
 }
-.main {
-  @include mq(pc) {
-    width: calc(100% - map.get($header, pc-width));
-  }
-}
+
 .bg {
   background: url("../img/img_fv.jpg") top center/cover no-repeat;
   position: fixed;
@@ -41,6 +37,6 @@ body {
   width: 100%;
   z-index: -1;
   @include mq(pc) {
-    width: calc(100vw - map.get($header, pc-width));
+    width: calc(100vw - 200px);
   }
 }

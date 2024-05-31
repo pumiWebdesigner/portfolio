@@ -4,7 +4,7 @@
 
 .fv {
   padding-top: 100px;
-  margin-top: map.get($header, sp-height);
+  margin-top: 88px;
   @include mq(pc) {
     margin-top: 0;
   }
@@ -31,7 +31,7 @@
   // padding-block: 32px;
   margin-top: 30px;
   padding: 10px 10px 40px;
-  // background: map.get($color, section-sub);
+  // background:  --section-sub;
 }
 .works__img {
   img {
@@ -56,7 +56,7 @@
   //     content: "";
   //     // font-size: 36px;
   //     // font-weight: bold;
-  //     // color: map.get($color, main);
+  //     // color:  --main;
   //   }
   //   // &::before {
   //   //   position: absolute;
@@ -95,7 +95,7 @@
     // }
   }
   .swiper-pagination-bullet-active {
-    background: map.get($color, main);
+    background: --main;
   }
 }
 // swiper内では柔軟にボタンのサイズ変更できないので外だし
@@ -194,7 +194,7 @@
 .skills__messages {
   margin-top: 20px;
   padding: 20px 10px 20px 30px;
-  // background: map.get($color, section-sub);
+  // background:  --section-sub;
   font-weight: bold;
   ul {
     list-style: circle;
@@ -297,7 +297,7 @@
   line-height: 1.6;
 }
 // .works {
-//   background-color: map.get($color, bg-light);
+//   background-color:  --bg-light;
 // }
 // .works__list {
 //   @include mq(pc) {
@@ -397,7 +397,7 @@
 .flow__item {
   position: relative;
   padding: 46px 12px 24px;
-  background: map.get($color, section-sub);
+  background: --section-sub;
   box-shadow: 0 4px 15px 0 rgba(black, 0.15);
 
   // @media screen and (max-width: 1200px) {
@@ -422,7 +422,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background-color: map.get($color, bg-dark);
+  background-color: --bg-dark;
   color: white;
   width: 48px;
   height: 48px;
@@ -497,7 +497,7 @@
   background-color: #6f6f6f;
 }
 .page-bottom__item-twitter {
-  background-color: map.get($color, bg-dark);
+  background-color: --bg-dark;
 }
 
 // ダッシュする領域

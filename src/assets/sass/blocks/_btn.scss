@@ -5,7 +5,7 @@
 .util-btn--inline-block {
   padding: 4px 22px 6px;
   font-size: 20px;
-  color: map.get($color, font);
+  color: --font;
   text-align: center;
   font-family: "Oswald", "Noto Sans JP", sans-serif;
   font-weight: 700;
@@ -16,7 +16,7 @@
 
   &:hover {
     transform: translateY(4px);
-    background-color: map.get($color, hov-btn);
+    background-color: --hov-btn;
     box-shadow: 0px 0px 0px 0px currentColor;
   }
 }
@@ -43,10 +43,10 @@
     &:hover {
       background-color: white;
       .button__icon-path {
-        fill: map.get($color, bg-dark);
+        fill: --bg-dark;
       }
       .button__text {
-        color: map.get($color, bg-dark);
+        color: --bg-dark;
       }
     }
   }
@@ -82,7 +82,7 @@
 
 // svg画像の色設定（contactは反転）
 .button__icon-path-contact {
-  fill: map.get($color, bg-dark);
+  fill: --bg-dark;
 }
 
 // ボタンの文字設定（contact以外）
@@ -95,5 +95,5 @@
 
 // ボタンの文字設定（contact）
 .button__text-contact {
-  color: map.get($color, bg-dark);
+  color: --bg-dark;
 }

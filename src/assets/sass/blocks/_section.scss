@@ -6,7 +6,7 @@
   padding-block: 48px;
   background-color: #fff;
   &:nth-of-type(2n) {
-    background-color: map.get($color, section-sub);
+    background-color: --section-sub;
   }
 }
 .section__inner {

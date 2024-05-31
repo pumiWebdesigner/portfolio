@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: map.get($color, hov-btn);
+    background-color: --hov-btn;
     transition: transform 0.3s;
   }
   &:hover::before {
@@ -23,7 +23,8 @@
 }
 
 .hover__underline--from-left {
-  background-image: linear-gradient(90deg, map.get($color, accent), map.get($color, accent)); /* 改行しても下線を表示させるためにimage */
+  background-image: linear-gradient(90deg, --accent, --accent); /* 改行しても下線を表示させるためにimage */
+  // background-image: linear-gradient(90deg, map.get($color, accent), map.get($color, accent)); /* 改行しても下線を表示させるためにimage */
   background-repeat: no-repeat;
   background-position: left bottom; /* X軸の起点 Y軸の起点 */
   background-size: 0 1px; /* 線の横幅を0、縦幅を1pxに */

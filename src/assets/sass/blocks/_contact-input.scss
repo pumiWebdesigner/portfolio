@@ -30,7 +30,7 @@ textarea {
   &:hover,
   &:focus {
     border-radius: 8px;
-    border: 1px solid map.get($color, main);
+    border: 1px solid --main;
     background: #e9f6f8;
     outline: none;
   }
@@ -96,7 +96,7 @@ input[type="checkbox"] {
   &:focus,
   &:checked {
     & + span::before {
-      border: 1px solid map.get($color, main);
+      border: 1px solid --main;
     }
   }
   // チェック時にチェック時マークを表示
@@ -124,7 +124,7 @@ input[type="radio"] {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: map.get($color, main);
+      background: --main;
       @include mq(sp) {
         width: 8px;
         height: 8px;
@@ -149,8 +149,8 @@ input[type="checkbox"] {
     &::after {
       width: 12px;
       height: 6px;
-      border-bottom: solid 2px map.get($color, main);
-      border-left: solid 2px map.get($color, main);
+      border-bottom: solid 2px --main;
+      border-left: solid 2px --main;
       transform: translateY(-70%) rotate(-45deg);
       @include mq(sp) {
         width: 8px;
@@ -210,7 +210,7 @@ input[type="checkbox"] {
 //     // checked時に表示
 //     &:checked + span {
 //       &::before {
-//         border: 1px solid map.get($color, main);
+//         border: 1px solid --main;
 //       }
 //       &::after {
 //         opacity: 1;
@@ -219,7 +219,7 @@ input[type="checkbox"] {
 //     &:hover,
 //     &:focus {
 //       & + span::before {
-//         border: 1px solid map.get($color, main);
+//         border: 1px solid --main;
 //       }
 //     }
 //   }
@@ -250,7 +250,7 @@ input[type="checkbox"] {
 //   &:hover,
 //   &:focus {
 //     border-radius: 8px;
-//     border: 1px solid map.get($color, main);
+//     border: 1px solid --main;
 //     background: #e9f6f8;
 //     outline: none;
 //   }

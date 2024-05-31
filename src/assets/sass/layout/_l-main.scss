@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.l-main {
+  @include mq(pc) {
+    width: calc(100% - 200px);
+  }
+}

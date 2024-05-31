@@ -6,24 +6,24 @@
   // position: sticky;
   top: 0;
   left: 0;
-  z-index: map.get($layer, header);
+  z-index: --layer-header;
 
   width: 100%;
-  height: map.get($header, sp-height);
+  height: --height-sp-header;
   background: transparent;
   transition: 0.5s;
   color: white;
 
   @include mq(sp) {
     .is-scroll & {
-      background: map.get($color, header-bg-sp);
+      background: --header-bg-sp;
     }
   }
   @include mq(pc) {
     position: relative;
     // display: block;
-    background: map.get($color, header-bg-pc);
-    width: map.get($header, pc-width);
+    background: --header-bg-pc;
+    width: 200px;
     // bottom: 0;
     // height: 100vh;
     height: auto;
@@ -42,7 +42,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    width: map.get($header, pc-width);
+    width: 200px;
     // position: sticky;
     // top: 50px;
   }
