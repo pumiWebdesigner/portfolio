@@ -129,8 +129,12 @@ function compileEJS() {
     .pipe(gulp.dest("./public"));
 }
 
+function copyCss() {
+  return gulp.src("./src/**/*.css").pipe(gulp.dest("./public"));
+}
+
 // wacthする前の初回出力ファイル作成
-exports.build = gulp.parallel(compileEJS, formatHTML, minJS, compileSass, copyImage);
+exports.build = gulp.parallel(compileEJS, formatHTML, minJS, compileSass, copyImage, copyCss);
 // 初回以外の出力ファイル作成
 // ブラウザ表示、変更監視まとめて実行
 exports.dev = gulp.parallel(browserInit, watch);
