@@ -1,0 +1,55 @@
+@use "../global" as *;
+
+.c-hamburger-btn {
+  width: calc(40px + 1em);
+  height: 70px;
+  display: block;
+  transition: 0.5s;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 0.5em;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    content: "MENU";
+    .drawer-open & {
+      content: "CLOSE";
+    }
+  }
+}
+
+.c-hamburger-bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  margin-inline: auto;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: 0.3s;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      top: calc(14px * #{$i});
+    }
+  }
+
+  .drawer-open & {
+    width: 48px;
+    top: 28px;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transform: translateX(-50%) rotate(calc(45deg + 90deg * #{$i}));
+      }
+    }
+  }
+}

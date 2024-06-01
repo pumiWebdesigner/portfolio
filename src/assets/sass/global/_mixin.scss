@@ -10,9 +10,9 @@ $size: (
 
 $breakpoints: (
   "sp": "(width <=  #{map.get($size, "sp-max")})",
-  "sp-tb": "(width <=  #{map.get($size, "tb-max")})",
+  "sp-tab": "(width <=  #{map.get($size, "tb-max")})",
   "tb": "(#{map.get($size, "tb-min")} <= width <=  #{map.get($size, "tb-max")})",
-  "tb-pc": "(#{map.get($size, "tb-min")} <= width)",
+  "tab-pc": "(#{map.get($size, "tb-min")} <= width)",
   "pc": "(#{map.get($size, "pc-min")} <= width)",
 ) !default;
 

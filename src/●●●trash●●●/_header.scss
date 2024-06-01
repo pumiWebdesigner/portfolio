@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "../global" as *;
+
+.p-header {
+}
+
+.p-header__logo {
+  //ナビ要素は、他の要素に合わせるためにinline-block
+}
+
+.p-header__nav {
+  @include mq(pc) {
+    display: block;
+    // position: fixed;
+    // z-index: 100;
+    padding-top: 40px;
+  }
+  // spサイズは_drawer.scssのdrawer__navで設定
+}
+
+.p-header__nav-item {
+  & + & {
+    margin-top: 24px;
+  }
+}

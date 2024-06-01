@@ -17,16 +17,6 @@
     display: none;
   }
 }
-.wrapper {
-  display: flex;
-  @include mq(sp) {
-    display: block;
-  }
-}
-body {
-  font-family: "Oswald", "Noto Sans JP", sans-serif;
-  color: --font;
-}
 
 .bg {
   background: url("../img/img_fv.jpg") top center/cover no-repeat;

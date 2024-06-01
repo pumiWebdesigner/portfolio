@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  height: var(--height-pc-header);
+  @include mq(sp) {
+    height: var(--height-sp-header);
+  }
+  left: 0;
+  width: 100%;
+  z-index: var(--layer-header);
+}

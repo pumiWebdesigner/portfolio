@@ -1,0 +1,37 @@
+@use "../global" as *;
+
+.p-drawer__nav {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - var(--height-sp-header));
+  top: var(--height-sp-header);
+  right: -100%;
+  z-index: var(--layer-drawer);
+  transition: 0.5s;
+  .drawer-open & {
+    right: 0;
+    text-align: center;
+  }
+  background: var(--header-bg-pc);
+
+  ////////////////
+  padding-inline: 15px;
+}
+
+.p-drawer__nav--item {
+  color: white;
+  font-family: "Noto Sans JP";
+  font-size: 30px;
+  font-weight: 400;
+
+  &:first-child {
+    margin-top: 40px;
+  }
+}
+
+.p-drawer__link {
+  padding: 1em 1em;
+  text-align: center;
+  padding: 1em;
+  text-transform: uppercase;
+}
