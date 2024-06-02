@@ -24,80 +24,144 @@
     margin-top: 38px;
   }
 }
-.contact__field {
-  margin-top: 24px;
+
+.reserve__form--item {
   text-align: left;
-  @include mq(pc) {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 22px;
+  padding-top: 28px;
+  padding-bottom: 27.5px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  &:first-child {
+    border-top: #ddd solid 1px;
+  }
+  border-bottom: #ddd solid 1px;
+  @include mq(sp) {
+    flex-direction: column;
+    align-items: revert;
+  }
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 23.5px;
+    gap: 12px;
+  }
+}
+.reserve__form--title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 0 0 180px;
+  @include mq(sp) {
+    gap: 12px;
+    flex: revert;
   }
 }
 
-.contact__field__head {
-  width: 200px; //目検で決定
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  // size,weight,height,spacing
-  @include font(16, 400, 25.6, 0);
-  padding: 10px;
-}
-
-.contact__field--label {
-  @include font(14, 700, 22.4, 0);
+.reserve__form--title-text {
+  @include font(16, 500, null, null);
   display: grid;
   place-items: center;
 }
-.contact__field--tag {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 160%;
-  padding: 4px 8px;
+
+.reserve__form--require {
+  background-color: var(--accent);
+  width: 36px;
+  height: 23px;
   border-radius: 4px;
-  background: red;
   white-space: nowrap;
-}
-.contact__field--body {
-  // margin-top: 8px;
-  margin-top: 0;
-  @include mq(pc) {
-    width: calc(100% - 180px - 40px);
-    margin-top: 0;
-  }
-}
-.contact__field--radio-list {
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-  @include mq(pc) {
-    flex-direction: row;
-    gap: 15px;
+  @include font(12, 700, null, null);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  @include mq(sp) {
+    padding-top: 3px;
   }
 }
 
-// .contact-select-box {
-//   margin-top: 8px;
-//   @include mq(pc) {
-//     margin-top: 0;
-//   }
-//   border-radius: 8px;
-//   overflow: hidden;
-//   position: relative;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     right: 0;
-//     width: 52px;
-//     height: 56px;
-//     background: map.get($color, main) no-repeat url(../img/Icon/Icon=arrow-bottom.svg) center center;
-//     pointer-events: none;
-//   }
-// }
+.reserve__form--input,
+.reserve__form--selectbox-wrapper,
+.reserve__form--date-wrapper {
+  flex: 1;
+}
+
+.reserve__form--item-radio {
+  padding-top: 41px;
+  padding-bottom: 40px;
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+.reserve__form--radio-wrapper {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  @include mq(sp) {
+    margin-top: 12px;
+    gap: 40px;
+    // flex-direction: column;
+  }
+}
+.reserve__form--item-checkbox {
+  padding-top: 31px;
+  padding-bottom: 23px;
+  .reserve__form--require {
+    margin-top: -20px;
+  }
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+
+.reserve__form--title-text-top {
+  @include font(16, 500, null, null);
+}
+.reserve__form--title-text-bottom {
+  margin-top: 6px;
+  @include font(11, 500, null, null);
+  color: #888;
+}
+.reserve__form--checkbox-wrapper {
+  display: flex;
+  gap: 24px 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  @include mq(sp) {
+    margin-top: 14px;
+    gap: 24px;
+  }
+}
+.reserve__form--item-selectbox {
+  @include mq(sp) {
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+.reserve__form--item-date {
+  padding-top: 27px;
+}
+.reserve__form--date-wrapper {
+  margin-top: 2px;
+}
+.reserve__form--input-date {
+  & + & {
+    margin-top: 20px;
+  }
+}
+.reserve__form--item-textarea {
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 26px;
+  }
+}
 
 .contact__privacy {
   width: 100%;
@@ -108,6 +172,37 @@
   // @include mq(pc) {
   //   margin-top: 42px;
   // }
+}
+///////////////////
+/// ここまで
+///
+.reserve__button {
+  margin-top: 72px;
+  padding-block: 18.5px;
+  width: 360px;
+  border-radius: 28px;
+  @include font(16, 500, null, 1.28);
+  @include mq(sp) {
+    padding-block: 9.5px;
+    width: 273px;
+    @include font(14, 500, null, 1.12);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+    background-color: #ccc;
+    color: black;
+  }
+  @include mq(sp) {
+    margin-top: 70px;
+  }
+}
+.reserve__message-success {
+  max-width: 728px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: left;
+  @include font(14, 500, 24, null);
 }
 
 .contact-button {

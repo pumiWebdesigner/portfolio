@@ -1,0 +1,264 @@
+@use "sass:map";
+@use "../global" as *;
+
+.reserve {
+  margin-top: 80px;
+  margin-bottom: 192px;
+  @include mq(sp) {
+    margin-top: 61px;
+    margin-bottom: 134px;
+  }
+}
+.reserve__inner {
+  max-width: 728px;
+  width: 100%;
+  padding-inline: revert;
+  margin-inline: auto;
+  .is-success & {
+    max-width: 768px;
+  }
+  @include mq(sp) {
+    padding-inline: 20px;
+  }
+}
+.reserve__wrapper {
+  .is-success & {
+    display: none;
+  }
+}
+.reserve__message {
+  margin-top: 86px;
+  text-align: left;
+  @include mq(sp) {
+    margin-top: 65px;
+  }
+}
+.reserve__message--tel-title {
+  @include font(28, 700, null, 2.24);
+  @include mq(sp) {
+    @include font(20, 700, null, 1.6);
+  }
+}
+.reserve__info--tel {
+  margin-top: 34px;
+  color: var(--main);
+  @include mq(sp) {
+    margin-top: 29px;
+  }
+}
+.reserve__info--tel-number {
+  @include font(32, 700, null, -0.64);
+  padding-left: 32px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background: url(../img/phone.webp) no-repeat center center / cover;
+  }
+}
+.reserve__info--tel-text {
+  @include font(12, 500, null, null);
+  margin-top: 4px;
+  padding-left: 45px;
+}
+
+.reserve__message--tel-text {
+  @include font(14, 500, 24, null);
+  margin-top: 25px;
+  @include mq(sp) {
+    margin-top: 21px;
+  }
+}
+.reserve__message--email {
+  margin-top: 46px;
+  @include mq(sp) {
+    margin-top: 44px;
+  }
+}
+.reserve__message--email-title {
+  @include font(28, 700, null, 2.24);
+  @include mq(sp) {
+    @include font(20, 700, null, 1.6);
+  }
+}
+.reserve__message--email-text {
+  margin-top: 28px;
+  @include font(14, 500, 24, null);
+  @include mq(sp) {
+    margin-top: 23px;
+  }
+}
+.section__title {
+  margin-top: 157px;
+  @include mq(sp) {
+    margin-top: 95px;
+    @include font(20, 700, 28, 1.6);
+  }
+}
+.reserve__form {
+  margin-top: 74px;
+  @include mq(sp) {
+    margin-top: 70px;
+  }
+}
+.reserve__form--item {
+  text-align: left;
+  padding-top: 28px;
+  padding-bottom: 27.5px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  &:first-child {
+    border-top: #ddd solid 1px;
+  }
+  border-bottom: #ddd solid 1px;
+  @include mq(sp) {
+    flex-direction: column;
+    align-items: revert;
+  }
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 23.5px;
+    gap: 12px;
+  }
+}
+.reserve__form--title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 0 0 180px;
+  @include mq(sp) {
+    gap: 12px;
+    flex: revert;
+  }
+}
+.reserve__form--title-text {
+  @include font(16, 500, null, null);
+}
+.reserve__form--require {
+  background-color: var(--accent);
+  width: 36px;
+  height: 23px;
+  border-radius: 4px;
+  @include font(12, 700, null, null);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  @include mq(sp) {
+    padding-top: 3px;
+  }
+}
+.reserve__form--input,
+.reserve__form--selectbox-wrapper,
+.reserve__form--date-wrapper {
+  flex: 1;
+}
+.reserve__form--item-radio {
+  padding-top: 41px;
+  padding-bottom: 40px;
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+.reserve__form--radio-wrapper {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  @include mq(sp) {
+    margin-top: 12px;
+    gap: 40px;
+  }
+}
+.reserve__form--item-checkbox {
+  padding-top: 31px;
+  padding-bottom: 23px;
+  .reserve__form--require {
+    margin-top: -20px;
+  }
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+.reserve__form--title-text-top {
+  @include font(16, 500, null, null);
+}
+.reserve__form--title-text-bottom {
+  margin-top: 6px;
+  @include font(11, 500, null, null);
+  color: #888;
+}
+.reserve__form--checkbox-wrapper {
+  display: flex;
+  gap: 24px 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  @include mq(sp) {
+    margin-top: 14px;
+    gap: 24px;
+  }
+}
+.reserve__form--item-selectbox {
+  @include mq(sp) {
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+.reserve__form--item-date {
+  padding-top: 27px;
+}
+.reserve__form--date-wrapper {
+  margin-top: 2px;
+}
+.reserve__form--input-date {
+  & + & {
+    margin-top: 20px;
+  }
+}
+.reserve__form--item-textarea {
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 26px;
+  }
+}
+.reserve__button {
+  margin-top: 72px;
+  padding-block: 18.5px;
+  width: 360px;
+  border-radius: 28px;
+  @include font(16, 500, null, 1.28);
+  @include mq(sp) {
+    padding-block: 9.5px;
+    width: 273px;
+    @include font(14, 500, null, 1.12);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+    background-color: #ccc;
+    color: black;
+  }
+  @include mq(sp) {
+    margin-top: 70px;
+  }
+}
+.reserve__message-success {
+  max-width: 728px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: left;
+  @include font(14, 500, 24, null);
+}

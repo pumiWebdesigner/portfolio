@@ -1,0 +1,120 @@
+<!-- prettier-ignore -->
+<%_
+_%>
+
+<!-- wordPress化する時 -->
+<!-- formタグをdivタグに置換え -->
+<!-- inputタグもCONTACT7用に置換え -->
+<section id="contact" class="l-section p-contact wow fadeInUp">
+  <div class="l-inner">
+    <hgroup class="p-section__title">
+      <h2 class="p-section__title--main">Contact</h2>
+      <p class="p-section__title--sub">お問い合わせ</p>
+    </hgroup>
+
+    <form
+      id="js-form"
+      class="contact-form"
+      method="post"
+      action="
+        https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
+        "
+    >
+      <!-- /ここのコメントも送信時に消すので、formタグ内に記述 -->
+      <div class="contact__message">
+        ご相談やご質問など、お気軽にご連絡ください。
+        <br />以下のフォームに入力のうえ、ご送信ください。
+      </div>
+
+      <div class="contact__fields">
+        <div class="contact__field">
+          <div class="contact__field__head">
+            <label for="your-name" class="contact__field--label">お名前</label>
+            <span class="contact__field--tag">必須</span>
+          </div>
+          <div class="contact__field--body">
+            <input type="text" id="your-name" placeholder="山田太郎" name="entry.530212225" required />
+          </div>
+        </div>
+        <div class="contact__field">
+          <div class="contact__field__head">
+            <label for="your-email" class="contact__field--label">メールアドレス</label>
+            <span class="contact__field--tag">必須</span>
+          </div>
+          <div class="contact__field--body">
+            <input type="email" id="your-email" placeholder="info@example.com" name="emailAddress" required />
+          </div>
+        </div>
+        <!-- ↑labelのfor、inputのidを同値にし、labelクリック時にinputフォーカス -->
+        <!-- ↓labelの要素内にinputを配置することで、labelクリック時にinputフォーカス -->
+        <div class="contact__field">
+          <div class="contact__field__head">
+            <label class="contact__field--label" for="contact-type" id="contact-type"> お問い合わせ種類</label>
+            <span class="contact__field--tag">必須</span>
+          </div>
+
+          <div class="contact__field--body">
+            <div class="contact__field--radio-list">
+              <label class="contact__field--radio">
+                <input type="radio" name="entry.716562788" value="ホームページ制作" required />
+                <span class="contact-radio-label">ホームページ制作</span>
+              </label>
+              <label class="contact__field--radio">
+                <input type="radio" name="entry.716562788" value="ホームページ修正" />
+                <span class="contact-radio-label">ホームページ修正</span>
+              </label>
+              <label class="contact__field--radio">
+                <input type="radio" name="entry.716562788" value="ホームページ相談" />
+                <span class="contact-radio-label">ホームページ相談</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="contact__field">
+          <div class="contact__field__head">
+            <label for="your-message" class="contact__field--label">お問い合わせ内容</label>
+            <span class="contact__field--tag">必須</span>
+          </div>
+
+          <div class="contact__field--body">
+            <textarea
+              id="your-message"
+              placeholder="お問い合わせ内容をご入力ください。
+            3営業日以内にご返信いたします。"
+              name="entry.1269014493"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="contact__field">
+          <label class="contact__field__head contact__privacy">
+            <!-- <label class="contact__privacy"> -->
+            <input type="checkbox" name="entry.2114229630" value="プライバシーポリシーに合意する" required aria-label="プライバシーポリシーに合意する" />
+            <span>
+              <a href="./policy.html" target="_blank" class="colorchange"> プライバシーポリシー </a>
+              に合意する
+            </span>
+            <span class="contact__field--tag">必須</span>
+            <!-- </label> -->
+          </label>
+        </div>
+
+        <button id="js-submit" class="contact-button util-btn--inline-block" type="submit">上記の内容を送信する</button>
+      </div>
+    </form>
+
+    <div id="js-success" class="contact__message--success">
+      <p>
+        送信完了しました。
+        <br />ありがとうございました。 <br />3営業日以内にご返信いたします。
+      </p>
+    </div>
+    <div id="js-error" class="contact__message--error">
+      <p>
+        送信に失敗しました。
+        <br />ページを更新して再度送信してください。
+      </p>
+    </div>
+  </div>
+</section>
