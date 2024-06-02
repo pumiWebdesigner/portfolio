@@ -86,35 +86,3 @@
 //     }
 //   }
 // }
-
-.about__container {
-  @include mq(pc) {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
-    justify-content: space-between;
-  }
-}
-.about__img {
-  @include mq(pc) {
-    margin-top: -100px;
-  }
-  max-width: 400px;
-  img {
-    box-shadow: 0 4px 15px 0 rgba(black, 0.15);
-  }
-}
-.about__text-contents {
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 400px;
-  // & + & {
-  margin-top: 2em;
-  @include mq(pc) {
-    margin-top: 0;
-  }
-  // }
-}
-.about__text {
-  margin-top: 10px;
-}

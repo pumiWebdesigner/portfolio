@@ -4,13 +4,14 @@
   background: white;
   box-shadow: 0 4px 15px 0 rgba(black, 0.15);
   margin-top: 2rem;
-  padding: 1rem 1rem;
+  padding: 2rem;
   // height: 500px;
 }
 .p-skills__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: calc(30 / 1440 * 100vw) calc(20 / 1440 * 100vw);
+  gap: 1rem 2rem;
+  // calc(30 / 1440 * 100vw) calc(20 / 1440 * 100vw);
 }
 .p-skills__item {
   display: flex;

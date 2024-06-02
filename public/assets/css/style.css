@@ -500,8 +500,6 @@ img {
 a {
 	color: inherit;
 	display: inline-block;
-	height: 100%;
-	width: 100%;
 }
 
 .mask {
@@ -861,7 +859,7 @@ a {
 }
 
 .p-first-view__inner {
-	padding-inline: 10px;
+	padding-inline: 2rem;
 }
 
 .dialog__wrapper {
@@ -956,7 +954,7 @@ a {
 	background: #cff;
 	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	margin-top: 2rem;
-	padding: 1rem 1rem 2.5rem;
+	padding: 2rem;
 	position: relative;
 }
 
@@ -1048,7 +1046,7 @@ a {
 	height: calc(100vh - var(--height-pc-header));
 	position: fixed;
 	right: 0;
-	top: 0;
+	top: var(--height-pc-header);
 	width: 100%;
 	z-index: -1;
 }
@@ -1057,12 +1055,12 @@ a {
 	background: white;
 	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	margin-top: 2rem;
-	padding: 1rem 1rem;
+	padding: 2rem;
 }
 
 .p-skills__list {
 	display: grid;
-	gap: 2.0833333333vw 1.3888888889vw;
+	gap: 1rem 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 
@@ -1166,6 +1164,78 @@ a {
 	background: url(../img/swiper_next.svg) center center/cover;
 }
 
+.p-about-section {
+	margin-inline: auto;
+	width: 70%;
+}
+
+.p-about__container {
+	padding-right: 50%;
+	position: relative;
+}
+
+.p-about__img {
+	content: "";
+	height: auto;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40%;
+}
+
+.p-about__text-contents {
+	min-height: 300px;
+}
+
+.p-about__text {
+	margin-top: 10px;
+}
+
+.p-contact-twitter {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-bottom: 0;
+}
+
+.p-contact-twitter__item {
+	padding: 40px;
+	text-align: center;
+}
+
+.p-contact-twitter__item-contact {
+	background-color: #6f6f6f;
+}
+
+.p-contact-twitter__item-twitter {
+	background-color: var(--bg-dark);
+}
+
+.p-contact-twitter__button {
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid white;
+	display: inline-flex;
+	margin-inline: auto;
+	margin-top: 2rem;
+	padding: 0.5rem 1.5rem;
+}
+
+.p-contact-twitter__button__icon {
+	display: grid;
+	height: 24px;
+	place-items: center;
+	width: 24px;
+}
+
+.p-contact-twitter__button__text {
+	color: white;
+	font-size: 16px;
+	letter-spacing: 0.08em;
+	margin-left: 10px;
+}
+
 .u-separate {
 	margin-bottom: 24px;
 	margin-top: 24px;
@@ -1193,25 +1263,6 @@ a {
 
 .hover__underline--from-left:hover {
 	background-size: 100% 1px; /* 線の横幅を100%にする */
-}
-
-.about__img {
-	max-width: 400px;
-}
-
-.about__img img {
-	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-}
-
-.about__text-contents {
-	font-size: 16px;
-	line-height: 1.6;
-	margin-top: 2em;
-	max-width: 400px;
-}
-
-.about__text {
-	margin-top: 10px;
 }
 
 @media (width <= 767px) {
@@ -1255,7 +1306,7 @@ a {
 
 .p-first-view__container {
 	display: revert;
-	padding-inline: 10px;
+	padding-inline: 2rem;
 }
 
 .p-first-view__container section {
@@ -1284,6 +1335,7 @@ a {
 
 .p-bg {
 	height: calc(100vh - var(--height-sp-header));
+	top: var(--height-sp-header);
 }
 
 .swiper-button-prev,
@@ -1298,6 +1350,10 @@ a {
 
 .swiper-button-next {
 	right: 0;
+}
+
+.p-contact-twitter {
+	display: revert;
 }
 
 .u-hidden-sp {
@@ -1337,23 +1393,28 @@ a {
 	justify-content: space-between;
 }
 
+.p-contact-twitter__item {
+	padding: 54px 10px;
+}
+
+.p-contact-twitter__button {
+	transition: background 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.p-contact-twitter__button:hover {
+	background-color: white;
+}
+
+.p-contact-twitter__button:hover .p-contact-twitter__button__icon-path {
+	fill: var(--bg-dark);
+}
+
+.p-contact-twitter__button:hover .p-contact-twitter__button__text {
+	color: var(--bg-dark);
+}
+
 .u-hidden-pc {
 	display: none !important;
-}
-
-.about__container {
-	display: flex;
-	flex-direction: row-reverse;
-	gap: 40px;
-	justify-content: space-between;
-}
-
-.about__img {
-	margin-top: -100px;
-}
-
-.about__text-contents {
-	margin-top: 0;
 }
 
 }

@@ -6,10 +6,11 @@
     const skillsHeight = skillsContents.offsetHeight;
     const worksHeight = worksContents.offsetHeight;
 
-    if (skillsHeight > worksHeight) {
-      worksContents.style.height = skillsHeight + "px";
-    } else {
+    if (skillsHeight < worksHeight) {
       skillsContents.style.height = worksHeight + "px";
     }
+    // else {
+    // worksContents.style.height = skillsHeight + "px";
+    // }
   }
 }

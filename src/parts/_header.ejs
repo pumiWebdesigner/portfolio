@@ -3,19 +3,19 @@
 const menus = [ 
   { 
     name : "works" ,
-    path : `${path}/#works` 
-  },
-  { 
-    name : "about" ,
-    path : `${path}/#about` 
+    link : "#works", 
   },
   { 
     name : "skills" ,
-    path : `${path}/#skills` 
+    link : "#skills" 
   },
   { 
     name : "contact" ,
-    path : `${path}/#contact` 
+    link : "#contact" 
+  },
+  { 
+    name : "Twitter(X)" ,
+    link : "https://twitter.com/pumi_webcoder"
   }
 ]; _%>
 <header class="l-header p-header">
@@ -30,7 +30,7 @@ const menus = [
       <nav class="p-header__nav">
         <%_ menus.forEach(menu => { _%>
         <div class="p-header__nav--item">
-          <a class="p-header__link" href="#<%= menu.name %>"><%= menu.name %></a>
+          <a class="p-header__link" href="<%= menu.link %>"><%= menu.name %></a>
         </div>
         <%_ }); _%>
       </nav>
@@ -47,7 +47,7 @@ const menus = [
     <nav class="p-drawer__nav">
       <%_ menus.forEach(menu => { _%>
       <div class="p-drawer__nav--item">
-        <a class="p-drawer__link" href="#<%= menu.name %>"><%= menu.name %></a>
+        <a class="p-drawer__link" href="<%= menu.link %>"><%= menu.name %></a>
       </div>
       <%_ }); _%>
     </nav>
