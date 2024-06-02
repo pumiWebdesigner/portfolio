@@ -615,7 +615,7 @@ a {
 .l-section {
 	margin-top: 4rem;
 	min-height: 300px;
-	padding-block: 3rem;
+	padding-block: 3rem 2rem;
 }
 
 .c-hamburger-btn {
@@ -1090,7 +1090,7 @@ a {
 }
 
 .p-skills__messages li {
-	font-size: 1.1111111111vw;
+	font-size: max(10px, 1.1111111111vw);
 	list-style: circle;
 	margin-top: 10px;
 }
@@ -1268,6 +1268,10 @@ a {
 
 .p-section__title--sub {
 	font-size: 1.2rem;
+}
+
+.p-section__explanation {
+	padding-inline: 1rem;
 }
 
 .swiper-button-prev {

@@ -53,6 +53,9 @@
 }
 .p-section__explanation {
   margin-top: 2rem;
+  @include mq(sp) {
+    padding-inline: 1rem;
+  }
   p + p {
     margin-top: 1rem;
   }

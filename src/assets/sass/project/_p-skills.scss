@@ -36,6 +36,6 @@
   li {
     list-style: circle;
     margin-top: 10px;
-    font-size: calc(16px / 1440px * 100vw);
+    font-size: max(10px, calc(16px / 1440px * 100vw));
   }
 }
