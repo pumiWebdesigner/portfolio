@@ -602,7 +602,7 @@ a {
 	height: inherit;
 	margin-inline: auto;
 	max-width: 1440px;
-	padding-inline: 40px;
+	padding-inline: 2rem;
 	width: 100%;
 }
 
@@ -887,10 +887,6 @@ a {
 
 .p-first-view__container section:nth-of-type(2n) {
 	background: #cff;
-}
-
-.p-first-view__inner {
-	padding-inline: 2rem;
 }
 
 .dialog__wrapper {
@@ -1267,19 +1263,9 @@ a {
 	margin-left: 10px;
 }
 
-.contact {
+.p-contact {
 	background: #fff;
-	margin-top: 238px;
-	padding-block: 40px 44px;
 	text-align: center;
-}
-
-.contact__inner {
-	padding-inline: 20px;
-}
-
-.contact__button--top {
-	border: none;
 }
 
 .contact__message {
@@ -1560,10 +1546,6 @@ input[type=checkbox] + span::after {
 	height: var(--height-sp-header);
 }
 
-.l-inner {
-	padding-inline: revert;
-}
-
 .l-first-view {
 	margin-top: var(--height-sp-header);
 }
@@ -1595,7 +1577,6 @@ input[type=checkbox] + span::after {
 
 .p-first-view__container {
 	display: revert;
-	padding-inline: 2rem;
 }
 
 .p-first-view__container section {
@@ -1643,10 +1624,6 @@ input[type=checkbox] + span::after {
 
 .p-contact-twitter {
 	display: revert;
-}
-
-.contact__inner {
-	padding-inline: 10px;
 }
 
 input[type=radio] + span,
@@ -1738,14 +1715,6 @@ input[type=checkbox] + span::after {
 
 .p-contact-twitter__button:hover .p-contact-twitter__button__text {
 	color: var(--bg-dark);
-}
-
-.contact {
-	margin-top: 0;
-}
-
-.contact {
-	padding-block: 120px;
 }
 
 .contact__message {

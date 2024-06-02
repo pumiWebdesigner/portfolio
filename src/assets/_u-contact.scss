@@ -1,0 +1,118 @@
+@use "sass:map";
+@use "../global" as *;
+
+.contact {
+  margin-top: 80px;
+  margin-bottom: 192px;
+  @include mq(sp) {
+    margin-top: 61px;
+    margin-bottom: 132px;
+  }
+}
+.contact__inner {
+  max-width: 728px;
+  width: 100%;
+  padding-inline: revert;
+  @include mq(sp) {
+    padding-inline: 20px;
+  }
+  .is-success & {
+    max-width: 768px;
+  }
+}
+.contact__wrapper {
+  .is-success & {
+    display: none;
+  }
+}
+.contact__message {
+  @include font(14, 500, 24, null);
+  text-align: left;
+}
+.section__title {
+  margin-top: 157px;
+  @include mq(sp) {
+    margin-top: 100px;
+    @include font(20, 700, 28, 1.6);
+  }
+}
+.contact__form {
+  margin-top: 74px;
+  @include mq(sp) {
+    margin-top: 70px;
+  }
+}
+.contact__form--item {
+  text-align: left;
+  padding-top: 28px;
+  padding-bottom: 27.5px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  &:first-child {
+    border-top: #ddd solid 1px;
+  }
+  border-bottom: #ddd solid 1px;
+  @include mq(sp) {
+    flex-direction: column;
+    align-items: revert;
+  }
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 23.5px;
+    gap: 12px;
+  }
+}
+.contact__form--title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 180px;
+  @include mq(sp) {
+    gap: 12px;
+  }
+}
+.contact__form--title-text {
+  @include font(16, 500, null, null);
+}
+.contact__form--require {
+  background-color: var(--accent);
+  width: 36px;
+  height: 23px;
+  border-radius: 4px;
+  @include font(12, 700, null, null);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  @include mq(sp) {
+    padding-top: 3px;
+  }
+}
+.contact__form--input {
+  flex: 1;
+}
+.contact__button {
+  margin-top: 72px;
+  padding-block: 18.5px;
+  width: 360px;
+  border-radius: 28px;
+  @include font(16, 500, null, 1.28);
+  @include mq(sp) {
+    padding-block: 9.5px;
+    width: 273px;
+    @include font(14, 500, null, 1.12);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+    background-color: #ccc;
+    color: black;
+  }
+}
+.contact__message-success {
+  max-width: 728px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: left;
+  @include font(14, 500, 24, null);
+}

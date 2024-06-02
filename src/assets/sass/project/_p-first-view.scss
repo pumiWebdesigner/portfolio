@@ -7,7 +7,6 @@
   display: flex;
   @include mq(sp) {
     display: revert;
-    padding-inline: 2rem;
   }
   section {
     width: 50%;
@@ -20,8 +19,4 @@
       background: #cff;
     }
   }
-}
-
-.p-first-view__inner {
-  padding-inline: 2rem;
 }

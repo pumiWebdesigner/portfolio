@@ -1,27 +1,9 @@
 @use "../global" as *;
 
 // contact
-.contact {
-  margin-top: calc(88px + 150px);
-  @include mq(pc) {
-    margin-top: 0;
-  }
+.p-contact {
   background: #fff;
-  padding-block: 40px 44px;
   text-align: center;
-  @include mq(pc) {
-    padding-block: 120px;
-  }
-}
-.contact__inner {
-  padding-inline: 20px;
-  @include mq(sp) {
-    padding-inline: 10px;
-  }
-}
-
-.contact__button--top {
-  border: none;
 }
 
 .contact__message {
@@ -35,7 +17,7 @@
 }
 
 .contact__fields {
-  max-width: 848px;
+  max-width: 900px; //目検で決定
   margin-inline: auto;
   margin-top: 24px;
   @include mq(pc) {
@@ -54,9 +36,7 @@
 }
 
 .contact__field__head {
-  // width: 260px;
-  width: 200px;
-  // font-size: 16px;
+  width: 200px; //目検で決定
   display: flex;
   align-items: center;
   gap: 10px;

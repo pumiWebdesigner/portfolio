@@ -1,0 +1,102 @@
+<!-- prettier-ignore -->
+<%_
+_%>
+
+<div class="contact__form js-contact">
+  <div class="contact__form--item">
+    <div class="contact__form--title"><label for="name" class="contact__form--title-text">お名前</label> <span class="contact__form--require">必須</span></div>
+    <div class="contact__form--input">
+      <span class="wpcf7-form-control-wrap" data-name="your-name"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact__form--input js-text"
+          id="name"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="山田　太郎"
+          value=""
+          type="text"
+          name="your-name"
+          required="required"
+      /></span>
+      <div class="error-message"></div>
+    </div>
+  </div>
+  <div class="contact__form--item">
+    <div class="contact__form--title"><label for="name-kana" class="contact__form--title-text">フリガナ</label> <span class="contact__form--require">必須</span></div>
+    <div class="contact__form--input">
+      <span class="wpcf7-form-control-wrap" data-name="name-kana"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact__form--input js-kana"
+          id="name-kana"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="ヤマダ　タロウ"
+          value=""
+          type="text"
+          name="name-kana"
+          required="required"
+      /></span>
+      <div class="error-message"></div>
+    </div>
+  </div>
+  <div class="contact__form--item">
+    <div class="contact__form--title"><label for="tel" class="contact__form--title-text">電話番号</label> <span class="contact__form--require">必須</span></div>
+    <div class="contact__form--input">
+      <span class="wpcf7-form-control-wrap" data-name="tel"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel contact__form--input js-tel-number"
+          id="tel"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="000-0000-0000"
+          value=""
+          type="tel"
+          name="tel"
+          required="required"
+      /></span>
+      <div class="error-message"></div>
+    </div>
+  </div>
+  <div class="contact__form--item">
+    <div class="contact__form--title"><label for="email" class="contact__form--title-text">メールアドレス</label> <span class="contact__form--require">必須</span></div>
+    <div class="contact__form--input">
+      <span class="wpcf7-form-control-wrap" data-name="emailAddress"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email contact__form--input js-mail"
+          id="email"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="xxx@example.com"
+          value=""
+          type="email"
+          name="emailAddress"
+          required="required"
+      /></span>
+      <div class="error-message"></div>
+    </div>
+  </div>
+  <div class="contact__form--item">
+    <div class="contact__form--title"><label for="message" class="contact__form--title-text">お問い合わせ内容</label> <span class="contact__form--require">必須</span></div>
+    <div class="contact__form--input">
+      <span class="wpcf7-form-control-wrap" data-name="message">
+        <textarea
+          cols="40"
+          rows="5"
+          class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact__form--input contact__form--textarea js-text"
+          id="message"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="ご自由にご記入ください"
+          name="message"
+          required="required"
+        ></textarea>
+      </span>
+      <div class="error-message"></div>
+    </div>
+  </div>
+  <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /><span class="wpcf7-spinner"></span>
+</div>
