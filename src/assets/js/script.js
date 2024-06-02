@@ -1,9 +1,8 @@
 {
-  // ページ内の遷移
+  // スムーズスクロール
   // aタグのクリック（ドロワー関連は専用処理あり）
   jQuery('a[href^="#"]').on("click", function (e) {
     e.preventDefault(); // aタグの通常の処理を止める
-    console.log("test");
 
     // aタグのhrefが遷移する先
     var id = jQuery(this).attr("href"); // スクロール先のhrefを取得
@@ -23,9 +22,6 @@
       // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
       var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
       var headerHeight = $(".l-header").outerHeight(); // ヘッダーの高さ（マージン含む）
-      if ($(window).width() >= 1024) {
-        headerHeight = 0; // PCサイズでheaderHeightを0に設定
-      }
       scrollDistance = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
     }
     return scrollDistance;

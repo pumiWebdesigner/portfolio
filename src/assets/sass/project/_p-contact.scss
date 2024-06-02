@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "../global" as *;
 
 // contact
@@ -150,6 +149,7 @@
 }
 .contact__message--success,
 .contact__message--error {
+  margin-top: 2rem;
   text-align: center;
   display: none;
   background: #fff;
