@@ -26,6 +26,6 @@ const swiper = new Swiper(".swiper", {
 jQuery(".js-modal__btn--open").on("click", function () {
   swiper.autoplay.stop(); // モーダル表示時にスライドを止める
 });
-jQuery(".js-modal__btn--close").on("click", function (e) {
+jQuery(".js-modal__btn--close").on("click", function () {
   swiper.autoplay.start(); // モーダルを閉じたらスライドを再開する
 });

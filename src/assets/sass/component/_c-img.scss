@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.c-img {
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+}

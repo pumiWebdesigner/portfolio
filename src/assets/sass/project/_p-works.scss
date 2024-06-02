@@ -1,0 +1,86 @@
+@use "../global" as *;
+
+// .p-works__slide--contents {
+//   position: relative;
+// }
+
+.p-works__contents {
+  background: white;
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+  margin-top: 2rem;
+  padding: 1rem 1rem 2.5rem;
+  position: relative;
+}
+.p-works__img {
+  overflow: hidden;
+
+  .swiper-pagination {
+    // bottom: -5px;
+    bottom: 7px;
+  }
+  .swiper-pagination-bullet {
+    background: #c2c2c2;
+    // width: 8px;
+    // height: 8px;
+    width: 15px;
+    height: 15px;
+    padding: 6px;
+    opacity: 0.8;
+    margin: 0 10px !important;
+    // @include mq(sp) {
+    //   width: 6px;
+    //   height: 6px;
+    // }
+  }
+  .swiper-pagination-bullet-active {
+    background: --main;
+  }
+}
+// swiper内では柔軟にボタンのサイズ変更できないので外だし
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+
+  // top: calc(50% + 40px);
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+  }
+  &::before {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  &::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.swiper-button-prev {
+  // position: absolute;
+
+  left: 20px;
+  &::after {
+    background: url(../img/swiper_prev.svg) center center / cover;
+  }
+  @include mq(sp) {
+    left: 0;
+  }
+}
+.swiper-button-next {
+  // position: absolute;
+  right: 20px;
+  &::after {
+    background: url(../img/swiper_next.svg) center center / cover;
+  }
+  @include mq(sp) {
+    right: 0;
+  }
+}

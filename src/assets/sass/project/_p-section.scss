@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "../global" as *;
+
+.p-section {
+  background-color: #fff;
+  &:nth-of-type(2n) {
+    background-color: var(--section-sub);
+  }
+}
+
+.p-section__title {
+  text-align: center;
+}
+
+.p-section__title--main {
+  letter-spacing: 0.1em;
+  font-size: 3rem;
+
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  @include mq(sp) {
+    font-size: 2rem;
+  }
+  display: inline-block;
+  padding-inline: 2rem;
+  position: relative;
+  &::before,
+  &::after {
+    content: "-";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: auto;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+.p-section__title--sub {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  @include mq(sp) {
+    font-size: 1.2rem;
+  }
+}
+.p-section__contents {
+  margin-top: 2rem;
+}
+.p-section__explanation {
+  margin-top: 2rem;
+  p + p {
+    margin-top: 1rem;
+  }
+}

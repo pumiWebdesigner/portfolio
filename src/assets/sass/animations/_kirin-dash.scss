@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "../global" as *;
+
+// ダッシュする領域
+.kirin-dash {
+  height: 170px;
+  position: relative;
+}
+.kirin-dash--kirin {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // キリンの横幅、縦幅は画像に合わせる
+  width: 100px;
+  height: auto;
+  animation: kirin-dash 8s infinite linear forwards;
+}
+
+@keyframes kirin-dash {
+  // キリンの向き（0degで右向き、180degで左向き）
+  $kirin-direction: 0deg;
+  // キリン左端
+  0%,
+  100% {
+    // right: auto;
+    left: 30px;
+    transform: rotate(0deg);
+  }
+  // キリン右端
+  50% {
+    left: calc(100vw - 100px - 30px);
+    // right: 30px;
+
+    // left: auto;
+    // right: calc(100vw - 30px);
+  }
+  // 5%～95%の間5%毎に傾き幅を反転
+  // 50%以上でキリンの向きを反転
+  @for $i from 1 through 19 {
+    @if $i >= 10 {
+      $kirin-direction: 180deg;
+    }
+    #{calc($i * 5%)} {
+      @if $i % 2 == 0 {
+        transform: rotate(calc(15deg * -1)) rotateY($kirin-direction);
+      } @else {
+        transform: rotate(calc(15deg * 1)) rotateY($kirin-direction);
+      }
+    }
+  }
+}
+
+//headerの横幅分キリンの移動距離を変える
+@media screen and (min-width: 1024px) {
+  @keyframes kirin-dash {
+    // キリンの向き（0degで右向き、180degで左向き）
+    $kirin-direction: 0deg;
+    // キリン左端
+    0%,
+    100% {
+      // right: auto;
+      left: 15px;
+      transform: rotate(0deg);
+    }
+    // キリン右端
+    50% {
+      left: calc(100vw - 200px - 100px - 15px);
+      // right: 30px;
+      // left: auto;
+      // right: calc(100vw - 30px);
+    }
+    // 5%～95%の間5%毎に傾き幅を反転
+    // 50%以上でキリンの向きを反転
+    @for $i from 1 through 19 {
+      @if $i >= 10 {
+        $kirin-direction: 180deg;
+      }
+      #{calc($i * 5%)} {
+        @if $i % 2 == 0 {
+          transform: rotate(calc(15deg * -1)) rotateY($kirin-direction);
+        } @else {
+          transform: rotate(calc(15deg * 1)) rotateY($kirin-direction);
+        }
+      }
+    }
+  }
+}

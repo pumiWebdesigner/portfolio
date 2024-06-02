@@ -1,0 +1,20 @@
+@use "../global" as *;
+
+.p-first-view {
+  background: #eee;
+}
+.p-first-view__container {
+  display: flex;
+
+  section {
+    width: 50%;
+    margin-top: 0;
+    &:nth-of-type(2n) {
+      background: #cff;
+    }
+  }
+}
+
+.p-first-view__inner {
+  padding-inline: 10px;
+}

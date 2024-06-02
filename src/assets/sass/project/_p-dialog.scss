@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../global" as *;
+
+.dialog__wrapper {
+  // 標準でdialogにはwidth,heightの最大値が設定されている。
+  border: none;
+  padding: 2rem;
+  width: 90%;
+  border-radius: 1.5rem;
+  &::backdrop {
+    background-color: rgba(#000, 0.5);
+  }
+}
+.dialog__container {
+  @include mq(pc) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dialog__img {
+  flex: 0 1 48%;
+  // aspect-ratio: 3 / 2;
+}
+.dialog__text {
+  // font-family: "Oswald", "Noto Sans JP", sans-serif;
+  text-align: left;
+  flex: 0 0 48%;
+  dt {
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+  dd {
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+}

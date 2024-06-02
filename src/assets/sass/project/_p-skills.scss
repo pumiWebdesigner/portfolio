@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.p-skills__contents {
+  background: white;
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+  margin-top: 2rem;
+  padding: 1rem 1rem 2.5rem;
+}
+.p-skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  gap: 2rem 1.5rem;
+  @media screen and (min-width: 1024px) and (max-width: 1200px) {
+    gap: 1rem 0.8rem;
+  }
+  // width: calc(33% - 10px * 2 - 1px);
+  // 実際に格納される.p-skills__itemは50px+10px+60px=120px
+}
+.p-skills__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #eee;
+  padding: 0.5rem;
+}
+.p-skills__item--img {
+  width: 50px;
+  height: 50px;
+}
+
+.p-skills__item-name {
+  display: inline-block;
+}
+
+.p-skills__messages {
+  margin-top: 20px;
+  padding: 1rem 0.8rem;
+
+  li {
+    list-style: circle;
+    margin-top: 10px;
+    @include mq(tb) {
+      @media screen and (max-width: 1200px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

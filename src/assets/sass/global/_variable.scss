@@ -15,8 +15,10 @@
   --accent: #f00;
   --hov-btn: rgba(255, 240, 228, 1);
   --header-bg-pc: linear-gradient(to bottom, #00f, #80f, #000);
-  --header-bg-sp: blue;
+  --header-bg-sp: #00f;
   --drawer-bg-sp: linear-gradient(to bottom, #00f, #80f, #000);
+  --drawer-bg-sp: #000;
+
   --section-sub: rgb(255, 240, 228);
   --bg-dark: #4a4a4a;
 
@@ -48,7 +50,8 @@
   // height
   --height-pc-header: 104px;
   --height-sp-header: 80px;
-
+  --height-pc-footer: 80px;
+  --height-sp-footer: 70px;
   // padding
   --padding-pc-comp: 130;
   --padding-tab-comp: 60;

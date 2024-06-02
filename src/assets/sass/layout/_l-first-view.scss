@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+.l-first-view {
+  margin-top: var(--height-pc-header);
+  // height: calc(100vh - var(--height-pc-header));
+  @include mq(sp) {
+    margin-top: var(--height-sp-header);
+    // height: calc(100vh - var(--height-sp-header));
+  }
+}
