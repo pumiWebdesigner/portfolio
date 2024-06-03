@@ -1,0 +1,48 @@
+<!-- prettier-ignore -->
+<%_
+_%>
+
+<!-- ラジオボタン -->
+<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+<div class="p-contact__form--item reserve__form--item-radio">
+  <div class="p-contact__form--title">
+    <!-- <div class="p-contact__form--title-text">初診/再診</div> -->
+    <div class="p-contact__form--title-text">お問い合わせ種類</div>
+    <!-- <label for="radio-button" class="p-contact__form--title-text">初診/再診</label> -->
+    <span class="p-contact__form--require">必須</span>
+  </div>
+  <div class="p-contact__form--input">
+    <!-- wrapperの構成が違ってたので、HTML用にクラスをコピーしてDIVタグ作成した -->
+    <!-- <span class="wpcf7-form-control-wrap" data-name="radio-button">
+        <span class="wpcf7-form-control wpcf7-radio reserve__form--radio-wrapper js-radio" id="radio-button">
+          <span class="wpcf7-list-item first">
+            <label>
+              <input type="radio" name="radio-button" value="初診" checked="checked" />
+              <span class="wpcf7-list-item-label">初診</span>
+            </label>
+          </span>
+          <span class="wpcf7-list-item last">
+            <label>
+              <input type="radio" name="radio-button" value="再診" />
+              <span class="wpcf7-list-item-label">再診</span>
+            </label>
+          </span>
+        </span>
+      </span> -->
+    <div class="p-contact__form--radio-wrapper js-radio">
+      <label class="p-contact__field--radio">
+        <input type="radio" name="entry.716562788" value="ホームページ制作" required />
+        <span class="p-contact-radio-label">ホームページ制作</span>
+      </label>
+      <label class="p-contact__field--radio">
+        <input type="radio" name="entry.716562788" value="ホームページ修正" />
+        <span class="p-contact-radio-label">ホームページ修正</span>
+      </label>
+      <label class="p-contact__field--radio">
+        <input type="radio" name="entry.716562788" value="ホームページ相談" />
+        <span class="p-contact-radio-label">ホームページ相談</span>
+      </label>
+    </div>
+    <div class="error-message"></div>
+  </div>
+</div>

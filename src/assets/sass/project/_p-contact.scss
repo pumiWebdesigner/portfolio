@@ -25,7 +25,7 @@
   }
 }
 
-.reserve__form--item {
+.p-contact__form--item {
   text-align: left;
   padding-top: 28px;
   padding-bottom: 27.5px;
@@ -46,7 +46,7 @@
     gap: 12px;
   }
 }
-.reserve__form--title {
+.p-contact__form--title {
   display: flex;
   gap: 16px;
   align-items: center;
@@ -57,13 +57,13 @@
   }
 }
 
-.reserve__form--title-text {
+.p-contact__form--title-text {
   @include font(16, 500, null, null);
   display: grid;
   place-items: center;
 }
 
-.reserve__form--require {
+.p-contact__form--require {
   background-color: var(--accent);
   width: 36px;
   height: 23px;
@@ -78,57 +78,57 @@
   }
 }
 
-.reserve__form--input,
-.reserve__form--selectbox-wrapper,
-.reserve__form--date-wrapper {
+.p-contact__form--input,
+.p-contact__form--selectbox-wrapper,
+.p-contact__form--date-wrapper {
   flex: 1;
 }
 
-.reserve__form--item-radio {
+.p-contact__form--item-radio {
   padding-top: 41px;
   padding-bottom: 40px;
   @include mq(sp) {
     padding-top: 25px;
     padding-bottom: 28px;
-    .reserve__form--require {
+    .p-contact__form--require {
       margin-left: 4px;
     }
   }
 }
-.reserve__form--radio-wrapper {
+.p-contact__form--radio-wrapper {
   display: flex;
   gap: 32px;
   align-items: center;
   @include mq(sp) {
     margin-top: 12px;
-    gap: 40px;
-    // flex-direction: column;
+    flex-direction: column;
+    align-items: revert;
   }
 }
-.reserve__form--item-checkbox {
+.p-contact__form--item-checkbox {
   padding-top: 31px;
   padding-bottom: 23px;
-  .reserve__form--require {
+  .p-contact__form--require {
     margin-top: -20px;
   }
   @include mq(sp) {
     padding-top: 27px;
     padding-bottom: 28px;
-    .reserve__form--require {
+    .p-contact__form--require {
       margin-left: 4px;
     }
   }
 }
 
-.reserve__form--title-text-top {
+.p-contact__form--title-text-top {
   @include font(16, 500, null, null);
 }
-.reserve__form--title-text-bottom {
+.p-contact__form--title-text-bottom {
   margin-top: 6px;
   @include font(11, 500, null, null);
   color: #888;
 }
-.reserve__form--checkbox-wrapper {
+.p-contact__form--checkbox-wrapper {
   display: flex;
   gap: 24px 32px;
   align-items: center;
@@ -138,34 +138,37 @@
     gap: 24px;
   }
 }
-.reserve__form--item-selectbox {
+.p-contact__form--item-selectbox {
   @include mq(sp) {
-    .reserve__form--require {
+    .p-contact__form--require {
       margin-left: 4px;
     }
   }
 }
-.reserve__form--item-date {
+.p-contact__form--item-date {
   padding-top: 27px;
 }
-.reserve__form--date-wrapper {
+.p-contact__form--date-wrapper {
   margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.reserve__form--input-date {
-  & + & {
-    margin-top: 20px;
-  }
-}
-.reserve__form--item-textarea {
+.p-contact__form--item-textarea {
   @include mq(sp) {
     padding-top: 27px;
     padding-bottom: 26px;
   }
 }
-
-.contact__privacy {
-  width: 100%;
+.p-contact__form--item-privacy {
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.p-contact__wrapper-privacy {
+  flex: revert;
+  justify-content: center;
+  align-items: center;
   // display: block;
   // position: relative;
   // margin-top: 21px;
@@ -173,11 +176,9 @@
   //   margin-top: 42px;
   // }
 }
-///////////////////
-/// ここまで
-///
-.reserve__button {
-  margin-top: 72px;
+
+.p-contact__button {
+  margin-top: 24px;
   padding-block: 18.5px;
   width: 360px;
   border-radius: 28px;
@@ -192,38 +193,18 @@
     border-color: transparent;
     background-color: #ccc;
     color: black;
-  }
-  @include mq(sp) {
-    margin-top: 70px;
-  }
-}
-.reserve__message-success {
-  max-width: 728px;
-  width: 100%;
-  margin-inline: auto;
-  text-align: left;
-  @include font(14, 500, 24, null);
-}
-
-.contact-button {
-  margin-top: 24px;
-  @include mq(pc) {
-    margin-top: 40px;
-  }
-  &:disabled {
-    cursor: not-allowed;
-    border-color: transparent;
-    background-color: #ccc;
-    box-shadow: 0px 4px 0px 0px transparent;
-    &:hover {
-      transform: translateY(0px);
-      background-color: #ccc;
-      box-shadow: 0px 0px 0px 0px transparent;
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: #ccc;
+        transform: revert;
+        box-shadow: 0px 4px 0px 0px currentColor;
+      }
     }
   }
 }
-.contact__message--success,
-.contact__message--error {
+.p-contact__message--success,
+.p-contact__message--error {
   margin-top: 2rem;
   text-align: center;
   display: none;
@@ -231,9 +212,9 @@
   padding: contact 20px;
   font-size: 24px;
 }
-.contact__message--success {
+.p-contact__message--success {
   color: #00f;
 }
-.contact__messag---error {
+.p-contact__message--error {
   color: #f00;
 }

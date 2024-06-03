@@ -124,7 +124,8 @@
     });
   });
 
-  checkbox: jQuery(document).ready(function () {
+  // checkbox:ラジオボタンと違って、何も選ばない状態に戻せる
+  jQuery(document).ready(function () {
     var jQuerycheckbox = jQuery(".js-checkbox");
     jQuerycheckbox.on("change", function () {
       var $this = jQuery(this);

@@ -1280,7 +1280,7 @@ a {
 	max-width: 900px;
 }
 
-.reserve__form--item {
+.p-contact__form--item {
 	align-items: center;
 	border-bottom: #ddd solid 1px;
 	display: flex;
@@ -1290,25 +1290,25 @@ a {
 	text-align: left;
 }
 
-.reserve__form--item:first-child {
+.p-contact__form--item:first-child {
 	border-top: #ddd solid 1px;
 }
 
-.reserve__form--title {
+.p-contact__form--title {
 	align-items: center;
 	display: flex;
 	flex: 0 0 180px;
 	gap: 16px;
 }
 
-.reserve__form--title-text {
+.p-contact__form--title-text {
 	display: grid;
 	font-size: 1rem;
 	font-weight: 500;
 	place-items: center;
 }
 
-.reserve__form--require {
+.p-contact__form--require {
 	background-color: var(--accent);
 	border-radius: 4px;
 	color: #fff;
@@ -1321,114 +1321,93 @@ a {
 	width: 36px;
 }
 
-.reserve__form--input,
-.reserve__form--selectbox-wrapper,
-.reserve__form--date-wrapper {
+.p-contact__form--input,
+.p-contact__form--selectbox-wrapper,
+.p-contact__form--date-wrapper {
 	flex: 1;
 }
 
-.reserve__form--item-radio {
+.p-contact__form--item-radio {
 	padding-bottom: 40px;
 	padding-top: 41px;
 }
 
-.reserve__form--radio-wrapper {
+.p-contact__form--radio-wrapper {
 	align-items: center;
 	display: flex;
 	gap: 32px;
 }
 
-.reserve__form--item-checkbox {
+.p-contact__form--item-checkbox {
 	padding-bottom: 23px;
 	padding-top: 31px;
 }
 
-.reserve__form--item-checkbox .reserve__form--require {
+.p-contact__form--item-checkbox .p-contact__form--require {
 	margin-top: -20px;
 }
 
-.reserve__form--title-text-top {
+.p-contact__form--title-text-top {
 	font-size: 1rem;
 	font-weight: 500;
 }
 
-.reserve__form--title-text-bottom {
+.p-contact__form--title-text-bottom {
 	color: #888;
 	font-size: 0.6875rem;
 	font-weight: 500;
 	margin-top: 6px;
 }
 
-.reserve__form--checkbox-wrapper {
+.p-contact__form--checkbox-wrapper {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 24px 32px;
 }
 
-.reserve__form--item-date {
+.p-contact__form--item-date {
 	padding-top: 27px;
 }
 
-.reserve__form--date-wrapper {
+.p-contact__form--date-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 	margin-top: 2px;
 }
 
-.reserve__form--input-date + .reserve__form--input-date {
-	margin-top: 20px;
-}
-
-.contact__privacy {
+.p-contact__form--item-privacy {
+	flex-direction: column;
+	gap: 20px;
 	justify-content: center;
-	width: 100%;
 }
 
-.reserve__button {
+.p-contact__wrapper-privacy {
+	align-items: center;
+	flex: revert;
+	justify-content: center;
+}
+
+.p-contact__button {
 	border-radius: 28px;
 	font-size: 1rem;
 	font-weight: 500;
 	letter-spacing: 0.08em;
-	margin-top: 72px;
+	margin-top: 24px;
 	padding-block: 18.5px;
 	width: 360px;
 }
 
-.reserve__button:disabled {
+.p-contact__button:disabled {
 	background-color: #ccc;
 	border-color: transparent;
 	color: black;
 	cursor: not-allowed;
 }
 
-.reserve__message-success {
-	font-size: 0.875rem;
-	font-weight: 500;
-	line-height: 1.7142857143;
-	margin-inline: auto;
-	max-width: 728px;
-	text-align: left;
-	width: 100%;
-}
-
-.contact-button {
-	margin-top: 24px;
-}
-
-.contact-button:disabled {
-	background-color: #ccc;
-	border-color: transparent;
-	box-shadow: 0px 4px 0px 0px transparent;
-	cursor: not-allowed;
-}
-
-.contact-button:disabled:hover {
-	background-color: #ccc;
-	box-shadow: 0px 0px 0px 0px transparent;
-	transform: translateY(0px);
-}
-
-.contact__message--success,
-.contact__message--error {
+.p-contact__message--success,
+.p-contact__message--error {
 	background: #fff;
 	display: none;
 	font-size: 24px;
@@ -1437,67 +1416,79 @@ a {
 	text-align: center;
 }
 
-.contact__message--success {
+.p-contact__message--success {
 	color: #00f;
 }
 
-.contact__messag---error {
+.p-contact__message--error {
 	color: #f00;
 }
 
 input[type=text],
 input[type=email],
+input[type=tel],
+input[type=date],
+select,
 textarea {
-	background: #f5f5f5;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: #f6f6f6;
 	border: 1px solid transparent;
-	border-radius: 8px;
-	color: black;
+	border-radius: 4px;
+	color: var(--font);
 	font-family: inherit;
-	font-size: 0.875rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.4285714286;
 	overflow: hidden;
-	padding: 10px 1em;
+	padding: 14px 15px;
+	text-align: left;
 	width: 100%;
 }
 
 input[type=text]::-moz-placeholder,
 input[type=email]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
+input[type=date]::-moz-placeholder,
+select::-moz-placeholder,
 textarea::-moz-placeholder {
-	color: #ccc;
-	font-family: Noto Sans JP;
-	font-size: 0.875rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.4285714286;
+	color: #c2c2c2;
+	font-size: 1rem;
+	font-weight: 500;
 }
 
 input[type=text]::placeholder,
 input[type=email]::placeholder,
+input[type=tel]::placeholder,
+input[type=date]::placeholder,
+select::placeholder,
 textarea::placeholder {
-	color: #ccc;
-	font-family: Noto Sans JP;
-	font-size: 0.875rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.4285714286;
+	color: #c2c2c2;
+	font-size: 1rem;
+	font-weight: 500;
 }
 
 input[type=text]:hover,
 input[type=text]:focus,
+input[type=text]:active,
 input[type=email]:hover,
 input[type=email]:focus,
+input[type=email]:active,
+input[type=tel]:hover,
+input[type=tel]:focus,
+input[type=tel]:active,
+input[type=date]:hover,
+input[type=date]:focus,
+input[type=date]:active,
+select:hover,
+select:focus,
+select:active,
 textarea:hover,
-textarea:focus {
-	background: #e9f6f8;
-	border: 1px solid var(--main);
-	border-radius: 8px;
-	outline: none;
+textarea:focus,
+textarea:active {
+	border-color: var(--main);
 }
 
 textarea {
-	height: 160px;
+	min-height: 200px;
 	resize: vertical;
 }
 
@@ -1515,15 +1506,14 @@ input[type=checkbox] + span {
 	align-items: center;
 	display: flex;
 	font-size: 0.875rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.6;
+	font-weight: 500;
 	padding-left: 32px;
 	position: relative;
 }
 
 input[type=radio] + span::before,
 input[type=checkbox] + span::before {
+	background: #f6f6f6;
 	border: 1px solid transparent;
 	content: "";
 	left: 0;
@@ -1544,11 +1534,11 @@ input[type=checkbox] + span::after {
 
 input[type=radio]:hover + span::before,
 input[type=radio]:focus + span::before,
-input[type=radio]:checked + span::before,
+input[type=radio]:active + span::before,
 input[type=checkbox]:hover + span::before,
 input[type=checkbox]:focus + span::before,
-input[type=checkbox]:checked + span::before {
-	border: 1px solid var(--main);
+input[type=checkbox]:active + span::before {
+	border-color: var(--main);
 }
 
 input[type=radio]:checked + span::after,
@@ -1557,7 +1547,6 @@ input[type=checkbox]:checked + span::after {
 }
 
 input[type=radio] + span::before {
-	background: #f5f5f5;
 	border-radius: 50%;
 	height: 24px;
 	width: 24px;
@@ -1571,8 +1560,6 @@ input[type=radio] + span::after {
 }
 
 input[type=checkbox] + span::before {
-	background: #f5f5f5;
-	border-radius: 4px;
 	height: 24px;
 	width: 24px;
 }
@@ -1580,9 +1567,56 @@ input[type=checkbox] + span::before {
 input[type=checkbox] + span::after {
 	border-bottom: solid 2px var(--main);
 	border-left: solid 2px var(--main);
-	height: 6px;
+	height: 8px;
 	transform: translateY(-70%) rotate(-45deg);
-	width: 12px;
+	width: 13px;
+}
+
+select {
+	background: #f6f6f6 url(../img/select-arrow.svg) no-repeat right 12px center;
+}
+
+input[type=date] {
+	background: #f6f6f6 url(../img/icon-calender.svg) no-repeat right 12px center;
+	padding: 14px 16px;
+	position: relative;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.firefox input[type=date] {
+	background: revert;
+}
+
+input[type=date]::-webkit-datetime-edit-fields-wrapper {
+	display: none;
+}
+
+input[type=date]::before {
+	color: #c2c2c2;
+	content: attr(placeholder);
+	width: 100%;
+}
+
+input[type=date].is-input::-webkit-datetime-edit-fields-wrapper {
+	display: revert;
+}
+
+input[type=date].is-input::before {
+	display: none;
+}
+
+.error-message {
+	color: var(--accent);
+	display: none;
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin-top: 8px;
 }
 
 .u-separate {
@@ -1704,64 +1738,65 @@ input[type=checkbox] + span::after {
 	display: revert;
 }
 
-.reserve__form--item {
+.p-contact__form--item {
 	align-items: revert;
 	flex-direction: column;
 }
 
-.reserve__form--item {
+.p-contact__form--item {
 	gap: 12px;
 	padding-bottom: 23.5px;
 	padding-top: 25px;
 }
 
-.reserve__form--title {
+.p-contact__form--title {
 	flex: revert;
 	gap: 12px;
 }
 
-.reserve__form--require {
+.p-contact__form--require {
 	padding-top: 3px;
 }
 
-.reserve__form--item-radio {
+.p-contact__form--item-radio {
 	padding-bottom: 28px;
 	padding-top: 25px;
 }
 
-.reserve__form--item-radio .reserve__form--require {
+.p-contact__form--item-radio .p-contact__form--require {
 	margin-left: 4px;
 }
 
-.reserve__form--radio-wrapper {
-	gap: 40px;
+.p-contact__form--radio-wrapper {
+	align-items: revert;
+	flex-direction: column;
 	margin-top: 12px;
 }
 
-.reserve__form--item-checkbox {
+.p-contact__form--item-checkbox {
 	padding-bottom: 28px;
 	padding-top: 27px;
 }
 
-.reserve__form--item-checkbox .reserve__form--require {
+.p-contact__form--item-checkbox .p-contact__form--require {
 	margin-left: 4px;
 }
 
-.reserve__form--checkbox-wrapper {
+.p-contact__form--checkbox-wrapper {
 	gap: 24px;
 	margin-top: 14px;
 }
 
-.reserve__form--item-selectbox .reserve__form--require {
+.p-contact__form--item-selectbox .p-contact__form--require {
 	margin-left: 4px;
 }
 
-.reserve__form--item-textarea {
+.p-contact__form--item-textarea {
 	padding-bottom: 26px;
 	padding-top: 27px;
 }
 
-.reserve__button {
+.p-contact__button {
 	font-size: 0.875rem;
 	font-weight: 500;
 	letter-spacing: 0.08em;
@@ -1769,38 +1804,16 @@ input[type=checkbox] + span::after {
 	width: 273px;
 }
 
-.reserve__button {
-	margin-top: 70px;
+textarea {
+	min-height: 160px;
 }
 
-input[type=radio] + span,
-input[type=checkbox] + span {
-	padding-left: 22px;
+select {
+	background-position: right 9px center;
 }
 
-input[type=radio] + span::after,
-input[type=checkbox] + span::after {
-	left: 4px;
-}
-
-input[type=radio] + span::before {
-	height: 16px;
-	width: 16px;
-}
-
-input[type=radio] + span::after {
-	height: 8px;
-	width: 8px;
-}
-
-input[type=checkbox] + span::before {
-	height: 16px;
-	width: 16px;
-}
-
-input[type=checkbox] + span::after {
-	height: 4px;
-	width: 8px;
+input[type=date] {
+	background-position: right 9px center;
 }
 
 .u-separeta--header {
@@ -1824,6 +1837,13 @@ input[type=checkbox] + span::after {
 .swiper-button-prev:hover::before,
 .swiper-button-next:hover::before {
 	opacity: 0.8;
+}
+
+.p-contact__button:disabled:hover,
+.p-contact__button:disabled:focus {
+	background-color: #ccc;
+	box-shadow: 0px 4px 0px 0px currentColor;
+	transform: revert;
 }
 
 }
@@ -1871,45 +1891,6 @@ input[type=checkbox] + span::after {
 
 .contact__fields {
 	margin-top: 38px;
-}
-
-.contact-button {
-	margin-top: 40px;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.6;
-}
-
-input[type=text]::-moz-placeholder,
-input[type=email]::-moz-placeholder,
-textarea::-moz-placeholder {
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.6;
-}
-
-input[type=text]::placeholder,
-input[type=email]::placeholder,
-textarea::placeholder {
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.6;
-}
-
-input[type=radio] + span,
-input[type=checkbox] + span {
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 0em;
-	line-height: 1.6;
 }
 
 .u-hidden-pc {

@@ -120,7 +120,7 @@
         console.log(jQuery(".js-radio:checked").length);
         console.log(jQuery(".js-radio:checked"));
         if (jQuery(".js-radio:checked").length === 0) {
-          $errorMessageWrapperNext.text("初診・再診どちらか選んでください。").show();
+          $errorMessageWrapperNext.text("どれか選んでください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
@@ -146,11 +146,10 @@
       var $this = jQuery(this); // 毎回jQuery(this)を実行するのは無駄なので変数に格納
       var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
 
-      // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
       // チェックボックスのバリデーション
       if ($this.hasClass("js-checkbox")) {
         if (jQuery(".js-checkbox:checked").length === 0) {
-          $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
+          $errorMessageWrapperNext.text("合意いただけましたらチェックください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
