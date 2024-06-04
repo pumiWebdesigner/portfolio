@@ -120,8 +120,6 @@
 		<!-- contact -->
 		<!-- prettier-ignore -->
 
-		<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-
 		<!-- wordPress化する時 -->
 		<!-- formタグをdivタグに置換え -->
 		<!-- inputタグもCONTACT7用に置換え -->
@@ -133,6 +131,9 @@
 				</hgroup>
 
 				<form id="js-form" class="p-contact__form">
+					<!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容） -->
+					<!-- prettier-ignore -->
+
 					<!-- テキスト（名前） -->
 					<!-- prettier-ignore -->
 
@@ -281,98 +282,29 @@
 						<div class="error-message"></div>
 
 					</div>
-					<div class="display-none" style="display: none">
-						<!-- テキスト（カナ名前） -->
-						<!-- prettier-ignore -->
+					<!-- 送信ボタン -->
+					<!-- prettier-ignore -->
 
-						<!-- テキスト（カナ名前） -->
-						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-						<div class="p-contact__form--item">
-							<div class="p-contact__form--title"><label for="name-kana" class="p-contact__form--title-text">フリガナ</label> <span class="p-contact__form--require">必須</span></div>
-							<div class="p-contact__form--input">
-								<span class="wpcf7-form-control-wrap" data-name="name-kana"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required reserve__form--input js-kana" id="name-kana" aria-required="true" aria-invalid="false" placeholder="ヤマダ　タロウ" value="" type="text" name="name-kana" required="required" /></span>
-								<div class="error-message"></div>
-							</div>
-						</div>
-						<!-- 電話番号 -->
-						<!-- prettier-ignore -->
-
-						<!-- 電話番号 -->
-						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-						<div class="p-contact__form--item">
-							<div class="p-contact__form--title">
-								<label for="tel" class="p-contact__form--title-text">電話番号</label>
-								<span class="p-contact__form--require">必須</span>
-							</div>
-							<div class="p-contact__form--input">
-								<span class="wpcf7-form-control-wrap" data-name="tel"><input size="40" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel reserve__form--input js-tel-number" id="tel" aria-required="true" aria-invalid="false" placeholder="000-0000-0000" value="" type="tel" name="tel" required="required" /></span>
-								<div class="error-message"></div>
-							</div>
-						</div>
-						<!-- チェックボックス -->
-						<!-- prettier-ignore -->
-
-						<!-- チェックボックス -->
-						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-						<div class="p-contact__form--item reserve__form--item-checkbox">
-							<div class="p-contact__form--title">
-								<div class="p-contact__form--title-text reserve__form--title-text-checkbox">
-									<div class="p-contact__form--title-text-top">診療内容</div>
-									<div class="p-contact__form--title-text-bottom">※(複数選択可)</div>
-								</div>
-								<span class="p-contact__form--require">必須</span>
-							</div>
-							<div class="p-contact__form--input">
-								<span class="wpcf7-form-control-wrap" data-name="checkbox-button"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required p-contact__form--checkbox-wrapper js-checkbox" id="checkbox-button" required="required"><span class="wpcf7-list-item first"><label><input type="checkbox" name="checkbox-button[]" value="虫歯" /><span class="wpcf7-list-item-label">虫歯</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="被せ物がとれた" /><span class="wpcf7-list-item-label">被せ物がとれた</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="矯正歯科" /><span class="wpcf7-list-item-label">矯正歯科</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="咬み合わせ" /><span class="wpcf7-list-item-label">咬み合わせ</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="歯周病" /><span class="wpcf7-list-item-label">歯周病</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="小児歯科" /><span class="wpcf7-list-item-label">小児歯科</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="入れ歯" /><span class="wpcf7-list-item-label">入れ歯</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-button[]" value="インプラント" /><span class="wpcf7-list-item-label">インプラント</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="checkbox-button[]" value="その他" /><span class="wpcf7-list-item-label">その他</span></label></span></span></span>
-								<div class="error-message"></div>
-							</div>
-						</div>
-						<!-- セレクトボックス -->
-						<!-- prettier-ignore -->
-
-						<!-- セレクトボックス -->
-						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-						<div class="p-contact__form--item p-contact__form--item-selectbox">
-							<div class="p-contact__form--title"><label for="selectbox" class="p-contact__form--title-text">ご連絡方法</label> <span class="p-contact__form--require">必須</span></div>
-							<div class="p-contact__form--input">
-								<span class="wpcf7-form-control-wrap" data-name="select-menu"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required p-contact__form--selectbox-wrapper js-select" id="selectbox" aria-required="true" aria-invalid="false" name="select-menu" required="required">
-										<option value="ご連絡方法を選択ください。">ご連絡方法を選択ください。</option>
-										<option value="メール">メール</option>
-										<option value="電話">電話</option>
-										<option value="FAX">FAX</option>
-									</select></span>
-								<div class="error-message"></div>
-							</div>
-						</div>
-						<!-- 日付 -->
-						<!-- prettier-ignore -->
-
-						<!-- 日付 -->
-						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-						<div class="p-contact__form--item p-contact__form--item-date">
-							<div class="p-contact__form--title"><label for="date1" class="p-contact__form--title-text">希望日</label></div>
-							<div class="p-contact__form--date-wrapper">
-								<span class="wpcf7-form-control-wrap" data-name="Preferred-date1"><input class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date p-contact__form--input p-contact__form--input-date" id="Preferred-date1" aria-invalid="false" placeholder="年 / 月 / 日" value="" type="date" name="Preferred-date1" /></span>
-								<span class="wpcf7-form-control-wrap" data-name="Preferred-date2"><input class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date p-contact__form--input p-contact__form--input-date" id="Preferred-date2" aria-invalid="false" placeholder="年 / 月 / 日" value="" type="date" name="Preferred-date2" /></span>
-								<span class="wpcf7-form-control-wrap" data-name="Preferred-date3"><input class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date p-contact__form--input p-contact__form--input-date" id="Preferred-date3" aria-invalid="false" placeholder="年 / 月 / 日" value="" type="date" name="Preferred-date3" /></span>
-							</div>
-						</div>
-					</div>
-					<button id="js-submit" class="c-btn p-contact__button" type="submit">上記の内容を送信する</button>
+					<!-- 送信ボタン -->
+					<button id="js-submit" class="c-btn p-contact__btn" type="submit">上記の内容を送信する</button>
+					<!-- wordPress化する時は以下に置換えられる（CONTACT7用） -->
 					<!-- <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /> -->
-			</div>
-			<div id="js-success" class="p-contact__message--success">
-				<p>
-					送信完了しました。
-					<br />ありがとうございました。 <br />3営業日以内にご返信いたします。
-				</p>
-			</div>
-			<div id="js-error" class="p-contact__message--error">
-				<p>
-					送信に失敗しました。
-					<br />ページを更新して再度送信してください。
-				</p>
-			</div>
+				</form>
+				<!-- 送信後のメッセージ -->
+				<!-- prettier-ignore -->
+
+				<div id="js-success" class="p-contact__message--success">
+					<p>
+						送信完了しました。
+						<br />ありがとうございました。 <br />3営業日以内にご返信いたします。
+					</p>
+				</div>
+				<div id="js-error" class="p-contact__message--error">
+					<p>
+						送信に失敗しました。
+						<br />ページを更新して再度送信してください。
+					</p>
+				</div>
 			</div>
 		</section>
 		<!-- contact-twitter -->
@@ -380,7 +312,7 @@
 
 		<section id="contact-twitter" class="l-section p-contact-twitter wow fadeInUp">
 			<!-- contact -->
-			<div id="contact" class="p-contact-twitter__item p-contact-twitter__item-contact">
+			<div class="p-contact-twitter__item p-contact-twitter__item-contact">
 				<hgroup class="p-section__title">
 					<h2 class="p-section__title--main">Contact</h2>
 					<p class="p-section__title--sub">お問い合わせ</p>
@@ -395,7 +327,7 @@
 				</a>
 			</div>
 			<!-- twitter(X) -->
-			<div id="twitter" class="p-contact-twitter__item p-contact-twitter__item-twitter">
+			<div class="p-contact-twitter__item p-contact-twitter__item-twitter">
 				<hgroup class="p-section__title">
 					<h2 class="p-section__title--main">Twitter(X)</h2>
 					<p class="p-section__title--sub">ツイッター(X)</p>

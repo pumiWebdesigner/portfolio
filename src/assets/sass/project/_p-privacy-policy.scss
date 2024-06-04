@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.p-privacy-policy {
+  padding: 100px 20px;
+  @include mq(pc) {
+    padding: 100px 40px;
+  }
+  background: white;
+}
+
+.p-privacy-policy__title {
+  @include font(32, 700, 51.2, 0);
+  text-align: center;
+}
+
+.p-privacy-policy__content {
+  margin-top: 4rem;
+}
+
+.p-privacy-policy__body {
+  margin-top: 50px;
+}
+
+.p-privacy-policy__box {
+  margin-top: 30px;
+}
+
+.p-privacy-policy__subTitle {
+  @include font(24, 700, 38.4, 0);
+}
+
+.p-privacy-policy__text {
+  margin-top: 10px;
+}
+
+.p-privacy-policy__detail {
+  list-style: inside;
+  margin-left: 1em;
+}
+
+.p-privacy-policy__submit {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.p-privacy-policy__btn {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 200px;
+}

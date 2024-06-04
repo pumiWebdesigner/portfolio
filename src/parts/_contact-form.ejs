@@ -2,8 +2,6 @@
 <%_
 _%>
 
-<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-
 <!-- wordPress化する時 -->
 <!-- formタグをdivタグに置換え -->
 <!-- inputタグもCONTACT7用に置換え -->
@@ -15,42 +13,12 @@ _%>
     </hgroup>
 
     <form id="js-form" class="p-contact__form">
-      <!-- テキスト（名前） -->
-      <%- include("../parts-contact/_contact-your-name",{ path:".", }) -%>
-      <!-- メールアドレス -->
-      <%- include("../parts-contact/_contact-email",{ path:".", }) -%>
-      <!-- ラジオボタン -->
-      <%- include("../parts-contact/_contact-radio",{ path:".", }) -%>
-      <!-- テキストアリア -->
-      <%- include("../parts-contact/_contact-textarea",{ path:".", }) -%>
-      <!-- チェックボックス -->
-      <%- include("../parts-contact/_contact-check-privacy",{ path:".", }) -%>
-      <div class="display-none" style="display: none">
-        <!-- テキスト（カナ名前） -->
-        <%- include("../parts-contact/_contact-name-kana",{ path:".", }) -%>
-        <!-- 電話番号 -->
-        <%- include("../parts-contact/_contact-tel",{ path:".", }) -%>
-        <!-- チェックボックス -->
-        <%- include("../parts-contact/_contact-check-box",{ path:".", }) -%>
-        <!-- セレクトボックス -->
-        <%- include("../parts-contact/_contact-select",{ path:".", }) -%>
-        <!-- 日付 -->
-        <%- include("../parts-contact/_contact-date",{ path:".", }) -%>
-      </div>
-      <button id="js-submit" class="c-btn p-contact__button" type="submit">上記の内容を送信する</button>
-      <!-- <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /> -->
-    </div>
-    <div id="js-success" class="p-contact__message--success">
-      <p>
-        送信完了しました。
-        <br />ありがとうございました。 <br />3営業日以内にご返信いたします。
-      </p>
-    </div>
-    <div id="js-error" class="p-contact__message--error">
-      <p>
-        送信に失敗しました。
-        <br />ページを更新して再度送信してください。
-      </p>
-    </div>
+      <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容） -->
+      <%- include("../parts/_contact-form__item-portfolio",{ path:".", }) -%>
+      <!-- 送信ボタン -->
+      <%- include("../parts/_contact-btn",{ path:".", }) -%>
+    </form>
+    <!-- 送信後のメッセージ -->
+    <%- include("../parts/_contact-message",{ path:".", }) -%>
   </div>
 </section>

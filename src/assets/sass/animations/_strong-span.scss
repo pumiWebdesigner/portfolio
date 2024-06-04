@@ -1,0 +1,8 @@
+@use "../global" as *;
+@use "sass:map";
+
+strong {
+  &.color-accent {
+    color: var(--accent);
+  }
+}

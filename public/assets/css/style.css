@@ -1,24 +1,18 @@
 :root {
-	--White: #fff;
-	--gray: #333333;
-	--font: #333333;
-	--lightgray: #6c6e6f;
-	--Blue: #f4fbfd;
-	--accent: #ff8b71;
-	--accent-Blue: #82bfed;
-	--accent-green: #c6ecec;
-	--gradation: linear-gradient(177deg, #50bfcb -29.45%, rgba(80, 191, 203, 0.42) 127.88%);
 	--main: #77f;
 	--font: #333;
-	--accent: #f00;
-	--hov-btn: rgba(255, 240, 228, 1);
-	--header-bg-pc: linear-gradient(to bottom, #00f, #80f, #000);
+	--lightgray: #6c6e6f;
+	--accent: #ff8b71;
+	--btn-image: linear-gradient(to bottom, #77f, #c7f, #c7c);
+	--hov-btn: #45b6f0;
+	--gradation: linear-gradient(177deg, #50bfcb -29.45%, rgba(80, 191, 203, 0.42) 127.88%);
+	--header-bg-pc: linear-gradient(to bottom, #00f, #80f, #808);
 	--header-bg-sp: #00f;
-	--drawer-bg-sp: linear-gradient(to bottom, #00f, #80f, #000);
+	--drawer-bg-sp: linear-gradient(to bottom, #00f, #80f, #808);
 	--drawer-bg-sp: #000;
-	--section-sub: rgb(255, 240, 228);
 	--bg-dark: #4a4a4a;
 	--clip-triangle-bottom: polygon(0 0, 100% 0, 50% 100%);
+	--clip-triangle-right: polygon(0 0, 100% 50%, 0 100%);
 	--layer-hamburger: 150;
 	--layer-drawer: 40;
 	--layer-totop: 100;
@@ -712,7 +706,7 @@ a {
 }
 
 .c-btn {
-	background: #cff;
+	background-image: var(--btn-image);
 	border: 2px solid currentColor;
 	border-radius: 2rem;
 	box-shadow: 0px 4px 0px 0px currentColor;
@@ -1193,30 +1187,35 @@ a {
 
 .p-about-section {
 	margin-inline: auto;
-	width: 70%;
+	width: 75vw;
 }
 
 .p-about__container {
-	padding-right: 50%;
-	position: relative;
+	align-items: center;
+	display: flex;
+	gap: 40px;
+	justify-content: space-between;
 }
 
 .p-about__img {
-	content: "";
+	aspect-ratio: 1;
+	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	flex: 1;
 	height: auto;
-	position: absolute;
-	right: 5%;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 40%;
 }
 
 .p-about__text-contents {
 	min-height: 300px;
+	width: 37.5vw;
 }
 
-.p-about__text {
-	margin-top: 10px;
+.p-about__text--title {
+	font-size: 1.8rem;
+	margin-top: 1rem;
+}
+
+.p-about__text--message {
+	padding: 1rem;
 }
 
 .p-contact-twitter {
@@ -1278,6 +1277,10 @@ a {
 	margin-inline: auto;
 	margin-top: 24px;
 	max-width: 900px;
+}
+
+.p-contact__form {
+	margin-block: 4rem;
 }
 
 .p-contact__form--item {
@@ -1389,20 +1392,13 @@ a {
 	justify-content: center;
 }
 
-.p-contact__button {
-	border-radius: 28px;
-	font-size: 1rem;
-	font-weight: 500;
-	letter-spacing: 0.08em;
-	margin-top: 24px;
-	padding-block: 18.5px;
-	width: 360px;
+.p-contact__btn {
+	margin-top: 3rem;
 }
 
-.p-contact__button:disabled {
+.p-contact__btn:disabled {
 	background-color: #ccc;
 	border-color: transparent;
-	color: black;
 	cursor: not-allowed;
 }
 
@@ -1417,11 +1413,11 @@ a {
 }
 
 .p-contact__message--success {
-	color: #00f;
+	color: blue;
 }
 
 .p-contact__message--error {
-	color: #f00;
+	color: var(--accent);
 }
 
 input[type=text],
@@ -1619,6 +1615,116 @@ input[type=date].is-input::before {
 	margin-top: 8px;
 }
 
+.p-privacy-policy {
+	background: white;
+	padding: 100px 20px;
+}
+
+.p-privacy-policy__title {
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0em;
+	line-height: 1.6;
+	text-align: center;
+}
+
+.p-privacy-policy__content {
+	margin-top: 4rem;
+}
+
+.p-privacy-policy__body {
+	margin-top: 50px;
+}
+
+.p-privacy-policy__box {
+	margin-top: 30px;
+}
+
+.p-privacy-policy__subTitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0em;
+	line-height: 1.6;
+}
+
+.p-privacy-policy__text {
+	margin-top: 10px;
+}
+
+.p-privacy-policy__detail {
+	list-style: inside;
+	margin-left: 1em;
+}
+
+.p-privacy-policy__submit {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.p-privacy-policy__btn {
+	margin-top: 2rem;
+	max-width: 200px;
+	width: 100%;
+}
+
+.p-promise__container {
+	align-items: center;
+	display: flex;
+	gap: 5vw;
+	justify-content: space-between;
+}
+
+.p-promise__img {
+	aspect-ratio: 1;
+	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	flex: 1;
+	height: auto;
+}
+
+.p-promise__text-contents {
+	min-height: 300px;
+	width: 60vw;
+}
+
+.p-promise__text--title-main {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+.p-promise__text--title-sub {
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+}
+
+.p-promise__text--wrapper {
+	margin-top: 0.5rem;
+	padding-left: 1rem;
+}
+
+.p-promise__text--wrapper li {
+	list-style: circle;
+	margin-top: 0.5rem;
+}
+
+.p-promise__text--message {
+	margin-top: 0.5rem;
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+.p-promise__text--message::before {
+	background: var(--accent, #ff8b71);
+	clip-path: var(--clip-triangle-right);
+	content: "";
+	height: 0.5rem;
+	left: 0.5rem;
+	position: absolute;
+	top: 0.5rem;
+	transform: translateY(-50%);
+	width: 0.5rem;
+}
+
 .u-separate {
 	margin-bottom: 24px;
 	margin-top: 24px;
@@ -1650,6 +1756,10 @@ input[type=date].is-input::before {
 
 .hover__underline--from-left:hover {
 	background-size: 100% 1px; /* 線の横幅を100%にする */
+}
+
+strong.color-accent {
+	color: var(--accent);
 }
 
 @media (width <= 767px) {
@@ -1796,14 +1906,6 @@ input[type=date].is-input::before {
 	padding-top: 27px;
 }
 
-.p-contact__button {
-	font-size: 0.875rem;
-	font-weight: 500;
-	letter-spacing: 0.08em;
-	padding-block: 9.5px;
-	width: 273px;
-}
-
 textarea {
 	min-height: 160px;
 }
@@ -1814,6 +1916,19 @@ select {
 
 input[type=date] {
 	background-position: right 9px center;
+}
+
+.p-promise__container {
+	flex-direction: column-reverse;
+}
+
+.p-promise__img {
+	width: 70vw;
+}
+
+.p-promise__text-contents {
+	padding: 2rem;
+	width: revert;
 }
 
 .u-separeta--header {
@@ -1829,8 +1944,8 @@ input[type=date] {
 @media (hover: hover) {
 
 .c-btn:hover {
-	background: #aff;
 	box-shadow: revert;
+	opacity: 0.7;
 	transform: translateY(4px);
 }
 
@@ -1839,8 +1954,8 @@ input[type=date] {
 	opacity: 0.8;
 }
 
-.p-contact__button:disabled:hover,
-.p-contact__button:disabled:focus {
+.p-contact__btn:disabled:hover,
+.p-contact__btn:disabled:focus {
 	background-color: #ccc;
 	box-shadow: 0px 4px 0px 0px currentColor;
 	transform: revert;
@@ -1891,6 +2006,10 @@ input[type=date] {
 
 .contact__fields {
 	margin-top: 38px;
+}
+
+.p-privacy-policy {
+	padding: 100px 40px;
 }
 
 .u-hidden-pc {

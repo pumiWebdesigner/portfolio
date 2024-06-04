@@ -39,7 +39,11 @@
     // 対象のDOM要素を取得（.get(0)や[0]を使用してから）checkValidityを行う
     // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
     // 全てのcheckboxをチェックさせるよう個別にチェックを行う
+    console.log("test");
+
     if (form.get(0).checkValidity()) {
+      console.log("tests");
+
       if (jQuery('input[type="checkbox"]').length > 0) {
         if (jQuery('input[type="checkbox"]:checked').length > 0) {
           submit.prop("disabled", false);

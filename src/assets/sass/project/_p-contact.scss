@@ -25,6 +25,10 @@
   }
 }
 
+.p-contact__form {
+  margin-block: 4rem;
+}
+
 .p-contact__form--item {
   text-align: left;
   padding-top: 28px;
@@ -177,22 +181,13 @@
   // }
 }
 
-.p-contact__button {
-  margin-top: 24px;
-  padding-block: 18.5px;
-  width: 360px;
-  border-radius: 28px;
-  @include font(16, 500, null, 1.28);
-  @include mq(sp) {
-    padding-block: 9.5px;
-    width: 273px;
-    @include font(14, 500, null, 1.12);
-  }
+.p-contact__btn {
+  margin-top: 3rem;
   &:disabled {
     cursor: not-allowed;
     border-color: transparent;
     background-color: #ccc;
-    color: black;
+    // color: black;
     @media (hover: hover) {
       &:hover,
       &:focus {
@@ -213,8 +208,8 @@
   font-size: 24px;
 }
 .p-contact__message--success {
-  color: #00f;
+  color: blue;
 }
 .p-contact__message--error {
-  color: #f00;
+  color: var(--accent);
 }
