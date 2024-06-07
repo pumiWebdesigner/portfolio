@@ -1,11 +1,12 @@
 :root {
   //color
   --main: #77f;
+  --sub: #cff;
   --font: #333;
   --lightgray: #6c6e6f;
   --accent: #ff8b71;
-  --btn-image: linear-gradient(to bottom, #77f, #c7f, #c7c);
-
+  // --btn-image: linear-gradient(to bottom, #77f, #c7f, #c7c);
+  --btn-image: linear-gradient(to bottom, #00f, #80f, #808);
   --hov-btn: #45b6f0;
   --gradation: linear-gradient(177deg, #50bfcb -29.45%, rgba(80, 191, 203, 0.42) 127.88%);
 
@@ -17,15 +18,15 @@
   // --section-sub: rgb(255, 240, 228);
   --bg-dark: #4a4a4a;
 
-  // 三角
-  // --clip-triangle-top: polygon(50% 0, 100% 100%, 0 100%);
+  // 三角 clip-pathを使う
+  --clip-triangle-top: polygon(50% 0, 100% 100%, 0 100%);
   --clip-triangle-bottom: polygon(0 0, 100% 0, 50% 100%);
   --clip-triangle-right: polygon(0 0, 100% 50%, 0 100%);
-  // --clip-triangle-left: polygon(0 50%, 100% 0, 100% 100%);
-  // --clip-triangle-lower-left: polygon(0 0, 100% 100%, 0 100%);
-  // --clip-triangle-upper-left: polygon(0 0, 100% 0, 0 100%);
-  // --clip-triangle-lower-right: polygon(100% 0, 100% 100%, 0 100%);
-  // --clip-triangle-upper-right: polygon(0 0, 100% 0, 100% 100%);
+  --clip-triangle-left: polygon(0 50%, 100% 0, 100% 100%);
+  --clip-triangle-lower-left: polygon(0 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-left: polygon(0 0, 100% 0, 0 100%);
+  --clip-triangle-lower-right: polygon(100% 0, 100% 100%, 0 100%);
+  --clip-triangle-upper-right: polygon(0 0, 100% 0, 100% 100%);
 
   // 階層
   --layer-hamburger: 150;
@@ -47,6 +48,7 @@
   --height-sp-header: 80px;
   --height-pc-footer: 80px;
   --height-sp-footer: 70px;
+
   // padding
   --padding-pc-comp: 130;
   --padding-tab-comp: 60;

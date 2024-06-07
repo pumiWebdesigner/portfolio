@@ -10,24 +10,24 @@
   // email.prop("invalid", false);
   form.submit(function () {
     jQuery.ajax({
+      // actionに設定されているURLにリクエストを送信
       url: form.attr("action"),
+      // フォーム内の入力データをURLエンコードされた文字列に変換
       data: form.serialize(),
+      // リクエストの種類をPOSTに設定
       type: "POST",
       dataType: "xml",
       statusCode: {
+        // 通信成功時の処理
+        // ブラウザからのgoogleformへのの場合は0となる（CORS制約）
         0: function () {
-          //送信に成功したときの処理
-          if (form.hasClass("js-contact")) {
-            window.location.href = "./thanks/contact.html";
-            alert("送信しました。");
-          } else if (form.hasClass("js-reservation")) {
-            window.location.href = "./thanks/reservation.html";
-            alert("予約しました。");
-          }
+          form.slideUp();
+          jQuery("#js-success").slideDown();
         },
+        // CORS制約のため200が返ってくるのは異常
         200: function () {
-          //送信に失敗したときの処理
-          window.location.href = "./index.html";
+          form.slideUp();
+          jQuery("#js-error").slideDown();
         },
       },
     });
@@ -39,11 +39,8 @@
     // 対象のDOM要素を取得（.get(0)や[0]を使用してから）checkValidityを行う
     // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
     // 全てのcheckboxをチェックさせるよう個別にチェックを行う
-    console.log("test");
 
     if (form.get(0).checkValidity()) {
-      console.log("tests");
-
       if (jQuery('input[type="checkbox"]').length > 0) {
         if (jQuery('input[type="checkbox"]:checked').length > 0) {
           submit.prop("disabled", false);
@@ -153,7 +150,7 @@
       // チェックボックスのバリデーション
       if ($this.hasClass("js-checkbox")) {
         if (jQuery(".js-checkbox:checked").length === 0) {
-          $errorMessageWrapperNext.text("合意いただけましたらチェックください。").show();
+          $errorMessageWrapperNext.text("チェックされておりません。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }

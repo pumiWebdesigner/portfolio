@@ -82,7 +82,8 @@ input[type="checkbox"] {
   }
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &:checked {
     & + span::before {
       border-color: var(--main);
     }

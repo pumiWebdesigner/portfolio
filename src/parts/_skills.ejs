@@ -30,11 +30,21 @@ const skills = [
     name : "WordPress" ,
     img : "wordpress.svg",
     alt : "WordPress",
+  },
+  { 
+    name : "github" ,
+    img : "github.svg",
+    alt : "github",
+  },
+  { 
+    name : "gulp" ,
+    img : "gulp.svg",
+    alt : "gulp",
   }
 
 ]; _%>
 
-<section id="skills" class="l-section wow fadeInUp">
+<section id="skills" class="l-section p-section wow fadeInUp">
   <div class="l-inner">
     <hgroup class="p-section__title">
       <h2 class="p-section__title--main">Skills</h2>
@@ -55,16 +65,34 @@ const skills = [
         </ul>
         <div class="p-skills__messages">
           <ul>
-            <li><strong class="hover__underline--from-left">W3C標準に準拠</strong>したコーディングを行います。</li>
-            <li>適切なタグを使用する等、<strong class="hover__underline--from-left">SEOを意識</strong>し適切なページ構成します。</li>
-            <li>スマホ・タブレット・パソコンに合わせた<strong class="hover__underline--from-left">レスポンシブ</strong>な画面レイアウトを実装可能です。</li>
-            <li>CSS・javaScript・jQueryを使用した<strong class="hover__underline--from-left">アニメーション</strong>も実装可能です。</li>
-            <li>HTMLサイト、WordPressサイト<strong class="hover__underline--from-left">どちらでも実装可能です。</strong></li>
+            <li class="p-skills__text--item">
+              <div class="p-skills__text--title-main">HTMLサイト</div>
+              <div class="p-skills__text--title-sub"><strong class="color-accent">W3C標準に準拠</strong>したコーディングを行います。</div>
+            </li>
+            <li class="p-skills__text--item">
+              <div class="p-skills__text--title-main">WordPressサイト</div>
+              <div class="p-skills__text--title-sub">ブログ投稿者の操作しやすさを意識して<strong class="color-accent">カスタム</strong>いたします</div>
+            </li>
+            <li class="p-skills__text--item">
+              <div class="p-skills__text--title-main">SEO</div>
+              <div class="p-skills__text--title-sub"><strong class="color-accent">パーツの役割を意識して適切なタグを使用する</strong>等、適切なページ構成で実装します。</div>
+            </li>
+            <li class="p-skills__text--item">
+              <div class="p-skills__text--title-main">アニメーション</div>
+              <div class="p-skills__text--title-sub">
+                <strong class="color-accent">CSS・javaScript・jQuery</strong>
+                を使用した簡易なアニメーションを実装可能です。
+              </div>
+            </li>
+            <li class="p-skills__text--item">
+              <div class="p-skills__text--title-main">レスポンシブデザイン</div>
+              <div class="p-skills__text--title-sub">
+                <strong class="color-accent">スマホ・タブレット・パソコン</strong>
+                に合わせた画面レイアウトを実装可能です。
+              </div>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="p-section__explanation">
-        <p>具体的なスキルについては、お気軽にご相談ください。</p>
       </div>
     </div>
   </div>

@@ -8,3 +8,7 @@
     // height: calc(100vh - var(--height-sp-header));
   }
 }
+
+.l-first-view__inner {
+  max-width: revert;
+}

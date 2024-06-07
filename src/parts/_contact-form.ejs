@@ -12,7 +12,14 @@ _%>
       <p class="p-section__title--sub">お問い合わせ</p>
     </hgroup>
 
-    <form id="js-form" class="p-contact__form">
+    <form
+      id="js-form"
+      class="p-contact__form"
+      method="post"
+      action="
+              https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
+              "
+    >
       <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容） -->
       <%- include("../parts/_contact-form__item-portfolio",{ path:".", }) -%>
       <!-- 送信ボタン -->

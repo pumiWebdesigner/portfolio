@@ -35,9 +35,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 	<script src="./assets/js/slider.js" defer></script>
-	<script src="./assets/js/height-compare.js" defer></script>
-	<!-- wow --t
-  <!-- wow.jsはwow().initより先に実行する必要があるので、deferを外す -->
+	<!-- wow.jsはwow().initより先に実行する必要があるので、deferを外す -->
 	<link rel="stylesheet" href="./assets/css/animate.css" />
 	<!-- css読み込み -->
 	<link rel="stylesheet" href="./assets/css/style.css" />
@@ -48,7 +46,7 @@
 		new WOW().init();
 	</script>
 	<script src="./assets/js/dialog.js" defer></script>
-	<script src="./assets/js/contact.js" defer></script>
+	<script src="./assets/js/contact-html.js" defer></script>
 	<script src="./assets/js/script.js" defer></script>
 	<!-- 優先表示画像の事前読込 -->
 	<link rel="preload" href="./assets/img/img_fv.jpg" as="image" />
@@ -74,7 +72,10 @@
 						<a class="p-header__link" href="#skills" target="_self">skills</a>
 					</div>
 					<div class="p-header__nav--item">
-						<a class="p-header__link" href="./contact.html" target="_blank">contact</a>
+						<a class="p-header__link" href="#promise" target="_self">promise</a>
+					</div>
+					<div class="p-header__nav--item">
+						<a class="p-header__link" href="#contact" target="_self">contact</a>
 					</div>
 					<div class="p-header__nav--item">
 						<a class="p-header__link" href="https://twitter.com/pumi_webcoder" target="_blank">Twitter(X)</a>
@@ -102,7 +103,10 @@
 					<a class="p-drawer__link" href="#skills">skills</a>
 				</div>
 				<div class="p-drawer__nav--item">
-					<a class="p-drawer__link" href="./contact.html">contact</a>
+					<a class="p-drawer__link" href="#promise">promise</a>
+				</div>
+				<div class="p-drawer__nav--item">
+					<a class="p-drawer__link" href="#contact">contact</a>
 				</div>
 				<div class="p-drawer__nav--item">
 					<a class="p-drawer__link" href="https://twitter.com/pumi_webcoder">Twitter(X)</a>
@@ -116,421 +120,613 @@
 		<!-- prettier-ignore -->
 
 		<div class="p-bg"></div>
-		<!-- FirstView -->
+		<!-- work -->
 		<!-- prettier-ignore -->
 
-		<div class="l-first-view p-first-view">
-			<div class="p-first-view__container">
-				<!-- work -->
-				<!-- prettier-ignore -->
-
-				<section id="works" class="l-section wow fadeInUp">
-					<div class="l-inner">
-						<hgroup class="p-section__title">
-							<h2 class="p-section__title--main">Works</h2>
-							<p class="p-section__title--sub">実績</p>
-						</hgroup>
-
-						<div class="p-section__contents">
-							<div class="swiper p-works__contents">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/clinic.jpg" alt="仮想の歯医者HP" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/clinic.jpg" alt="仮想の歯医者HP" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery、GitHub、WordPress</dd>
-														<dt>制作時期</dt>
-														<dd>2024年3月～5月</dd>
-														<dt>制作時間</dt>
-														<dd>約2ヶ月（113時間）</dd>
-														<dt>制作概要</dt>
-														<dd>スクール卒業課題です。FigmaカンプからHTMLサイト作成し、WordPress化しました。カスタム投稿・カスタムフィールドを実装しており、サイト所有者によるブログ投稿やスタッフ追加が可能となります。表示速度を意識した画像圧縮やプラグイン導入を実施しました。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="https://pumi-webcoder.com/" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/Portfolio.jpg" alt="本サイト（ポートフォリオサイト）" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/Portfolio.jpg" alt="本サイト（ポートフォリオサイト）" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery、GitHub、Gulp、EJS</dd>
-														<dt>制作時期</dt>
-														<dd>2023年3月～4月</dd>
-														<dt>制作時間</dt>
-														<dd>約2週間（40時間）</dd>
-														<dt>制作概要</dt>
-														<dd>一度BEMで作成しましたが、FLOCSS、EJSを学習し再構築しました。一番ご覧になっていただきたい「実績」セクションは、Swiperによるスライダーの実装にdialogタグによるモーダル表示を組み合わせました。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/lp-team-h.png" alt="仮想の子供向けクリニックLP（チーム開発）" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/lp-team-h.png" alt="仮想の子供向けクリニックLP（チーム開発）" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、SASS、jQuery、GitHub</dd>
-														<dt>制作時期</dt>
-														<dd>2023年12月～2月（コーディングは1ヶ月）</dd>
-														<dt>制作時間</dt>
-														<dd>約2週間（32時間）</dd>
-														<dt>制作概要</dt>
-														<dd>デザイナー2名、コーダー（私含め）3人で共同開発した架空クリニックのHPです。GitHubを用いて共同開発し私はヘッダーとアニメーションを担当しました。レスポンシブやアニメーションについても、MTGにて認識合わせしながら開発を進めました。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./Lp-Team_H/index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/Rich-Life.jpg" alt="家具のレンタルサービスサイトLP" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/Rich-Life.jpg" alt="家具のレンタルサービスサイトLP" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery、GitHub</dd>
-														<dt>制作時期</dt>
-														<dd>2024年3月</dd>
-														<dt>制作時間</dt>
-														<dd>約2週間（33時間）</dd>
-														<dt>制作概要</dt>
-														<dd>デイトラが開催した実案件チャレンジ企画の作成物です。メガメニューやアコーディオンの実装を行いました。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./RPC/index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/onomichi.jpg" alt="尾道キャンペーンのLP" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/onomichi.jpg" alt="尾道キャンペーンのLP" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery</dd>
-														<dt>制作時期</dt>
-														<dd>2023年11月</dd>
-														<dt>制作時間</dt>
-														<dd>2週間（38時間）</dd>
-														<dt>制作概要</dt>
-														<dd>スクール課題です。dialogタグやsummaryタグなど比較的新しい技術を取り入れながら実装しました。複数スライドの実装も行っております。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./LP-Onomichi_campaign/index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/tokaniku.jpg" alt="ﾎﾟｰﾄﾌｫﾘｵｻｲﾄ" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/tokaniku.jpg" alt="ﾎﾟｰﾄﾌｫﾘｵｻｲﾄ" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery</dd>
-														<dt>制作時期</dt>
-														<dd>2023年9月</dd>
-														<dt>制作時間</dt>
-														<dd>5日（28時間）</dd>
-														<dt>制作概要</dt>
-														<dd>スクール課題です。ライブラリswiperを使ってスライダーを実装しました。また、ドロワーメニュー、アコーディオンメニューの制御をjQueryで実装しました。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./tokakuni/index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-									<li class="swiper-slide">
-										<div class="p-works__img c-img js-modal__btn--open">
-											<img src="./assets/img/comp/sobolon.jpg" alt="ｱｸｾｻﾘｼｮｯﾌﾟのLP" />
-										</div>
-										<dialog class="dialog__wrapper" aria-label="Dialog Box">
-											<div class="dialog__container">
-												<div class="dialog__img">
-													<img src="./assets/img/comp/sobolon.jpg" alt="ｱｸｾｻﾘｼｮｯﾌﾟのLP" />
-												</div>
-												<div class="dialog__text">
-													<dl>
-														<dt>スキル</dt>
-														<dd>HTML、Sass、jQuery</dd>
-														<dt>制作時期</dt>
-														<dd>2023年9月</dd>
-														<dt>制作時間</dt>
-														<dd>3日（23時間）</dd>
-														<dt>制作概要</dt>
-														<dd>スクール課題です。wowやdrawerのライブラリを使って実装しています。</dd>
-													</dl>
-												</div>
-											</div>
-											<div class="p-modal__buttons">
-												<a class="c-btn p-btn-modal js-modal__btn--link" href="./soboron/index.html" target="_blank">ページを見る </a>
-												<form method="dialog">
-													<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-												</form>
-											</div>
-										</dialog>
-									</li>
-
-								</ul>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-								<div class="swiper-pagination"></div>
-							</div>
-
-							<div class="p-section__explanation">
-								<p>Basic認証を設定しております。<br />ユーザー名・パスワードともに<strong>『demo』</strong>となります。</p>
-								<!-- <p>これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。</p> -->
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- skills -->
-				<!-- prettier-ignore -->
-
-				<section id="skills" class="l-section wow fadeInUp">
-					<div class="l-inner">
-						<hgroup class="p-section__title">
-							<h2 class="p-section__title--main">Skills</h2>
-							<p class="p-section__title--sub">スキル</p>
-						</hgroup>
-
-						<div class="p-section__contents">
-							<div class="p-skills__contents">
-								<ul class="p-skills__list">
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/html5.svg" alt="html5" />
-										</div>
-										<h3 class="p-skills__item-name">HTML</h3>
-									</li>
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/css3.svg" alt="css3" />
-										</div>
-										<h3 class="p-skills__item-name">CSS</h3>
-									</li>
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/sass.svg" alt="sass" />
-										</div>
-										<h3 class="p-skills__item-name">Sass</h3>
-									</li>
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/javascript.svg" alt="JavaScript" />
-										</div>
-										<h3 class="p-skills__item-name">JavaScript</h3>
-									</li>
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/jquery.svg" alt="jQuery" />
-										</div>
-										<h3 class="p-skills__item-name">jQuery</h3>
-									</li>
-									<li class="p-skills__item wow fadeInUp">
-										<div class="p-skills__item--img">
-											<img src="./assets/img/skills/wordpress.svg" alt="WordPress" />
-										</div>
-										<h3 class="p-skills__item-name">WordPress</h3>
-									</li>
-								</ul>
-								<div class="p-skills__messages">
-									<ul>
-										<li><strong class="hover__underline--from-left">W3C標準に準拠</strong>したコーディングを行います。</li>
-										<li>適切なタグを使用する等、<strong class="hover__underline--from-left">SEOを意識</strong>し適切なページ構成します。</li>
-										<li>スマホ・タブレット・パソコンに合わせた<strong class="hover__underline--from-left">レスポンシブ</strong>な画面レイアウトを実装可能です。</li>
-										<li>CSS・javaScript・jQueryを使用した<strong class="hover__underline--from-left">アニメーション</strong>も実装可能です。</li>
-										<li>HTMLサイト、WordPressサイト<strong class="hover__underline--from-left">どちらでも実装可能です。</strong></li>
-									</ul>
-								</div>
-							</div>
-							<div class="p-section__explanation">
-								<p>具体的なスキルについては、お気軽にご相談ください。</p>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-		<!-- about -->
-		<!-- prettier-ignore -->
-
-		<section id="promise" class="l-section p-section p-promise-section wow fadeInUp">
-			<div class="l-inner">
+		<section id="works" class="l-section p-section wow fadeInUp">
+			<div class="l-inner l-first-view__inner">
 				<hgroup class="p-section__title">
-					<h2 class="p-section__title--main">Promise</h2>
-					<p class="p-section__title--sub">お約束</p>
+					<h2 class="p-section__title--main">Works</h2>
+					<p class="p-section__title--sub">実績</p>
 				</hgroup>
 
 				<div class="p-section__contents">
-					<div class="p-promise__container">
-						<div class="p-promise__text-contents">
-							<ul>
-								<li>
-									<div class="p-promise__text--title-main">コーディング</div>
-									<div class="p-promise__text--wrapper">
-										<ul>
-											<li>
-												<div class="p-promise__text--title-sub">レスポンシブデザイン</div>
-												<p class="p-promise__text--message">スマートフォンやタブレットなど、様々なデバイスでの閲覧にも対応します。</p>
-											</li>
-											<li>
-												<div class="p-promise__text--title-sub">クロスブラウザ</div>
-												<p class="p-promise__text--message">Chrome、Firefox、Safari、Edgeで表示崩れしないよう意識したコーディングを行います。</p>
-											</li>
-										</ul>
+					<div class="swiper p-works__contents">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/clinic.jpg" alt="仮想の歯医者HP" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/clinic.jpg" alt="仮想の歯医者HP" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery、GitHub、WordPress</dd>
+												<dt>制作時期</dt>
+												<dd>2024年3月～5月</dd>
+												<dt>制作時間</dt>
+												<dd>約2ヶ月（113時間）</dd>
+												<dt>制作概要</dt>
+												<dd>スクール卒業課題です。FigmaカンプからHTMLサイト作成し、WordPress化しました。カスタム投稿・カスタムフィールドを実装しており、サイト所有者によるブログ投稿やスタッフ追加が可能となります。表示速度を意識した画像圧縮やプラグイン導入を実施しました。</dd>
+											</dl>
+										</div>
 									</div>
-								</li>
-								<li>
-									<div class="p-promise__text--title-main">稼働時間</div>
-									<div class="p-promise__text--wrapper">
-										<ul>
-											<li>
-												<div class="p-promise__text--title-sub">平日</div>
-												<p class="p-promise__text--message"><strong>4時間</strong>を確保できます（5:00〜7:00、19:00〜21:00）</p>
-											</li>
-											<li>
-												<div class="p-promise__text--title-sub">土日祝日</div>
-												<p class="p-promise__text--message"><strong>12時間</strong>を確保できます（平日に加えて、8:00〜12:00、13:00〜17:00も）</p>
-											</li>
-										</ul>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="https://pumi-webcoder.com/" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
 									</div>
-								</li>
+								</dialog>
+							</li>
 
-								<li>
-									<div class="p-promise__text--title-main">報告・連絡・相談</div>
-									<div class="p-promise__text--wrapper">
-										<ul>
-											<li>
-												<div class="p-promise__text--title-sub">報告</div>
-												<p class="p-promise__text--message"><strong>適切な頻度</strong>で進捗報告をいたします。</p>
-												<p class="p-promise__text--message">最低でも週に１回報告することとし、頻度についてはご相談させていただきます。</p>
-											</li>
-										</ul>
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/Portfolio.jpg" alt="本サイト（ポートフォリオサイト）" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/Portfolio.jpg" alt="本サイト（ポートフォリオサイト）" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery、GitHub、Gulp、EJS</dd>
+												<dt>制作時期</dt>
+												<dd>2023年3月～4月</dd>
+												<dt>制作時間</dt>
+												<dd>約2週間（40時間）</dd>
+												<dt>制作概要</dt>
+												<dd>一度BEMで作成しましたが、FLOCSS、EJSを学習し再構築しました。一番ご覧になっていただきたい「実績」セクションは、Swiperによるスライダーの実装にdialogタグによるモーダル表示を組み合わせました。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/lp-team-h.png" alt="仮想の子供向けクリニックLP（チーム開発）" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/lp-team-h.png" alt="仮想の子供向けクリニックLP（チーム開発）" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、SASS、jQuery、GitHub</dd>
+												<dt>制作時期</dt>
+												<dd>2023年12月～2月（コーディングは1ヶ月）</dd>
+												<dt>制作時間</dt>
+												<dd>約2週間（32時間）</dd>
+												<dt>制作概要</dt>
+												<dd>デザイナー2名、コーダー（私含め）3人で共同開発した架空クリニックのHPです。GitHubを用いて共同開発し私はヘッダーとアニメーションを担当しました。レスポンシブやアニメーションについても、MTGにて認識合わせしながら開発を進めました。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./Lp-Team_H/index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/Rich-Life.jpg" alt="家具のレンタルサービスサイトLP" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/Rich-Life.jpg" alt="家具のレンタルサービスサイトLP" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery、GitHub</dd>
+												<dt>制作時期</dt>
+												<dd>2024年3月</dd>
+												<dt>制作時間</dt>
+												<dd>約2週間（33時間）</dd>
+												<dt>制作概要</dt>
+												<dd>デイトラが開催した実案件チャレンジ企画の作成物です。メガメニューやアコーディオンの実装を行いました。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./RPC/index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/onomichi.jpg" alt="尾道キャンペーンのLP" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/onomichi.jpg" alt="尾道キャンペーンのLP" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery</dd>
+												<dt>制作時期</dt>
+												<dd>2023年11月</dd>
+												<dt>制作時間</dt>
+												<dd>2週間（38時間）</dd>
+												<dt>制作概要</dt>
+												<dd>スクール課題です。dialogタグやsummaryタグなど比較的新しい技術を取り入れながら実装しました。複数スライドの実装も行っております。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./LP-Onomichi_campaign/index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/tokaniku.jpg" alt="ﾎﾟｰﾄﾌｫﾘｵｻｲﾄ" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/tokaniku.jpg" alt="ﾎﾟｰﾄﾌｫﾘｵｻｲﾄ" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery</dd>
+												<dt>制作時期</dt>
+												<dd>2023年9月</dd>
+												<dt>制作時間</dt>
+												<dd>5日（28時間）</dd>
+												<dt>制作概要</dt>
+												<dd>スクール課題です。ライブラリswiperを使ってスライダーを実装しました。また、ドロワーメニュー、アコーディオンメニューの制御をjQueryで実装しました。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./tokakuni/index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+							<li class="swiper-slide">
+								<div class="p-works__img c-img js-modal__btn--open">
+									<img src="./assets/img/comp/sobolon.jpg" alt="ｱｸｾｻﾘｼｮｯﾌﾟのLP" />
+								</div>
+								<dialog class="dialog__wrapper" aria-label="Dialog Box">
+									<div class="dialog__container">
+										<div class="dialog__img">
+											<img src="./assets/img/comp/sobolon.jpg" alt="ｱｸｾｻﾘｼｮｯﾌﾟのLP" />
+										</div>
+										<div class="dialog__text">
+											<dl>
+												<dt>スキル</dt>
+												<dd>HTML、Sass、jQuery</dd>
+												<dt>制作時期</dt>
+												<dd>2023年9月</dd>
+												<dt>制作時間</dt>
+												<dd>3日（23時間）</dd>
+												<dt>制作概要</dt>
+												<dd>スクール課題です。wowやdrawerのライブラリを使って実装しています。</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="p-modal__buttons">
+										<a class="c-btn p-btn-modal js-modal__btn--link" href="./soboron/index.html" target="_blank">ページを見る </a>
+										<form method="dialog">
+											<button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+										</form>
+									</div>
+								</dialog>
+							</li>
+
+						</ul>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+
+					<div class="p-section__explanation">
+						<p>Basic認証を設定しております。<br />ユーザー名・パスワードともに<strong>『demo』</strong>となります。</p>
+						<!-- <p>これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。</p> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- skills -->
+		<!-- prettier-ignore -->
+
+		<section id="skills" class="l-section p-section wow fadeInUp">
+			<div class="l-inner">
+				<hgroup class="p-section__title">
+					<h2 class="p-section__title--main">Skills</h2>
+					<p class="p-section__title--sub">スキル</p>
+				</hgroup>
+
+				<div class="p-section__contents">
+					<div class="p-skills__contents">
+						<ul class="p-skills__list">
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/html5.svg" alt="html5" />
+								</div>
+								<h3 class="p-skills__item-name">HTML</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/css3.svg" alt="css3" />
+								</div>
+								<h3 class="p-skills__item-name">CSS</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/sass.svg" alt="sass" />
+								</div>
+								<h3 class="p-skills__item-name">Sass</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/javascript.svg" alt="JavaScript" />
+								</div>
+								<h3 class="p-skills__item-name">JavaScript</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/jquery.svg" alt="jQuery" />
+								</div>
+								<h3 class="p-skills__item-name">jQuery</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/wordpress.svg" alt="WordPress" />
+								</div>
+								<h3 class="p-skills__item-name">WordPress</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/github.svg" alt="github" />
+								</div>
+								<h3 class="p-skills__item-name">github</h3>
+							</li>
+							<li class="p-skills__item wow fadeInUp">
+								<div class="p-skills__item--img">
+									<img src="./assets/img/skills/gulp.svg" alt="gulp" />
+								</div>
+								<h3 class="p-skills__item-name">gulp</h3>
+							</li>
+						</ul>
+						<div class="p-skills__messages">
+							<ul>
+								<li class="p-skills__text--item">
+									<div class="p-skills__text--title-main">HTMLサイト</div>
+									<div class="p-skills__text--title-sub"><strong class="color-accent">W3C標準に準拠</strong>したコーディングを行います。</div>
+								</li>
+								<li class="p-skills__text--item">
+									<div class="p-skills__text--title-main">WordPressサイト</div>
+									<div class="p-skills__text--title-sub">ブログ投稿者の操作しやすさを意識して<strong class="color-accent">カスタム</strong>いたします</div>
+								</li>
+								<li class="p-skills__text--item">
+									<div class="p-skills__text--title-main">SEO</div>
+									<div class="p-skills__text--title-sub"><strong class="color-accent">パーツの役割を意識して適切なタグを使用する</strong>等、適切なページ構成で実装します。</div>
+								</li>
+								<li class="p-skills__text--item">
+									<div class="p-skills__text--title-main">アニメーション</div>
+									<div class="p-skills__text--title-sub">
+										<strong class="color-accent">CSS・javaScript・jQuery</strong>
+										を使用した簡易なアニメーションを実装可能です。
+									</div>
+								</li>
+								<li class="p-skills__text--item">
+									<div class="p-skills__text--title-main">レスポンシブデザイン</div>
+									<div class="p-skills__text--title-sub">
+										<strong class="color-accent">スマホ・タブレット・パソコン</strong>
+										に合わせた画面レイアウトを実装可能です。
 									</div>
 								</li>
 							</ul>
 						</div>
-						<div class="p-promise__img">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- about -->
+		<!-- prettier-ignore -->
+
+		<section id="promise" class="l-section p-section p-about-section wow fadeInUp">
+			<div class="l-inner">
+				<hgroup class="p-section__title">
+					<h2 class="p-section__title--main">About</h2>
+					<p class="p-section__title--sub">私について</p>
+				</hgroup>
+
+				<div class="p-section__contents">
+					<div class="p-about__container">
+						<ul class="p-about__text--contents">
+							<li class="p-about__text--item">
+								<div class="p-about__text--title-main">稼働時間</div>
+								<div class="p-about__text--wrapper">
+									<ul>
+										<li>
+											<div class="p-about__text--title-sub">
+												平日：
+												<strong class="color-accent"> 4時間 </strong>
+												対応可能です（5:00〜7:00、19:00〜21:00）
+											</div>
+										</li>
+
+										<li>
+											<div class="p-about__text--title-sub">
+												土日祝日：
+												<strong class="color-accent"> 16時間 </strong>
+												対応可能です（5:00〜21:00）
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="p-about__text--item">
+								<div class="p-about__text--title-main">コーディング</div>
+								<div class="p-about__text--wrapper">
+									<ul>
+										<li>
+											<div class="p-about__text--title-sub">
+												レスポンシブデザイン：
+												<strong class="color-accent"> スマートフォンやタブレット </strong>
+												など、様々なデバイスでの閲覧に対応します。
+											</div>
+										</li>
+										<li>
+											<div class="p-about__text--title-sub">
+												クロスブラウザ：Chrome、Firefox、Safari、Edgeで
+												<strong class="color-accent"> 表示崩れしない </strong>
+												よう意識したコーディングを行います。
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="p-about__text--item">
+								<div class="p-about__text--title-main">報告・連絡・相談</div>
+								<div class="p-about__text--wrapper">
+									<ul>
+										<li>
+											<div class="p-about__text--title-sub">
+												進捗報告：
+												<strong class="color-accent"> 適切な頻度 </strong>
+												で進捗報告をいたします。
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<div class="p-about__img">
 							<img src="./assets/img/pumi.png" alt="プミ画像" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- contact-twitter -->
+		<!-- contact -->
 		<!-- prettier-ignore -->
 
-		<section id="contact-twitter" class="l-section p-contact-twitter wow fadeInUp">
-			<!-- contact -->
-			<div class="p-contact-twitter__item p-contact-twitter__item-contact">
+		<!-- wordPress化する時 -->
+		<!-- formタグをdivタグに置換え -->
+		<!-- inputタグもCONTACT7用に置換え -->
+		<section id="contact" class="l-section p-contact wow fadeInUp">
+			<div class="l-inner">
 				<hgroup class="p-section__title">
 					<h2 class="p-section__title--main">Contact</h2>
 					<p class="p-section__title--sub">お問い合わせ</p>
 				</hgroup>
-				<a href="./contact.html" target="_blank" class="p-contact-twitter__button">
-					<span class="p-contact-twitter__button__icon">
-						<svg width="20" height="16" viewBox="0 0 20 16" fill="white">
-							<path d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z" fill="white" class="p-contact-twitter__button__icon-path" />
-						</svg>
-					</span>
-					<span class="p-contact-twitter__button__text">Contact</span>
-				</a>
-			</div>
-			<!-- twitter(X) -->
-			<div class="p-contact-twitter__item p-contact-twitter__item-twitter">
-				<hgroup class="p-section__title">
-					<h2 class="p-section__title--main">Twitter(X)</h2>
-					<p class="p-section__title--sub">ツイッター(X)</p>
-				</hgroup>
-				<a href="https://twitter.com/pumi_webcoder" target="_blank" class="p-contact-twitter__button">
-					<span class="p-contact-twitter__button__icon">
-						<svg width="20" height="21" viewBox="0 0 20 21" fill="white">
-							<path d="M17.9441 6.40799C17.9568 6.58444 17.9568 6.76092 17.9568 6.93736C17.9568 12.3191 13.8325 18.5201 6.29441 18.5201C3.97207 18.5201 1.81473 17.8521 0 16.6926C0.329961 16.7304 0.647187 16.743 0.989844 16.743C2.90605 16.743 4.67004 16.1002 6.07867 15.0037C4.27664 14.9659 2.76648 13.7937 2.24617 12.1805C2.5 12.2183 2.75379 12.2435 3.02031 12.2435C3.38832 12.2435 3.75637 12.193 4.09898 12.1049C2.22082 11.7267 0.812148 10.0883 0.812148 8.10949V8.05909C1.35781 8.36158 1.99238 8.55063 2.66492 8.57581C1.56086 7.84479 0.837539 6.59704 0.837539 5.18543C0.837539 4.42922 1.04055 3.73602 1.3959 3.13105C3.41367 5.60136 6.44668 7.21459 9.84766 7.39107C9.78422 7.08858 9.74613 6.77353 9.74613 6.45843C9.74613 4.21496 11.5736 2.38745 13.8451 2.38745C15.0253 2.38745 16.0913 2.87899 16.84 3.67302C17.7664 3.49658 18.6547 3.15626 19.4416 2.68994C19.137 3.63523 18.4898 4.42926 17.6395 4.93337C18.4644 4.84519 19.2639 4.61827 19.9999 4.30322C19.4416 5.10981 18.7436 5.82819 17.9441 6.40799Z" fill="white" class="p-contact-twitter__button__icon-path" />
-						</svg>
-					</span>
-					<span class="p-contact-twitter__button__text">Twitter(X)</span>
-				</a>
+
+				<form id="js-form" class="p-contact__form" method="post" action="
+              https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
+              ">
+					<!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容） -->
+					<!-- prettier-ignore -->
+
+					<!-- テキスト（名前） -->
+					<!-- prettier-ignore -->
+
+					<!-- テキスト（名前） -->
+					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+					<div class="p-contact__form--item">
+						<div class="p-contact__form--title">
+							<label for="your-name" class="p-contact__form--title-text">お名前</label>
+							<span class="p-contact__form--require">必須</span>
+						</div>
+						<div class="p-contact__form--input">
+							<input class="js-text" type="text" id="your-name" placeholder="山田太郎" name="entry.530212225" required />
+							<!-- <span class="wpcf7-form-control-wrap" data-name="your-name"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required reserve__form--input js-text"
+          id="your-name"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="山田　太郎"
+          value=""
+          type="text"
+          name="your-name"
+          required="required"
+      /></span> -->
+							<div class="error-message"></div>
+						</div>
+					</div>
+					<!-- メールアドレス -->
+					<!-- prettier-ignore -->
+
+					<!-- メールアドレス -->
+					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+					<div class="p-contact__form--item">
+						<div class="p-contact__form--title">
+							<label for="email" class="p-contact__form--title-text">メールアドレス</label>
+							<span class="p-contact__form--require">必須</span>
+						</div>
+						<div class="p-contact__form--input">
+							<!-- <span class="wpcf7-form-control-wrap" data-name="emailAddress"
+        ><input
+          size="40"
+          class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email reserve__form--input js-mail"
+          id="email"
+          aria-required="true"
+          aria-invalid="false"
+          placeholder="xxx@example.com"
+          value=""
+          type="email"
+          name="emailAddress"
+          required="required"
+      />
+    </span> -->
+							<input class="js-mail" type="email" id="your-email" placeholder="info@example.com" name="emailAddress" required />
+							<div class="error-message"></div>
+						</div>
+					</div>
+					<!-- ラジオボタン -->
+					<!-- prettier-ignore -->
+
+					<!-- ラジオボタン -->
+					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+					<div class="p-contact__form--item reserve__form--item-radio">
+						<div class="p-contact__form--title">
+							<!-- <div class="p-contact__form--title-text">初診/再診</div> -->
+							<div class="p-contact__form--title-text">お問い合わせ種類</div>
+							<!-- <label for="radio-button" class="p-contact__form--title-text">初診/再診</label> -->
+							<span class="p-contact__form--require">必須</span>
+						</div>
+						<div class="p-contact__form--input">
+							<!-- wrapperの構成が違ってたので、HTML用にクラスをコピーしてDIVタグ作成した -->
+							<!-- <span class="wpcf7-form-control-wrap" data-name="radio-button">
+        <span class="wpcf7-form-control wpcf7-radio reserve__form--radio-wrapper js-radio" id="radio-button">
+          <span class="wpcf7-list-item first">
+            <label>
+              <input type="radio" name="radio-button" value="初診" checked="checked" />
+              <span class="wpcf7-list-item-label">初診</span>
+            </label>
+          </span>
+          <span class="wpcf7-list-item last">
+            <label>
+              <input type="radio" name="radio-button" value="再診" />
+              <span class="wpcf7-list-item-label">再診</span>
+            </label>
+          </span>
+        </span>
+      </span> -->
+							<div class="p-contact__form--radio-wrapper js-radio">
+								<label class="p-contact__field--radio">
+									<input type="radio" name="entry.716562788" value="ホームページ制作" required />
+									<span class="p-contact-radio-label">ホームページ制作</span>
+								</label>
+								<label class="p-contact__field--radio">
+									<input type="radio" name="entry.716562788" value="ホームページ修正" />
+									<span class="p-contact-radio-label">ホームページ修正</span>
+								</label>
+								<label class="p-contact__field--radio">
+									<input type="radio" name="entry.716562788" value="ホームページ相談" />
+									<span class="p-contact-radio-label">ホームページ相談</span>
+								</label>
+							</div>
+							<div class="error-message"></div>
+						</div>
+					</div>
+					<!-- テキストアリア -->
+					<!-- prettier-ignore -->
+
+					<!-- テキストアリア -->
+					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+					<div class="p-contact__form--item reserve__form--item-textarea">
+						<div class="p-contact__form--title">
+							<label for="message" class="p-contact__form--title-text"> お問い合わせ内容 </label>
+							<span class="p-contact__form--require">必須</span>
+						</div>
+						<div class="p-contact__form--input">
+							<!-- <span class="wpcf7-form-control-wrap" data-name="message">
+      <textarea
+        cols="40"
+        rows="5"
+        class="wpcf7-form-control wpcf7-textarea reserve__form--input reserve__form--textarea"
+        id="message"
+        aria-invalid="false"
+        placeholder="ご自由にご記入ください。"
+        name="message"
+        required="required"
+      ></textarea>
+    </span> -->
+							<textarea class="js-text" id="your-message" placeholder="お問い合わせ内容をご入力ください。3営業日以内にご返信いたします。" name="entry.1269014493" required></textarea>
+							<div class="error-message"></div>
+						</div>
+					</div>
+					<!-- チェックボックス -->
+					<!-- prettier-ignore -->
+
+					<!-- チェックボックス -->
+					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+					<div class="p-contact__form--item p-contact__form--item-privacy">
+						<label class="p-contact__form--title p-contact__wrapper-privacy js-form--wrapper">
+							<input class="js-checkbox" type="checkbox" name="entry.2114229630" value="プライバシーポリシーに合意する" required aria-label="プライバシーポリシーに合意する" />
+							<span>
+								<a href="./policy.html" target="_blank""> プライバシーポリシー </a>
+      に合意する
+    </span>
+    <span class=" p-contact__form--require">必須</span>
+						</label>
+						<div class="error-message"></div>
+
+					</div>
+					<!-- 送信ボタン -->
+					<!-- prettier-ignore -->
+
+					<!-- 送信ボタン -->
+					<button id="js-submit" class="c-btn p-contact__btn" type="submit">上記の内容を送信する</button>
+					<!-- wordPress化する時は以下に置換えられる（CONTACT7用） -->
+					<!-- <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /> -->
+				</form>
+				<!-- 送信後のメッセージ -->
+				<!-- prettier-ignore -->
+
+				<div id="js-success" class="p-contact__message--success">
+					<p>
+						送信完了しました。
+						<br />ありがとうございました。 <br />3営業日以内にご返信いたします。
+					</p>
+				</div>
+				<div id="js-error" class="p-contact__message--error">
+					<p>
+						送信に失敗しました。
+						<br />ページを更新して再度送信してください。
+					</p>
+				</div>
 			</div>
 		</section>
 		<!-- footer -->

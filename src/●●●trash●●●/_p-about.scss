@@ -1,0 +1,34 @@
+@use "../global" as *;
+
+.p-about-section {
+  width: calc(1200 / 1600 * 100vw);
+  margin-inline: auto;
+}
+.p-about__container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-about__img {
+  flex: 1;
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+  aspect-ratio: 1;
+  height: auto;
+}
+.p-about__text-contents {
+  min-height: 300px;
+  width: calc(600 / 1600 * 100vw);
+  // width: 48%;
+  // @include mq(sp) {
+  //   width: 100%;
+  // }
+}
+.p-about__text--title {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.p-about__text--message {
+  padding: 1rem;
+}

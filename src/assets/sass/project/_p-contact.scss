@@ -182,11 +182,12 @@
 }
 
 .p-contact__btn {
-  margin-top: 3rem;
+  margin-top: 2rem;
   &:disabled {
     cursor: not-allowed;
     border-color: transparent;
     background-color: #ccc;
+    background-image: revert;
     // color: black;
     @media (hover: hover) {
       &:hover,

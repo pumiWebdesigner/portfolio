@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
   <!-- head -->
-  <%- include("./parts/_head",{ path:".", }) -%>
+  <%- include("./parts/_head-contact",{ path:".", }) -%>
 
   <body>
     <!-- header -->
-    <%- include("./parts/_header",{ path:".", }) -%>
+    <%- include("./parts/_header-contact",{ path:".", }) -%>
 
     <main class="main">
       <!-- BackGround -->
       <%- include("./parts/_back-ground",{ path:".", }) -%>
-      <!-- work -->
-      <%- include("./parts/_works",{ path:".", }) -%>
-      <!-- skills -->
-      <%- include("./parts/_skills",{ path:".", }) -%>
-      <!-- about -->
-      <%- include("./parts/_about",{ path:".", }) -%>
+      <!-- headerの高さ分の余白を取る -->
+      <div class="u-separeta--header"></div>
       <!-- contact -->
       <%- include("./parts/_contact-form",{ path:".", }) -%>
+      <!-- contact-twitter -->
+      <%- include("./parts/_contact-twitter",{ path:".", }) -%>
       <!-- footer -->
       <%- include("./parts/_footer",{ path:".", }) -%>
       <!-- to-top -->
