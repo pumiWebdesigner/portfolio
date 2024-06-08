@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../global" as *;
+
+.hover__fontsize--2rem {
+  &:hover {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,5 @@
+@use "../global" as *;
+
+.l-first-view__inner {
+  max-width: revert;
+}

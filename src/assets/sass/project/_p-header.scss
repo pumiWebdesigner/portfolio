@@ -33,10 +33,10 @@
 }
 
 .p-header__nav--item {
-  border-left: 1px solid currentColor;
-  &:first-child {
-    border-left: revert;
-  }
+  // border-left: 1px solid currentColor;
+  // &:first-child {
+  //   border-left: revert;
+  // }
   color: white;
   font-family: "Noto Sans JP";
   font-size: 1.5em;
@@ -44,4 +44,9 @@
 
 .p-header__link {
   padding: 0.2em 1em;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

@@ -42,7 +42,6 @@
 }
 .p-section__title--sub {
   display: block;
-  margin-top: 1rem;
   font-size: 1.5rem;
   @include mq(sp) {
     font-size: 1.2rem;
@@ -50,13 +49,11 @@
 }
 .p-section__contents {
   margin-top: 2rem;
-}
-.p-section__explanation {
-  margin-top: 2rem;
-  @include mq(sp) {
-    padding-inline: 1rem;
-  }
-  p + p {
-    margin-top: 1rem;
+  background-color: var(--sub);
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+  padding: 5%;
+
+  .p-section:nth-of-type(2n) & {
+    background-color: #fff;
   }
 }

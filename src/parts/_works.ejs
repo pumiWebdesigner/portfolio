@@ -74,56 +74,54 @@ const works = [
 ];
 _%>
 
-<section id="works" class="l-section p-section wow fadeInUp">
-  <div class="l-inner l-first-view__inner">
+<section id="works" class="l-section l-first-view p-section wow fadeInUp">
+  <div class="l-inner">
     <hgroup class="p-section__title">
       <h2 class="p-section__title--main">Works</h2>
       <p class="p-section__title--sub">実績</p>
     </hgroup>
 
-    <div class="p-section__contents">
-      <div class="swiper p-works__contents">
-        <ul class="swiper-wrapper">
-          <%_ works.forEach(work => { _%>
-          <li class="swiper-slide">
-            <div class="p-works__img c-img js-modal__btn--open">
-              <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
+    <div class="p-section__contents swiper p-works__contents">
+      <ul class="swiper-wrapper">
+        <%_ works.forEach(work => { _%>
+        <li class="swiper-slide">
+          <div class="p-works__img c-img js-modal__btn--open">
+            <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
+          </div>
+          <dialog class="dialog__wrapper" aria-label="Dialog Box">
+            <div class="dialog__container">
+              <div class="dialog__img">
+                <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
+              </div>
+              <div class="dialog__text">
+                <dl>
+                  <dt>スキル</dt>
+                  <dd><%= work.skills %></dd>
+                  <dt>制作時期</dt>
+                  <dd><%= work.season %></dd>
+                  <dt>制作時間</dt>
+                  <dd><%= work.time %></dd>
+                  <dt>制作概要</dt>
+                  <dd><%= work.message %></dd>
+                </dl>
+              </div>
             </div>
-            <dialog class="dialog__wrapper" aria-label="Dialog Box">
-              <div class="dialog__container">
-                <div class="dialog__img">
-                  <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
-                </div>
-                <div class="dialog__text">
-                  <dl>
-                    <dt>スキル</dt>
-                    <dd><%= work.skills %></dd>
-                    <dt>制作時期</dt>
-                    <dd><%= work.season %></dd>
-                    <dt>制作時間</dt>
-                    <dd><%= work.time %></dd>
-                    <dt>制作概要</dt>
-                    <dd><%= work.message %></dd>
-                  </dl>
-                </div>
-              </div>
-              <div class="p-modal__buttons">
-                <a class="c-btn p-btn-modal js-modal__btn--link" href="<%= work.link %>" target="_blank">ページを見る </a>
-                <form method="dialog">
-                  <button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
-                </form>
-              </div>
-            </dialog>
-          </li>
+            <div class="p-modal__buttons">
+              <a class="c-btn p-btn-modal js-modal__btn--link" href="<%= work.link %>" target="_blank">ページを見る </a>
+              <form method="dialog">
+                <button class="c-btn p-btn-modal js-modal__btn--close">閉じる</button>
+              </form>
+            </div>
+          </dialog>
+        </li>
 
-          <%_ }); _%>
-        </ul>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+        <%_ }); _%>
+      </ul>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
 
-      <div class="p-section__explanation">
+      <div class="p-works__explanation">
         <p>Basic認証を設定しております。<br />ユーザー名・パスワードともに<strong>『demo』</strong>となります。</p>
         <!-- <p>これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。</p> -->
       </div>

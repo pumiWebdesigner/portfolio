@@ -1,16 +1,20 @@
 @use "../global" as *;
 
 .p-about-section {
-  // width: calc(1200 / 1600 * 100vw);
-  // margin-inline: auto;
+}
+.p-about__contents {
+  max-width: 1000px;
+  margin-inline: auto;
 }
 .p-about__container {
   display: flex;
-  gap: 5vw;
+  gap: 2vw;
   justify-content: center;
   align-items: center;
-  @include mq(sp) {
+  @media screen and (max-width: 1280px) {
     flex-direction: column-reverse;
+    margin-top: 3rem;
+    gap: revert;
   }
 }
 .p-about__img {
@@ -18,33 +22,27 @@
   aspect-ratio: 1;
   height: auto;
   width: 30vw;
-  @include mq(sp) {
+  @media screen and (max-width: 1280px) {
     width: 70vw;
+    max-width: 400px;
   }
 }
 .p-about__text--contents {
-  @include mq(sp) {
+  @media screen and (max-width: 1280px) {
     width: revert;
     padding: 2rem;
   }
 }
-.p-about__text--item {
-  margin-top: 1rem;
+.p-about__text--main {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
-.p-about__text--title-main {
+.p-about__text--sub-title {
   margin-top: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  // }
-
-  // .p-about__text--wrapper {
-  //   margin-top: 0.5rem;
-  // padding-left: 1rem;
-  li {
-    margin-top: 0.5rem;
-  }
 }
-.p-about__text--title-sub {
+.p-about__text--sub-message {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   padding-left: 1.5rem;

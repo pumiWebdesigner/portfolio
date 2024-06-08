@@ -1,13 +1,8 @@
 @use "../global" as *;
 
 .p-skills__contents {
-  background: white;
-  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
-  margin-top: 2rem;
-  padding: 2rem;
   max-width: 1000px;
   margin-inline: auto;
-  // height: 500px;
 }
 .p-skills__list {
   display: grid;

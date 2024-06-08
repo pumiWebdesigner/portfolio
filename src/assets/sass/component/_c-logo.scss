@@ -9,4 +9,9 @@
   @include mq(sp) {
     font-size: 20px;
   }
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

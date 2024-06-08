@@ -1,14 +1,10 @@
 @use "../global" as *;
 
 .l-first-view {
-  margin-top: var(--height-pc-header);
+  margin-top: var(--height-pc-header) !important;
   // height: calc(100vh - var(--height-pc-header));
   @include mq(sp) {
-    margin-top: var(--height-sp-header);
+    margin-top: var(--height-sp-header) !important;
     // height: calc(100vh - var(--height-sp-header));
   }
-}
-
-.l-first-view__inner {
-  max-width: revert;
 }
