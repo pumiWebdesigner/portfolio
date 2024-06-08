@@ -40,7 +40,7 @@ async function copyImage() {
     gulp
       .src("./src/assets/img/**/*")
       //そのままの画像も格納
-      .pipe(gulp.dest("./public/assets/img/"))
+      // .pipe(gulp.dest("./public/assets/img/"))
       //extname: ファイルの拡張子を取得,toLowerCase: 小文字に変換,拡張子が対象の拡張子に含まれているか確認
       .pipe(gulpIf((file) => webpExtensions.includes(file.extname.toLowerCase()), webp()))
       .pipe(gulp.dest("./public/assets/img/"))

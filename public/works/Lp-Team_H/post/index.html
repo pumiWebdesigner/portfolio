@@ -1,471 +1,432 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>キリンこどもクリニック</title>
-    <meta
-      name="description"
-      content="きりんこどもクリニックは、親も子も安心して診察を受けられるクリニックです。私たちは、気軽に相談できる環境を大切にし、24時間オンラインで予約が可能なシステムを導入しております。これにより、ご家族の貴重な時間を大切にし、待ち時間の短縮を実現しました。"
-    />
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!-- ヘッダー（下層ページでも共有） -->
-    <header class="header">
-      <div class="header__inner">
-        <div class="header__upper-wrapper">
-          <!-- ヘッダー左側の木 -->
-          <div class="header__tree--left">
-            <img src="../img/tree-left.png" alt="左側の木" />
-          </div>
-          <!-- キリンのロゴ -->
-          <h1 class="header__logo">
-            <a href="../#" class="header__logo--link">
-              <picture>
-                <source media="(min-width: 1025px)" srcset="../img/icon-logo.png" />
-                <img src="../img/sp/icon-logo-sp.png" alt="きりんこどもクリニック" />
-              </picture>
-            </a>
-          </h1>
-          <!-- 電話番号・住所 -->
-          <div class="header__info">
-            <div class="header__address">神奈川県横浜市西区北幸20-1</div>
-            <div class="header__tel">
-              <div class="header__tel--icon">
-                <img src="../img/icon-tel.png" alt="電話番号" />
-              </div>
-              <a class="header__tel--number">045-1234-5678</a>
-            </div>
-          </div>
-          <!-- ヘッダー右側の木 -->
-          <div class="header__tree--right">
-            <img src="../img/tree-right.png" alt="右側の木" />
-          </div>
-        </div>
 
-        <!-- ヘッダーナビ -->
-        <nav class="header__nav">
-          <ul class="header__nav--list">
-            <!-- ホーム -->
-            <li class="header__nav--item">
-              <a href="../#" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-home.png" alt="ホーム" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/home.png" alt="家アイコン" /></div>
-                <div class="header__nav--sub-text">Home</div>
-              </a>
-            </li>
-            <!-- 診療案内 -->
-            <li class="header__nav--item">
-              <a href="../#medical-menu" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-medical.png" alt="診療案内" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/medical.png" alt="聴診器アイコン" /></div>
-                <div class="header__nav--sub-text">Medical</div>
-              </a>
-            </li>
-            <!-- 医師紹介 -->
-            <li class="header__nav--item">
-              <a href="../#greeting" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-doctor.png" alt="医師紹介" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/doctor.png" alt="医者アイコン" /></div>
-                <div class="header__nav--sub-text">Doctor</div>
-              </a>
-            </li>
-            <!-- 施設案内 -->
-            <li class="header__nav--item">
-              <a href="../#point" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-clinic.png" alt="施設案内" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/clinic.png" alt="病院アイコン" /></div>
-                <div class="header__nav--sub-text">Clinic</div>
-              </a>
-            </li>
-            <!-- ブログ -->
-            <li class="header__nav--item">
-              <a href="../#blog" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-blog.png" alt="ブログ" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/blog.png" alt="葉っぱアイコン" /></div>
-                <div class="header__nav--sub-text">Blog</div>
-              </a>
-            </li>
-            <!-- アクセス -->
-            <li class="header__nav--item">
-              <a href="../#access" class="header__nav--container">
-                <div class="header__nav--icon">
-                  <img src="../img/icon-access.png" alt="アクセス" />
-                </div>
-                <div class="header__nav--main-text"><img src="../img/text/access.png" alt="目的地アイコン" /></div>
-                <div class="header__nav--sub-text">Access</div>
-              </a>
-            </li>
-          </ul>
-        </nav>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex" />
+	<title>キリンこどもクリニック</title>
+	<meta name="description" content="きりんこどもクリニックは、親も子も安心して診察を受けられるクリニックです。私たちは、気軽に相談できる環境を大切にし、24時間オンラインで予約が可能なシステムを導入しております。これにより、ご家族の貴重な時間を大切にし、待ち時間の短縮を実現しました。" />
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
 
-        <!-- 予約ボタン -->
-        <div class="header__reserve-btn--list">
-          <div class="header__reserve-btn--item btn-orange">
-            <a href="#" class="header__reserve-btn--link">
-              <div class="header__reserve-btn--item-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                  <path
-                    d="M8.26834 10.0439H8.27849M14.3572 10.0439H14.3674M9.28316 14.0633C9.79057 14.3648 10.5009 14.5657 11.3128 14.5657C12.1246 14.5657 12.835 14.3648 13.3424 14.0633"
-                    stroke="white"
-                    stroke-width="0.93899"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.4123 4.31599C19.0936 5.16162 19.6142 6.11894 19.9523 7.14122C20.1759 7.81713 20.6933 8.37476 21.0741 8.97629V8.97629C21.2766 9.29618 21.384 9.66607 21.384 10.0436C21.384 10.4211 21.2766 10.791 21.0741 11.1109V11.1109C20.6923 11.714 20.1682 12.267 19.9306 12.9401C19.3722 14.522 18.378 15.9269 17.0501 16.9896C15.4249 18.2904 13.3984 19 11.3086 19C9.2189 19 7.19234 18.2904 5.56714 16.9896C4.23933 15.9269 3.24504 14.522 2.68669 12.9401C2.44912 12.267 1.925 11.714 1.54323 11.1109V11.1109C1.34074 10.791 1.23334 10.4211 1.23334 10.0436C1.23334 9.66607 1.34074 9.29618 1.54323 8.97629V8.97629C1.9245 8.37396 2.44529 7.81865 2.67587 7.14412C3.22231 5.54551 4.21262 4.12244 5.54351 3.04422C7.17039 1.72621 9.20662 1.0042 11.3086 1C13.3383 1 14.8605 2.10533 14.8605 3.51211C14.8605 4.9189 13.9472 6.02423 12.8309 6.02423C12.019 6.02423 11.3086 5.62229 11.3086 5.01938"
-                    stroke="white"
-                    stroke-width="0.93899"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div class="header__reserve-btn--item-text">一般診療予約</div>
-            </a>
-          </div>
-          <div class="header__reserve-btn--item btn-blue">
-            <a href="#" class="header__reserve-btn--link">
-              <div class="header__reserve-btn--item-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
-                  <path
-                    d="M18.4539 5.51144L19.1618 4.68651L15.6818 1.44385L14.8374 2.15477L16.0913 3.47051L15.0677 4.48385L13.0207 2.71685L11.818 1.59268L10.9736 2.65985L11.7924 3.26785L3.23745 10.6731C2.96717 10.9232 2.79507 11.2503 2.74868 11.6019C2.7023 11.9535 2.78429 12.3094 2.98156 12.6127L4.21833 14.6172L2.37598 16.2385L3.10479 16.7452L4.83245 15.2252L7.18656 16.5235C7.44489 16.6658 7.73912 16.7423 8.0395 16.7452C8.2689 16.7485 8.44784 16.7452 8.70917 16.6286C8.8912 16.5235 8.96955 16.3896 9.13127 16.2385L17.195 8.24515L18.2186 9.25848L19.0595 8.32185L17.8483 7.19769L16.0316 5.42095L17.1148 4.28118L18.4539 5.51144ZM16.5007 7.72652L8.0395 15.6305L5.65127 14.2119L3.80892 11.5772L5.03715 10.5638L7.80068 12.9958L8.80715 12.2327L5.85597 9.95585L7.80068 8.24195L10.2571 10.6731L11.2124 9.99227L8.51715 7.52385L10.1548 6.10518L12.7136 8.53722L13.6263 7.75185L10.9736 5.49718L12.6113 3.87585L16.5007 7.72652Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-              <div class="header__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
-            </a>
-          </div>
-        </div>
+<body>
+	<!-- ヘッダー（下層ページでも共有） -->
+	<header class="header">
+		<div class="header__inner">
+			<div class="header__upper-wrapper">
+				<!-- ヘッダー左側の木 -->
+				<div class="header__tree--left">
+					<img src="../img/tree-left.png" alt="左側の木" />
+				</div>
+				<!-- キリンのロゴ -->
+				<h1 class="header__logo">
+					<a href="../#" class="header__logo--link">
+						<picture>
+							<source media="(min-width: 1025px)" srcset="../img/icon-logo.png" />
+							<img src="../img/sp/icon-logo-sp.png" alt="きりんこどもクリニック" />
+						</picture>
+					</a>
+				</h1>
+				<!-- 電話番号・住所 -->
+				<div class="header__info">
+					<div class="header__address">神奈川県横浜市西区北幸20-1</div>
+					<div class="header__tel">
+						<div class="header__tel--icon">
+							<img src="../img/icon-tel.png" alt="電話番号" />
+						</div>
+						<a class="header__tel--number">045-1234-5678</a>
+					</div>
+				</div>
+				<!-- ヘッダー右側の木 -->
+				<div class="header__tree--right">
+					<img src="../img/tree-right.png" alt="右側の木" />
+				</div>
+			</div>
 
-        <!-- ハンバーガーボタン -->
-        <button id="js-drawer__btn" class="header__hamburger--button" aria-label="menu">
-          <span class="drawer-bar"></span>
-          <span class="drawer-bar"></span>
-          <span class="drawer-bar"></span>
-        </button>
-      </div>
-    </header>
+			<!-- ヘッダーナビ -->
+			<nav class="header__nav">
+				<ul class="header__nav--list">
+					<!-- ホーム -->
+					<li class="header__nav--item">
+						<a href="../#" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-home.png" alt="ホーム" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/home.png" alt="家アイコン" /></div>
+							<div class="header__nav--sub-text">Home</div>
+						</a>
+					</li>
+					<!-- 診療案内 -->
+					<li class="header__nav--item">
+						<a href="../#medical-menu" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-medical.png" alt="診療案内" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/medical.png" alt="聴診器アイコン" /></div>
+							<div class="header__nav--sub-text">Medical</div>
+						</a>
+					</li>
+					<!-- 医師紹介 -->
+					<li class="header__nav--item">
+						<a href="../#greeting" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-doctor.png" alt="医師紹介" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/doctor.png" alt="医者アイコン" /></div>
+							<div class="header__nav--sub-text">Doctor</div>
+						</a>
+					</li>
+					<!-- 施設案内 -->
+					<li class="header__nav--item">
+						<a href="../#point" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-clinic.png" alt="施設案内" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/clinic.png" alt="病院アイコン" /></div>
+							<div class="header__nav--sub-text">Clinic</div>
+						</a>
+					</li>
+					<!-- ブログ -->
+					<li class="header__nav--item">
+						<a href="../#blog" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-blog.png" alt="ブログ" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/blog.png" alt="葉っぱアイコン" /></div>
+							<div class="header__nav--sub-text">Blog</div>
+						</a>
+					</li>
+					<!-- アクセス -->
+					<li class="header__nav--item">
+						<a href="../#access" class="header__nav--container">
+							<div class="header__nav--icon">
+								<img src="../img/icon-access.png" alt="アクセス" />
+							</div>
+							<div class="header__nav--main-text"><img src="../img/text/access.png" alt="目的地アイコン" /></div>
+							<div class="header__nav--sub-text">Access</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
 
-    <!-- ドロワーナビ（下層ページでも共有） -->
+			<!-- 予約ボタン -->
+			<div class="header__reserve-btn--list">
+				<div class="header__reserve-btn--item btn-orange">
+					<a href="#" class="header__reserve-btn--link">
+						<div class="header__reserve-btn--item-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+								<path d="M8.26834 10.0439H8.27849M14.3572 10.0439H14.3674M9.28316 14.0633C9.79057 14.3648 10.5009 14.5657 11.3128 14.5657C12.1246 14.5657 12.835 14.3648 13.3424 14.0633" stroke="white" stroke-width="0.93899" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M18.4123 4.31599C19.0936 5.16162 19.6142 6.11894 19.9523 7.14122C20.1759 7.81713 20.6933 8.37476 21.0741 8.97629V8.97629C21.2766 9.29618 21.384 9.66607 21.384 10.0436C21.384 10.4211 21.2766 10.791 21.0741 11.1109V11.1109C20.6923 11.714 20.1682 12.267 19.9306 12.9401C19.3722 14.522 18.378 15.9269 17.0501 16.9896C15.4249 18.2904 13.3984 19 11.3086 19C9.2189 19 7.19234 18.2904 5.56714 16.9896C4.23933 15.9269 3.24504 14.522 2.68669 12.9401C2.44912 12.267 1.925 11.714 1.54323 11.1109V11.1109C1.34074 10.791 1.23334 10.4211 1.23334 10.0436C1.23334 9.66607 1.34074 9.29618 1.54323 8.97629V8.97629C1.9245 8.37396 2.44529 7.81865 2.67587 7.14412C3.22231 5.54551 4.21262 4.12244 5.54351 3.04422C7.17039 1.72621 9.20662 1.0042 11.3086 1C13.3383 1 14.8605 2.10533 14.8605 3.51211C14.8605 4.9189 13.9472 6.02423 12.8309 6.02423C12.019 6.02423 11.3086 5.62229 11.3086 5.01938" stroke="white" stroke-width="0.93899" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="header__reserve-btn--item-text">一般診療予約</div>
+					</a>
+				</div>
+				<div class="header__reserve-btn--item btn-blue">
+					<a href="#" class="header__reserve-btn--link">
+						<div class="header__reserve-btn--item-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+								<path d="M18.4539 5.51144L19.1618 4.68651L15.6818 1.44385L14.8374 2.15477L16.0913 3.47051L15.0677 4.48385L13.0207 2.71685L11.818 1.59268L10.9736 2.65985L11.7924 3.26785L3.23745 10.6731C2.96717 10.9232 2.79507 11.2503 2.74868 11.6019C2.7023 11.9535 2.78429 12.3094 2.98156 12.6127L4.21833 14.6172L2.37598 16.2385L3.10479 16.7452L4.83245 15.2252L7.18656 16.5235C7.44489 16.6658 7.73912 16.7423 8.0395 16.7452C8.2689 16.7485 8.44784 16.7452 8.70917 16.6286C8.8912 16.5235 8.96955 16.3896 9.13127 16.2385L17.195 8.24515L18.2186 9.25848L19.0595 8.32185L17.8483 7.19769L16.0316 5.42095L17.1148 4.28118L18.4539 5.51144ZM16.5007 7.72652L8.0395 15.6305L5.65127 14.2119L3.80892 11.5772L5.03715 10.5638L7.80068 12.9958L8.80715 12.2327L5.85597 9.95585L7.80068 8.24195L10.2571 10.6731L11.2124 9.99227L8.51715 7.52385L10.1548 6.10518L12.7136 8.53722L13.6263 7.75185L10.9736 5.49718L12.6113 3.87585L16.5007 7.72652Z" fill="white" />
+							</svg>
+						</div>
+						<div class="header__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
+					</a>
+				</div>
+			</div>
 
-    <nav class="drawer__nav" role="navigation">
-      <!-- drawer -->
-      <ul class="drawer__nav--list">
-        <!-- ホーム -->
-        <li class="drawer__nav--item">
-          <a href="../#" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/home.png" alt="ホーム" /></div>
-          </a>
-        </li>
-        <!-- 診療案内 -->
-        <li class="drawer__nav--item">
-          <a href="../#medical-menu" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/medical.png" alt="診療案内" /></div>
-          </a>
-        </li>
-        <!-- 医師紹介 -->
-        <li class="drawer__nav--item">
-          <a href="../#greeting" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/doctor.png" alt="医師紹介" /></div>
-          </a>
-        </li>
-        <!-- 施設案内 -->
-        <li class="drawer__nav--item">
-          <a href="../#point" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/clinic.png" alt="施設案内" /></div>
-          </a>
-        </li>
-        <!-- ブログ -->
-        <li class="drawer__nav--item">
-          <a href="../#blog" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/blog.png" alt="ブログ" /></div>
-          </a>
-        </li>
-        <!-- アクセス -->
-        <li class="drawer__nav--item">
-          <a href="../#access" class="drawer__nav--link js-drawer__nav--link">
-            <div class="drawer__nav--main-text"><img src="../img/text/access.png" alt="アクセス" /></div>
-          </a>
-        </li>
-      </ul>
+			<!-- ハンバーガーボタン -->
+			<button id="js-drawer__btn" class="header__hamburger--button" aria-label="menu">
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+			</button>
+		</div>
+	</header>
 
-      <!-- 予約ボタン -->
-      <div class="drawer__reserve-btn--list">
-        <div class="drawer__reserve-btn--item btn-orange">
-          <a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
-            <div class="drawer__reserve-btn--item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
-                <path
-                  d="M10.4935 14.0635H10.5076M18.944 14.0635H18.9581M11.9019 19.8692C12.6061 20.3047 13.592 20.595 14.7187 20.595C15.8455 20.595 16.8314 20.3047 17.5356 19.8692"
-                  stroke="white"
-                  stroke-width="1.21547"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M24.5719 5.78976C25.5238 7.01943 26.2496 8.4126 26.7186 9.90041C27.0214 10.861 27.7426 11.6608 28.266 12.5213V12.5213C28.547 12.9834 28.6961 13.5177 28.6961 14.063C28.6961 14.6083 28.547 15.1426 28.266 15.6047V15.6047C27.7413 16.4674 27.0109 17.2609 26.6888 18.2178C25.9157 20.5147 24.5319 22.5546 22.6814 24.0961C20.4258 25.975 17.6133 27 14.713 27C11.8127 27 9.00018 25.975 6.74463 24.0961C4.89405 22.5546 3.51026 20.5147 2.73721 18.2178C2.41512 17.2609 1.68472 16.4674 1.16003 15.6047V15.6047C0.879003 15.1426 0.72995 14.6083 0.72995 14.063C0.72995 13.5177 0.879003 12.9834 1.16003 12.5213V12.5213C1.68408 11.6597 2.40991 10.863 2.72237 9.90418C3.47873 7.58316 4.85693 5.51678 6.71183 3.95277C8.96971 2.04898 11.7957 1.00607 14.713 1C17.5298 1 19.6425 2.59659 19.6425 4.62861C19.6425 6.66063 18.3749 8.25722 16.8256 8.25722C15.6989 8.25722 14.713 7.67664 14.713 6.80577"
-                  stroke="white"
-                  stroke-width="1.21547"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="drawer__reserve-btn--item-text">一般診療予約</div>
-          </a>
-        </div>
-        <div class="drawer__reserve-btn--item btn-blue">
-          <a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
-            <div class="drawer__reserve-btn--item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
-                <path
-                  d="M26.9027 5.58221L27.8305 4.45012L23.2695 0L22.1628 0.97564L23.8061 2.78132L22.4647 4.17198L19.7817 1.74702L18.2055 0.204258L17.0988 1.66879L18.172 2.50319L6.95958 12.6659C6.60535 13.0092 6.37979 13.458 6.31899 13.9405C6.2582 14.4231 6.36566 14.9115 6.62421 15.3277L8.24515 18.0786L5.83051 20.3037L6.78571 20.999L9.05003 18.913L12.1354 20.6948C12.474 20.8901 12.8596 20.995 13.2533 20.999C13.5539 21.0036 13.7885 20.999 14.131 20.839C14.3695 20.6948 14.4722 20.5109 14.6842 20.3037L25.2527 9.33386L26.5942 10.7245L27.6964 9.43912L26.109 7.89636L23.7279 5.45803L25.1476 3.89385L26.9027 5.58221ZM24.3427 8.6221L13.2533 19.4693L10.1232 17.5223L7.70856 13.9066L9.31832 12.516L12.9403 15.8535L14.2594 14.8062L10.3915 11.6816L12.9403 9.32947L16.1598 12.6659L17.4118 11.7315L13.8793 8.34397L16.0256 6.39704L19.3793 9.73468L20.5754 8.65687L17.0988 5.56265L19.2451 3.33759L24.3427 8.6221Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="drawer__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
-          </a>
-        </div>
-      </div>
-    </nav>
+	<!-- ドロワーナビ（下層ページでも共有） -->
 
-    <!-- ドロワーナビの背景（下層ページでも共有）  -->
-    <div class="drawer__background js-drawer__background"></div>
+	<nav class="drawer__nav" role="navigation">
+		<!-- drawer -->
+		<ul class="drawer__nav--list">
+			<!-- ホーム -->
+			<li class="drawer__nav--item">
+				<a href="../#" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/home.png" alt="ホーム" /></div>
+				</a>
+			</li>
+			<!-- 診療案内 -->
+			<li class="drawer__nav--item">
+				<a href="../#medical-menu" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/medical.png" alt="診療案内" /></div>
+				</a>
+			</li>
+			<!-- 医師紹介 -->
+			<li class="drawer__nav--item">
+				<a href="../#greeting" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/doctor.png" alt="医師紹介" /></div>
+				</a>
+			</li>
+			<!-- 施設案内 -->
+			<li class="drawer__nav--item">
+				<a href="../#point" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/clinic.png" alt="施設案内" /></div>
+				</a>
+			</li>
+			<!-- ブログ -->
+			<li class="drawer__nav--item">
+				<a href="../#blog" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/blog.png" alt="ブログ" /></div>
+				</a>
+			</li>
+			<!-- アクセス -->
+			<li class="drawer__nav--item">
+				<a href="../#access" class="drawer__nav--link js-drawer__nav--link">
+					<div class="drawer__nav--main-text"><img src="../img/text/access.png" alt="アクセス" /></div>
+				</a>
+			</li>
+		</ul>
 
-    <!-- ブログ‐post -->
-    <div class="post">
-      <div class="post__inner">
-        <div class="post__title">ブログ</div>
-        <div class="breadcrumb-list">
-          <div class="breadcrumb-list--icon">
-            <a href="#">
-              <img src="./img/home-icon.png" alt="home-icon" />
-            </a>
-          </div>
-          <div class="breadcrumb-list--text">ブログ</div>
-        </div>
-        <div class="post__wrapper">
-          <div class="post__articles">
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article1.png" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">熱帯魚が増えました</h2>
-                <div class="post__article--description">
-                  本日、きりんこどもクリニックに新たに熱帯魚5匹が仲間入りしました🐠可愛らしい熱帯魚たちが、皆さんを笑顔でお迎えします✨
-                </div>
-                <div class="post__article--btn">
-                  <a href="#" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
+		<!-- 予約ボタン -->
+		<div class="drawer__reserve-btn--list">
+			<div class="drawer__reserve-btn--item btn-orange">
+				<a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
+					<div class="drawer__reserve-btn--item-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
+							<path d="M10.4935 14.0635H10.5076M18.944 14.0635H18.9581M11.9019 19.8692C12.6061 20.3047 13.592 20.595 14.7187 20.595C15.8455 20.595 16.8314 20.3047 17.5356 19.8692" stroke="white" stroke-width="1.21547" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M24.5719 5.78976C25.5238 7.01943 26.2496 8.4126 26.7186 9.90041C27.0214 10.861 27.7426 11.6608 28.266 12.5213V12.5213C28.547 12.9834 28.6961 13.5177 28.6961 14.063C28.6961 14.6083 28.547 15.1426 28.266 15.6047V15.6047C27.7413 16.4674 27.0109 17.2609 26.6888 18.2178C25.9157 20.5147 24.5319 22.5546 22.6814 24.0961C20.4258 25.975 17.6133 27 14.713 27C11.8127 27 9.00018 25.975 6.74463 24.0961C4.89405 22.5546 3.51026 20.5147 2.73721 18.2178C2.41512 17.2609 1.68472 16.4674 1.16003 15.6047V15.6047C0.879003 15.1426 0.72995 14.6083 0.72995 14.063C0.72995 13.5177 0.879003 12.9834 1.16003 12.5213V12.5213C1.68408 11.6597 2.40991 10.863 2.72237 9.90418C3.47873 7.58316 4.85693 5.51678 6.71183 3.95277C8.96971 2.04898 11.7957 1.00607 14.713 1C17.5298 1 19.6425 2.59659 19.6425 4.62861C19.6425 6.66063 18.3749 8.25722 16.8256 8.25722C15.6989 8.25722 14.713 7.67664 14.713 6.80577" stroke="white" stroke-width="1.21547" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="drawer__reserve-btn--item-text">一般診療予約</div>
+				</a>
+			</div>
+			<div class="drawer__reserve-btn--item btn-blue">
+				<a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
+					<div class="drawer__reserve-btn--item-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
+							<path d="M26.9027 5.58221L27.8305 4.45012L23.2695 0L22.1628 0.97564L23.8061 2.78132L22.4647 4.17198L19.7817 1.74702L18.2055 0.204258L17.0988 1.66879L18.172 2.50319L6.95958 12.6659C6.60535 13.0092 6.37979 13.458 6.31899 13.9405C6.2582 14.4231 6.36566 14.9115 6.62421 15.3277L8.24515 18.0786L5.83051 20.3037L6.78571 20.999L9.05003 18.913L12.1354 20.6948C12.474 20.8901 12.8596 20.995 13.2533 20.999C13.5539 21.0036 13.7885 20.999 14.131 20.839C14.3695 20.6948 14.4722 20.5109 14.6842 20.3037L25.2527 9.33386L26.5942 10.7245L27.6964 9.43912L26.109 7.89636L23.7279 5.45803L25.1476 3.89385L26.9027 5.58221ZM24.3427 8.6221L13.2533 19.4693L10.1232 17.5223L7.70856 13.9066L9.31832 12.516L12.9403 15.8535L14.2594 14.8062L10.3915 11.6816L12.9403 9.32947L16.1598 12.6659L17.4118 11.7315L13.8793 8.34397L16.0256 6.39704L19.3793 9.73468L20.5754 8.65687L17.0988 5.56265L19.2451 3.33759L24.3427 8.6221Z" fill="white" />
+						</svg>
+					</div>
+					<div class="drawer__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
+				</a>
+			</div>
+		</div>
+	</nav>
 
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article-logo.png" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">院長のつぶやき</h2>
-                <div class="post__article--description">
-                  先日、診察室の戸を開けたときに待合室で待つ子供たちと目が合い、笑顔で手振りを振ってくれました。治療する私の方が日々、癒されてます😊</span>
-                </div>
-                <div class="post__article--btn">
-                  <a href="#" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
+	<!-- ドロワーナビの背景（下層ページでも共有）  -->
+	<div class="drawer__background js-drawer__background"></div>
 
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article2.png" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">患者様から嬉しいお声</h2>
-                <div class="post__article--description">
-                  以前、風邪で受診された患者様より、嬉しいお声をいただきました！患者様からのメッセージに、院長・スタッフ一同、心から嬉しく思っています🙇🏻‍♂️</span>
-                </div>
-                <div class="post__article--btn">
-                  <a href="#" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
+	<!-- ブログ‐post -->
+	<div class="post">
+		<div class="post__inner">
+			<div class="post__title">ブログ</div>
+			<div class="breadcrumb-list">
+				<div class="breadcrumb-list--icon">
+					<a href="#">
+						<img src="./img/home-icon.png" alt="home-icon" />
+					</a>
+				</div>
+				<div class="breadcrumb-list--text">ブログ</div>
+			</div>
+			<div class="post__wrapper">
+				<div class="post__articles">
+					<article class="post__article">
+						<div class="post__article--img"><img src="./img/article1.png" alt="" /></div>
+						<div class="post__article--text">
+							<div class="post__article--time">2023.12.12</div>
+							<h2 class="post__article--title">熱帯魚が増えました</h2>
+							<div class="post__article--description">
+								本日、きりんこどもクリニックに新たに熱帯魚5匹が仲間入りしました🐠可愛らしい熱帯魚たちが、皆さんを笑顔でお迎えします✨
+							</div>
+							<div class="post__article--btn">
+								<a href="#" class="btn__link a-btn--bgc-slide">
+									<div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
+								</a>
+							</div>
+						</div>
+					</article>
 
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article-logo.png" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">学会に参加しました</h2>
-                <div class="post__article--description">
-                  水島倫哉先生が、2023年11月25日・26日開催の日本小児感染症学会にて最新の研究成果についてポスター発表をしました！</span>
-                </div>
-                <div class="post__article--btn">
-                  <a href="#" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="post__archives">
-            <div class="post__archives--articles">
-              <div class="post__recent-post">
-                <div class="post__recent-post--title">最近の投稿</div>
-                <div class="post__recent-post--link"><a href="#">熱帯魚が増えました </a></div>
-                <div class="post__recent-post--link"><a href="#">院長のつぶやき</a></div>
-                <div class="post__recent-post--link"><a href="#">患者様からの嬉しいお声</a></div>
-                <div class="post__recent-post--link"><a href="#">学会に参加しました</a></div>
-              </div>
-              <div class="post__monthly-archive">
-                <div class="post__monthly-archive--title">月別アーカイブ</div>
-                <div class="post__monthly-archive--link"><a href="#">2023年12月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年11月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年10月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年9月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年8月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年7月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年6月</a></div>
-                <div class="post__monthly-archive--link"><a href="#">2023年5月</a></div>
-              </div>
-            </div>
-            <div class="post__search-box">
-              <div class="post__search-box--wrapper">
-                <div class="post__search-box--img"><img src="./img/serch.png" alt="" /></div>
-                <input type="text" placeholder="テキスト入力する" class="post__search-box--text" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="post__pagenation">
-          <div class="post__pagenation--wrapper">
-            <div class="post__pagenation--number is-current">
-              <a href="#">1</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">2</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">3</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">4</a>
-            </div>
-            <div class="post__pagenation--arrow">
-              <img src="./img/pagenation-arrow.png" alt="" />
-            </div>
-            <div class="post__pagenation--arrow">
-              <img src="./img/pagenation-arrow.png" alt="" />
-              <img src="./img/pagenation-arrow.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <footer id="access" class="footer">
-      <div class="inner footer__inner">
-        <div class="footer__wrapper">
-          <h2 class="section__title footer__title">
-            <span class="section__main-title">アクセス</span>
-            <span class="section__sub-title">access</span>
-          </h2>
-          <div class="footer__content">
-            <iframe
-              class="footer__map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1624.7601510175757!2d139.61413215833775!3d35.46666853717705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c0ed0a5e5f9%3A0x72566add522917de!2z44CSMjIwLTAwMDQg56We5aWI5bed55yM5qiq5rWc5biC6KW_5Yy65YyX5bm477yS5LiB55uu77yZ4oiS77yT77yQIOaoqua1nOilv-WPo-WKoOiXpOODk-ODqw!5e0!3m2!1sja!2sjp!4v1705801223767!5m2!1sja!2sjp"
-              width="468"
-              height="404"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <div class="footer__details">
-              <div class="footer__logo">
-                <img src="../img/svg/logo_site.svg" alt="きりんこどもクリニックのロゴです。" width="282" height="111" loading="lazy" />
-              </div>
-              <table class="footer__week">
-                <tbody>
-                  <tr class="footer__week-top">
-                    <th>診療時間</th>
-                    <th>月</th>
-                    <th>火</th>
-                    <th>水</th>
-                    <th>木</th>
-                    <th>金</th>
-                    <th>土</th>
-                  </tr>
-                  <tr>
-                    <th>8:30~12:30</th>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                  </tr>
-                  <tr>
-                    <th>14:30~15:30</th>
-                    <td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
-                    <td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
-                    <td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
-                    <td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
-                    <td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
-                    <td>／</td>
-                  </tr>
-                  <tr>
-                    <th>15:30~18:30</th>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td>〇</td>
-                    <td><span class="footer__week--text">17:30まで</span></td>
-                  </tr>
-                </tbody>
-              </table>
-              <p class="footer__atention">
-                <img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" />…予防接種・健診専用時間帯<br />受付時間
-                診療終了時間の30分前まで<br />日曜・祝日休診
-              </p>
-              <div class="footer__tel">
-                <div class="footer__call-icon"><img src="../img/svg/ico_call.svg" alt="受話器のアイコンです。" width="30" height="30" loading="lazy" /></div>
-                <a class="footer__tel-number">045-1234-5678</a>
-              </div>
-              <div class="footer__address">
-                <p class="footer__address-text">神奈川県横浜市西区北幸20-1<br />イオンモール浜すぐそば</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <small class="footer__copyright">&copy; 2024きりんこどもクリニック</small>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
+					<article class="post__article">
+						<div class="post__article--img"><img src="./img/article-logo.png" alt="" /></div>
+						<div class="post__article--text">
+							<div class="post__article--time">2023.12.12</div>
+							<h2 class="post__article--title">院長のつぶやき</h2>
+							<div class="post__article--description">
+								先日、診察室の戸を開けたときに待合室で待つ子供たちと目が合い、笑顔で手振りを振ってくれました。治療する私の方が日々、癒されてます😊</span>
+							</div>
+							<div class="post__article--btn">
+								<a href="#" class="btn__link a-btn--bgc-slide">
+									<div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="post__article">
+						<div class="post__article--img"><img src="./img/article2.png" alt="" /></div>
+						<div class="post__article--text">
+							<div class="post__article--time">2023.12.12</div>
+							<h2 class="post__article--title">患者様から嬉しいお声</h2>
+							<div class="post__article--description">
+								以前、風邪で受診された患者様より、嬉しいお声をいただきました！患者様からのメッセージに、院長・スタッフ一同、心から嬉しく思っています🙇🏻‍♂️</span>
+							</div>
+							<div class="post__article--btn">
+								<a href="#" class="btn__link a-btn--bgc-slide">
+									<div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="post__article">
+						<div class="post__article--img"><img src="./img/article-logo.png" alt="" /></div>
+						<div class="post__article--text">
+							<div class="post__article--time">2023.12.12</div>
+							<h2 class="post__article--title">学会に参加しました</h2>
+							<div class="post__article--description">
+								水島倫哉先生が、2023年11月25日・26日開催の日本小児感染症学会にて最新の研究成果についてポスター発表をしました！</span>
+							</div>
+							<div class="post__article--btn">
+								<a href="#" class="btn__link a-btn--bgc-slide">
+									<div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="post__archives">
+					<div class="post__archives--articles">
+						<div class="post__recent-post">
+							<div class="post__recent-post--title">最近の投稿</div>
+							<div class="post__recent-post--link"><a href="#">熱帯魚が増えました </a></div>
+							<div class="post__recent-post--link"><a href="#">院長のつぶやき</a></div>
+							<div class="post__recent-post--link"><a href="#">患者様からの嬉しいお声</a></div>
+							<div class="post__recent-post--link"><a href="#">学会に参加しました</a></div>
+						</div>
+						<div class="post__monthly-archive">
+							<div class="post__monthly-archive--title">月別アーカイブ</div>
+							<div class="post__monthly-archive--link"><a href="#">2023年12月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年11月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年10月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年9月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年8月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年7月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年6月</a></div>
+							<div class="post__monthly-archive--link"><a href="#">2023年5月</a></div>
+						</div>
+					</div>
+					<div class="post__search-box">
+						<div class="post__search-box--wrapper">
+							<div class="post__search-box--img"><img src="./img/serch.png" alt="" /></div>
+							<input type="text" placeholder="テキスト入力する" class="post__search-box--text" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="post__pagenation">
+				<div class="post__pagenation--wrapper">
+					<div class="post__pagenation--number is-current">
+						<a href="#">1</a>
+					</div>
+					<div class="post__pagenation--number">
+						<a href="#">2</a>
+					</div>
+					<div class="post__pagenation--number">
+						<a href="#">3</a>
+					</div>
+					<div class="post__pagenation--number">
+						<a href="#">4</a>
+					</div>
+					<div class="post__pagenation--arrow">
+						<img src="./img/pagenation-arrow.png" alt="" />
+					</div>
+					<div class="post__pagenation--arrow">
+						<img src="./img/pagenation-arrow.png" alt="" />
+						<img src="./img/pagenation-arrow.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer id="access" class="footer">
+		<div class="inner footer__inner">
+			<div class="footer__wrapper">
+				<h2 class="section__title footer__title">
+					<span class="section__main-title">アクセス</span>
+					<span class="section__sub-title">access</span>
+				</h2>
+				<div class="footer__content">
+					<iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1624.7601510175757!2d139.61413215833775!3d35.46666853717705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c0ed0a5e5f9%3A0x72566add522917de!2z44CSMjIwLTAwMDQg56We5aWI5bed55yM5qiq5rWc5biC6KW_5Yy65YyX5bm477yS5LiB55uu77yZ4oiS77yT77yQIOaoqua1nOilv-WPo-WKoOiXpOODk-ODqw!5e0!3m2!1sja!2sjp!4v1705801223767!5m2!1sja!2sjp" width="468" height="404" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<div class="footer__details">
+						<div class="footer__logo">
+							<img src="../img/svg/logo_site.svg" alt="きりんこどもクリニックのロゴです。" width="282" height="111" loading="lazy" />
+						</div>
+						<table class="footer__week">
+							<tbody>
+								<tr class="footer__week-top">
+									<th>診療時間</th>
+									<th>月</th>
+									<th>火</th>
+									<th>水</th>
+									<th>木</th>
+									<th>金</th>
+									<th>土</th>
+								</tr>
+								<tr>
+									<th>8:30~12:30</th>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+								</tr>
+								<tr>
+									<th>14:30~15:30</th>
+									<td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
+									<td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
+									<td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
+									<td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
+									<td><img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" /></td>
+									<td>／</td>
+								</tr>
+								<tr>
+									<th>15:30~18:30</th>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td>〇</td>
+									<td><span class="footer__week--text">17:30まで</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="footer__atention">
+							<img src="../img/svg/ico_star.svg" alt="予防接種・検診専用時間帯を示すアイコンです。" width="18" height="18" loading="lazy" />…予防接種・健診専用時間帯<br />受付時間
+							診療終了時間の30分前まで<br />日曜・祝日休診
+						</p>
+						<div class="footer__tel">
+							<div class="footer__call-icon"><img src="../img/svg/ico_call.svg" alt="受話器のアイコンです。" width="30" height="30" loading="lazy" /></div>
+							<a class="footer__tel-number">045-1234-5678</a>
+						</div>
+						<div class="footer__address">
+							<p class="footer__address-text">神奈川県横浜市西区北幸20-1<br />イオンモール浜すぐそば</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<small class="footer__copyright">&copy; 2024きりんこどもクリニック</small>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+
 </html>
