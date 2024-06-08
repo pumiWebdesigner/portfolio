@@ -472,16 +472,6 @@ th {
 	text-align: left;
 }
 
-@font-face {
-	font-family: "001Shirokuma Regular";
-	src: url(../../font/001Shirokuma-Regular.otf);
-}
-
-@font-face {
-	font-family: "HanziPen SC Regular";
-	src: url(../../font/hanzipen-sc-regular.otf);
-}
-
 body {
 	color: var(--font);
 	font-family: "Oswald", "Noto Sans JP", sans-serif;
@@ -867,24 +857,6 @@ a {
 	object-fit: cover;
 }
 
-.p-first-view {
-	background: #eee;
-}
-
-.p-first-view__container {
-	display: flex;
-}
-
-.p-first-view__container section {
-	background: white;
-	margin-top: 0;
-	width: 50%;
-}
-
-.p-first-view__container section:nth-of-type(2n) {
-	background: #cff;
-}
-
 .dialog__wrapper {
 	border: none;
 	border-radius: 1.5rem;
@@ -1023,7 +995,7 @@ a {
 
 .p-skills__item {
 	align-items: center;
-	background: #eee;
+	background: white;
 	display: flex;
 	gap: 1rem;
 	justify-content: center;
@@ -1196,50 +1168,6 @@ a {
 	top: 0.6rem;
 	transform: translateY(-50%);
 	width: 0.6rem;
-}
-
-.p-contact-twitter {
-	color: white;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	padding-bottom: 0;
-}
-
-.p-contact-twitter__item {
-	padding: 40px;
-	text-align: center;
-}
-
-.p-contact-twitter__item-contact {
-	background-color: #6f6f6f;
-}
-
-.p-contact-twitter__item-twitter {
-	background-color: var(--bg-dark);
-}
-
-.p-contact-twitter__button {
-	align-items: center;
-	background-color: transparent;
-	border: 1px solid white;
-	display: inline-flex;
-	margin-inline: auto;
-	margin-top: 2rem;
-	padding: 0.5rem 1.5rem;
-}
-
-.p-contact-twitter__button__icon {
-	display: grid;
-	height: 24px;
-	place-items: center;
-	width: 24px;
-}
-
-.p-contact-twitter__button__text {
-	color: white;
-	font-size: 16px;
-	letter-spacing: 0.08em;
-	margin-left: 10px;
 }
 
 .p-contact {
@@ -1623,7 +1551,7 @@ input[type=date].is-input::before {
 	margin-top: 30px;
 }
 
-.p-privacy-policy__subTitle {
+.p-privacy-policy__title-sub {
 	font-size: 1.5rem;
 	font-weight: 700;
 	letter-spacing: 0em;
@@ -1675,7 +1603,7 @@ input[type=date].is-input::before {
 	background-image: linear-gradient(90deg, white, white);
 	background-position: left bottom; /* X軸の起点 Y軸の起点 */
 	background-repeat: no-repeat;
-	background-size: 0 100%; /* 線の横幅を0、縦幅を1pxに */
+	background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
 	transition: background-size 0.3s; /* 線を伸ばすアニメーション実行時間を指定 */
 }
 
@@ -1685,10 +1613,6 @@ input[type=date].is-input::before {
 
 strong.color-accent {
 	color: var(--accent);
-}
-
-.hover__fontsize--2rem:hover {
-	font-size: 2rem;
 }
 
 @media (width <= 767px) {
@@ -1726,14 +1650,6 @@ strong.color-accent {
 	right: 1.5rem;
 }
 
-.p-first-view__container {
-	display: revert;
-}
-
-.p-first-view__container section {
-	width: 100%;
-}
-
 .p-section__title--main {
 	font-size: 2rem;
 }
@@ -1757,10 +1673,6 @@ strong.color-accent {
 
 .swiper-button-next {
 	right: 0;
-}
-
-.p-contact-twitter {
-	display: revert;
 }
 
 .p-contact__form--item {
@@ -1879,6 +1791,10 @@ input[type=date] {
 	display: none;
 }
 
+.p-drawer__nav {
+	display: none;
+}
+
 }
 
 @media (1024px <= width) {
@@ -1887,26 +1803,6 @@ input[type=date] {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-}
-
-.p-contact-twitter__item {
-	padding: 54px 10px;
-}
-
-.p-contact-twitter__button {
-	transition: background 0.3s, color 0.3s, opacity 0.3s;
-}
-
-.p-contact-twitter__button:hover {
-	background-color: white;
-}
-
-.p-contact-twitter__button:hover .p-contact-twitter__button__icon-path {
-	fill: var(--bg-dark);
-}
-
-.p-contact-twitter__button:hover .p-contact-twitter__button__text {
-	color: var(--bg-dark);
 }
 
 .contact__message {

@@ -20,12 +20,10 @@ _%>
               https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
               "
     >
-      <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容） -->
-      <%- include("../parts/_contact-form__item-portfolio",{ path:".", }) -%>
-      <!-- 送信ボタン -->
-      <%- include("../parts/_contact-btn",{ path:".", }) -%>
+      <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容）、送信ボタン -->
+      <%- include("../parts-contact/_contact-form__item-portfolio",{ path:".", }) -%>
     </form>
     <!-- 送信後のメッセージ -->
-    <%- include("../parts/_contact-message",{ path:".", }) -%>
+    <%- include("../parts-contact/_contact-message",{ path:".", }) -%>
   </div>
 </section>

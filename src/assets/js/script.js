@@ -1,11 +1,20 @@
 {
+  // 基本的に使用するjsはここに記述する
+
   // スムーズスクロール
   // aタグのクリック（ドロワー関連は専用処理あり）
-  jQuery('a[href^="#"]').on("click", function (e) {
+  jQuery('a[href*="#"]').on("click", function (e) {
+    // 下層ページからのリンクの場合は、aタグの通常の処理を行う
+    if (jQuery(this).attr("href").includes("../")) {
+      return;
+    }
+
     e.preventDefault(); // aタグの通常の処理を止める
 
     // aタグのhrefが遷移する先
-    var id = jQuery(this).attr("href"); // スクロール先のhrefを取得
+    // .splitはその文字で区切って配列にする。[0]は＃より前、[1]は＃より後の文字列を取得する
+    var id = "#" + jQuery(this).attr("href").split("#")[1]; // スクロール先のhrefを取得
+
     // 遷移する先とheaderの高さからスクロールする距離を計算
     scrollDistance = calcDistance(id);
     // スムーズスクロール
@@ -50,5 +59,10 @@
     } else {
       jQuery("body").removeClass("is-scroll");
     }
+  });
+
+  //閉じるボタン
+  jQuery(".js-closeBtn").on("click", function () {
+    window.close();
   });
 }

@@ -1,0 +1,33 @@
+・devフォルダを作成し、以下を格納
+　package.json
+　gulpfile.js
+　srcフォルダ
+
+・gulp.jsの内容を置換　※　gulpfile.jsを起点にパスを決める
+削除　assets/css/
+置換　./public/ → ../
+戻し　gulp.watch("../**/*.php", browserReload);
+置換　extname: ".html" → ".php"
+
+・ターミナルで以下を実行
+　cd dev
+　npm installを実行
+　npm gulp build
+
+削除　　twitterｶｰﾄﾞ
+削除　　OGP
+削除　　favicon
+削除　　title
+削除　　description
+
+
+
+・gulp.jsのbrowserSync.initを以下に設定
+　proxy: "http://localhost:8888/dev/",
+・ターミナルで以下を実行
+　npm gulp watch
+
+
+下層ページのパスはドメイン配下からのパスで記述できる（サーバにアップロードしている場合）
+（変更前）path : "./company/index.html" 
+（変更後）path : "/company/index.html" 

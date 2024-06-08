@@ -112,7 +112,7 @@ function formatHTML() {
         indent_with_tabs: true,
       })
     )
-    .pipe(gulp.dest("./public"));
+    .pipe(gulp.dest("./public/"));
 }
 
 function compileEJS() {
@@ -126,11 +126,11 @@ function compileEJS() {
         indent_with_tabs: true,
       })
     )
-    .pipe(gulp.dest("./public"));
+    .pipe(gulp.dest("./public/"));
 }
 
 function copyCss() {
-  return gulp.src("./src/**/*.css").pipe(gulp.dest("./public"));
+  return gulp.src("./src/**/*.css").pipe(gulp.dest("./public/"));
 }
 
 // wacthする前の初回出力ファイル作成

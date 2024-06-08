@@ -1,6 +1,10 @@
 @use "../global" as *;
 
 .p-drawer__nav {
+  @include mq(tab-pc) {
+    display: none;
+  }
+
   position: fixed;
   width: 100%;
   height: calc(100vh - var(--height-sp-header));
@@ -13,8 +17,6 @@
     text-align: center;
   }
   background: var(--header-bg-pc);
-
-  ////////////////
   padding-inline: 15px;
 }
 

@@ -6,7 +6,7 @@
   background-image: linear-gradient(90deg, white, white);
   background-repeat: no-repeat;
   background-position: left bottom; /* X軸の起点 Y軸の起点 */
-  background-size: 0 100%; /* 線の横幅を0、縦幅を1pxに */
+  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
   transition: background-size 0.3s; /* 線を伸ばすアニメーション実行時間を指定 */
 
   &:hover {
