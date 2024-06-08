@@ -1,0 +1,197 @@
+// 色
+$color-main: #ffaa3b;
+$color-active: #f18900;
+$color-text: #3e3e3e;
+$color-background: #f3f3f3;
+$color-disable: #b2b2b2;
+
+$font-black: #3e3e3e;
+$font-white: #ffffff;
+$color-background: #f3f3f3;
+$color-black: #3e3e3e;
+$color-white: #ffffff;
+$color-yellow: #ffaa3b;
+$color-blue: #3b69ff; //ruleには#4973FFで表示だが、明記された方を採用
+$color-red: #ff4646;
+$news-hover-color: #4973ff; //#4973FF1Aのうちcolor部分を切り出し
+$news-hover-opacity: 0.1; //1Aは16進数で26→26/255≒0.1
+$text-underbar-height: 1px;
+
+// フォント
+$font-family-japanese: "游ゴシック体", "Yu Gothic", yugothic, sans-serif;
+$font-family-english: "Montserrat", sans-serif;
+$font-family-base: $font-family-japanese;
+$font-family-default: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
+
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+// $layout-width-inner: 1280px;
+
+// ブレークポイント
+$sp-size: 767px;
+// マップ型変数breakpointsを定義
+$breakpoints: (
+  "sp": "screen and (max-width: #{$sp-size})",
+  "pc": "screen and (min-width: #{($sp-size + 1px)})",
+) !default;
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//ボーダーボックス
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//フォントサイズ
+$font-size-base: 16px;
+$font-weight-base: 500; //Medium:500
+
+body {
+  background-color: $color-background;
+  color: $font-black;
+  font-family: $font-family-base;
+  line-height: 1.45;
+  font-weight: $font-weight-base;
+  ////////////以下2行どうするか
+  // font-size: $font-size-base;
+  // transition: transform 0.3s;
+  //////////////////////
+}
+
+.util-title {
+  font-family: $font-family-english;
+  font-size: 36px;
+  font-weight: 600;
+  @include mq(sp) {
+    font-size: 30px;
+  }
+}
+.util-ttl {
+  font-family: $font-family-english;
+  font-size: 36px;
+  font-weight: 600;
+  @include mq(sp) {
+    font-size: 30px;
+  }
+}
+
+.util-link {
+  border: 1px solid $font-black;
+  color: $font-black;
+  display: block;
+  font-family: $font-family-english;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 4px; //0.2em;
+  padding: 0.8em 0;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+  &.mod-light {
+    border: 1px solid white;
+    color: white;
+  }
+  @include mq(pc) {
+    &.mod-light:hover {
+      background: #fff;
+      color: #3e3e3e;
+    }
+  }
+  &:hover {
+    background: $font-black;
+    color: $color-white;
+  }
+  @include mq(sp) {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 268px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+// 非表示設定
+.is-pc {
+  @include mq(sp) {
+    display: none;
+  }
+}
+.is-sp {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+// ヘッダー高さ
+$header-height-pc: 80px;
+$header-height-sp: 68px;
+
+// 余白
+$padding-pc: 40px;
+$padding-sp: 16px;
+
+// 階層
+$layer: (
+  totop: 200,
+  modal: 100,
+  drawer: 40,
+  header: 20,
+  footer: 10,
+  default: 1,
+  background: -1,
+);
+
+// 画像は親blockの横幅いっぱいにする
+img {
+  width: 100%;
+}
+
+.main-button {
+  background: $color-yellow;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #3e3e3e33;
+  color: $color-white;
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.025em;
+  line-height: 48px;
+  height: 48px;
+  margin-top: 40px;
+  text-align: center;
+  transform: background-color 0.2s;
+  width: 280px;
+  font-weight: bold;
+  cursor: pointer;
+  &:not(:disabled):hover {
+    background: #f18900;
+  }
+  @include mq(sp) {
+    margin: 30px auto 0;
+    width: 222px;
+    font-size: 16px;
+  }
+}
+
+.section {
+  //background-colorを意識してmargin,padding
+  margin-block: 20px;
+  padding-block: 20px;
+}
+.inner {
+  //中央寄せのためのmargin
+  margin-inline: auto;
+  // 幅が狭くなったときに窮屈にならないためのpadding
+  padding-inline: 20px;
+  // 幅が広くなったときのためのmax-width
+  max-width: 1280px;
+}
+table {
+  border-collapse: collapse;
+}

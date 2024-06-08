@@ -1,0 +1,134 @@
+@charset "utf-8";
+@use "base";
+
+.faqs {
+  background: url(../img/qa-bg.png) top center / cover;
+  //bg-wrapperより前に表示するための設定
+  position: relative;
+  z-index: 1;
+
+  @include base.mq(pc) {
+    //画像をビューポートに固定させる
+    background-attachment: fixed;
+    margin-top: 120px;
+    padding: 56px 0 124px;
+  }
+  @include base.mq(sp) {
+    margin-top: 60px;
+    padding: 36px 16px 64px;
+  }
+  .util-title {
+    text-align: center;
+  }
+}
+.faqs-inner {
+  margin-inline: auto;
+  max-width: base.$layout-width-inner;
+
+  @include base.mq(pc) {
+    margin-top: 56px;
+    padding: 0;
+  }
+
+  @include base.mq(sp) {
+    margin-top: 38px;
+  }
+}
+
+.faqs-list {
+  @include base.mq(pc) {
+    margin-left: auto;
+    width: 612px;
+  }
+}
+
+.faqs-item {
+  background: base.$color-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  padding: 0 18px;
+
+  & + & {
+    margin-top: 30px;
+  }
+
+  @include base.mq(pc) {
+    margin-top: 32px;
+  }
+  @include base.mq(sp) {
+    margin-top: 24px;
+  }
+}
+.faqs-box-q {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 14px;
+  line-height: calc(24 / 16);
+
+  &::before {
+    background: #3b69ff;
+    border-radius: 50%;
+    color: base.$font-white;
+    content: "Q";
+    display: inline-block;
+    flex: 0 0 24px;
+    font-family: base.$font-family-english;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+.faqs-box-q-text {
+  flex: 0 1 100%;
+  line-height: 1.5;
+  margin-left: 0.75em;
+  position: relative;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  &::before {
+    background: #4973ff;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    width: 15px;
+    letter-spacing: normal;
+  }
+  &::after {
+    background: #4973ff;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.3s;
+    width: 15px;
+  }
+}
+.faqs-item.is-open .faqs-box-q-text::after {
+  transform: translateY(-50%) rotate(0);
+}
+
+.faqs-box-a {
+  display: none;
+  padding-bottom: 14px;
+}
+.faqs-box-a-text {
+  background: rgba(73, 115, 255, 0.2);
+  border-radius: 4px;
+  line-height: calc(24 / 16);
+  padding: 14px;
+
+  @include base.mq(sp) {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,110 @@
+@charset "utf-8";
+@use "base";
+
+.service {
+  background: black;
+
+  margin-top: 60px;
+  padding-top: 36px;
+
+  .util-title {
+    color: base.$color-white;
+    text-align: center;
+  }
+
+  @include base.mq(pc) {
+    margin-top: 120px;
+    padding-top: 58px;
+  }
+}
+.service-inner {
+  margin: 54px auto 0;
+  max-width: 1040px;
+  @include base.mq(pc) {
+    padding: 0 40px;
+  }
+
+  @include base.mq(sp) {
+    margin: 38px 16px 0;
+  }
+}
+
+.service-list {
+  background: base.$color-white;
+  box-shadow: 0 5px 12px rgba(#3e3e3e, 0.2);
+
+  @include base.mq(pc) {
+    display: flex;
+    width: 100%;
+  }
+  @include base.mq(sp) {
+    padding: 40px 0 34px;
+  }
+}
+.service-item {
+  @include base.mq(pc) {
+    flex: 0 1 33.3333%; //33.3333% - 6.25% (6.25 % = { 90px * 2 / 3 } / 960px)
+    padding: 58px 45px 60px;
+  }
+  @include base.mq(sp) {
+    padding: 0 16px;
+    + .service-item {
+      margin-top: 40px;
+    }
+  }
+
+  dt {
+    background-position: top 12px center;
+    background-repeat: no-repeat;
+    font-family: base.$font-family-english;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.3;
+    padding-top: 72px; //top12,画像＋margin60
+    text-align: center;
+
+    @include base.mq(pc) {
+      // font-size: 20px;
+      line-height: calc(28 / 20);
+      padding-top: 72px;
+      font-weight: 600;
+    }
+    @include base.mq(sp) {
+      background-size: 52px; //幅52px,高さは自動調整
+    }
+  }
+
+  &:nth-child(1) dt {
+    background-image: url(../img/service1.svg);
+  }
+
+  &:nth-child(2) dt {
+    background-image: url(../img/service2.svg);
+
+    @include base.mq(sp) {
+      padding-top: 66px; //画像の高さが低いので調整
+    }
+  }
+
+  &:nth-child(3) dt {
+    background-image: url(../img/service3.svg);
+
+    @include base.mq(sp) {
+      padding-top: 66px;
+    }
+  }
+
+  dd {
+    font-size: 14px;
+    line-height: 1.72;
+    margin-top: 16px;
+    @include base.mq(pc) {
+      line-height: 1.7;
+      margin-top: 14px;
+    }
+    @include base.mq(sp) {
+      margin-top: 12px;
+    }
+  }
+}

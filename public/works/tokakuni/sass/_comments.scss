@@ -1,0 +1,101 @@
+@charset "utf-8";
+@use "base";
+
+.comments {
+  margin-top: 116px;
+  //bg-wrapperより前に表示するための設定
+  position: relative;
+  z-index: 1;
+  @include base.mq(sp) {
+    margin: 54px 16px 0;
+  }
+}
+.comments-inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: base.$layout-width-inner;
+  position: relative;
+}
+
+.comments-box {
+  background: base.$color-white;
+  box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+
+  @include base.mq(pc) {
+    flex: 0 1 668px;
+    padding: 114px 60px 124px;
+  }
+  @include base.mq(sp) {
+    padding: 40px 20px 32px;
+  }
+}
+.comments-list {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.65;
+  margin-top: 40px;
+
+  @include base.mq(pc) {
+    margin-top: 54px;
+  }
+
+  @include base.mq(sp) {
+    margin-top: 30px;
+  }
+}
+
+.comments-item {
+  display: flex; //bofore要素とitem
+  line-height: calc(24 / 16);
+  text-align: justify; //両端揃え
+  text-justify: inter-ideograph; // text-align: justify;の詳細設定
+  @include base.mq(pc) {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  @include base.mq(sp) {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+  }
+
+  // 画像をcomments-itemの疑似要素としてdisplay:flexで大きさ制御
+  &:before {
+    content: "";
+    display: block;
+    @include base.mq(sp) {
+      flex: 0 0 56px;
+      height: 56px;
+      margin-right: 24px;
+    }
+
+    @include base.mq(pc) {
+      flex: 0 0 100px;
+      height: 100px;
+      margin-right: 32px;
+    }
+  }
+
+  &:nth-child(1):before {
+    background: url(../img/comments1.png) center (center / contain) no-repeat;
+  }
+
+  &:nth-child(2):before {
+    background: url(../img/comments2.png) center (center / contain) no-repeat;
+  }
+  + .comments-item {
+    margin-top: 28px;
+
+    @include base.mq(pc) {
+      margin-top: 58px;
+    }
+  }
+}
+
+.comments-fig {
+  margin-top: 80px;
+
+  @include base.mq(sp) {
+    display: none;
+  }
+}

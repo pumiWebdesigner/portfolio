@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: local("Futura PT Book"), url("../../fonts/futura-pt/FuturaCyrillicBook.ttf") format("woff");
+}
+// @font-face {
+//   font-family: "Jost";
+//   src: url("../../fonts/Jost/Jost-VariableFont_wght.ttf") format("truetype");
+// }
+// @font-face {
+//   font-family: "NotoSansJP";
+//   src: url("../../fonts/Noto_Sans_JP/static/NotoSansJP-Black.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "001Shirokuma";
+//   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+// }
+// @font-face {
+//   font-family: "HanziPen SC Regular";
+//   src: url(../font/hanzipen-sc-regular-minify.woff);
+// }

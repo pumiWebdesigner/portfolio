@@ -1,0 +1,180 @@
+@use "sass:map";
+@use "../global" as *;
+
+.cta {
+  background: url(../../img/cta/CTA.png) no-repeat center / cover lightgray;
+  text-align: center;
+}
+.cta__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-block: 48px;
+  padding-inline: calc(30px + (130 - 30) * ((100vw - 768px) / (1440 - 768)));
+
+  height: 100%;
+  @include mq(sp) {
+    padding: 56px 16px;
+  }
+}
+// ボタンとボタン以外のボックス
+.cta__container {
+  display: flex;
+  padding: 56px 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  border-radius: 16px;
+  background: var(--White, #fff);
+  max-width: 719px;
+  width: 100%;
+  margin-inline: auto;
+  @include mq(sp) {
+    padding: 32px 16px;
+    gap: 24px;
+  }
+}
+// ボタン以外
+.cta__contents {
+  position: relative;
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+
+.cta__label--now {
+  color: var(--White, #fff);
+  @include font(16, 700, 24, 0.64);
+  transform: rotate(-29.317deg);
+  padding: 0px 16px;
+  position: absolute;
+  left: 24px;
+  top: -11px;
+  // left: 23.005px;
+  // top: -30.015px;
+  background: var(--Gray01, #565956);
+  @include mq(sp) {
+    transform: rotate(0deg);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.cta__message {
+  @include font(24, 700, 36, 0.96);
+  @include mq(sp) {
+    margin-top: 32px;
+    @include font(16, 700, 24, 0.64);
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
+  }
+}
+
+.cta__message-l {
+  margin-top: 8px;
+  @include font(28, 700, 42, 1.12);
+  @media screen and (max-width: 350px) {
+    font-size: 1.5rem;
+  }
+}
+
+.cta__labels {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include mq(sp) {
+    flex-direction: column;
+  }
+}
+
+.cta__label {
+  width: 192px;
+  padding-block: 16px;
+  text-align: center;
+  color: var(--White, #fff);
+  @include font(16, 700, 24, 0.64);
+  border-radius: 16px;
+  background: var(--Gray01, #565956);
+  @include mq(sp) {
+    width: 100%;
+    max-width: 311px;
+  }
+}
+
+.cta__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 37.05px;
+  @include mq(sp) {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+.cta__button--step {
+  padding: 15px 40px;
+  background: var(--Gray03, #f2f4f1);
+  @include font(20, 700, 30, 0.8);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 8px);
+    width: 29px;
+    height: 18px;
+    // transform: rotate(89.832deg);
+    background: url(../../img/cta/cta-triangle.svg) no-repeat center / contain;
+  }
+  @include mq(sp) {
+    &::after {
+      top: calc(100% - 5px);
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+  @media screen and (max-width: 350px) {
+    padding-inline: 27px;
+  }
+}
+
+.cta__button--cta {
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: linear-gradient(87deg, #698 2.32%, #689 96.4%);
+  color: var(--White, #fff);
+  @include font(20, 700, 30, 0.8);
+  span {
+    display: inline-block;
+    padding-right: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      width: 24px;
+      height: 24px;
+      background: url(../../img/cta/cta-arrow.svg) no-repeat center / contain;
+    }
+  }
+  transition: all 0.3s ease;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.56;
+      background: linear-gradient(87deg, #698 2.32%, #689 96.4%);
+    }
+  }
+
+  @include mq(sp) {
+    width: 100%;
+    max-width: 311px;
+  }
+}
