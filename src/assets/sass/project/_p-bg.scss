@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .p-bg {
-  background: url(../img/img_fv.jpg) top center / cover no-repeat;
+  background: url(../img/img_fv.webp) top center / cover no-repeat;
   position: fixed;
   top: var(--height-pc-header);
   height: calc(100vh - var(--height-pc-header));
