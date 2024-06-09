@@ -3,3 +3,6 @@
 置換　./public/ → ../
 戻し　gulp.watch("../**/*.php", browserReload);
 置換　extname: ".html" → ".php"
+
+・gulp.jsのbrowserSync.initを以下に設定
+　proxy: "http://localhost:8888/dev/",

@@ -21,14 +21,13 @@
 追記　<img → Ctrl + d →　Ctrl + Shift + P イメージサイズの追記
 追記　imglazy　loding=lazyの設定
 置換　./assets/ → <?php echo get_template_directory_uri() ?>/assets/
-置換　index.html　→　<?php echo esc_url(home_url('/')); ?>
+　　　↑　worksフォルダなどリアルパスはこっち
+　　　↓　WordPress内のパスはこっち
+置換　./index.html　→　<?php echo esc_url(home_url('/')); ?>
 置換　./〇〇.html　→　<?php echo esc_url(home_url('/')); ?>〇〇/
-
-
 
 style.cssのパスを修正
 置換　../ → ./assets/
-
 
 必須ファイル作成
 作成　　header.php
@@ -42,10 +41,8 @@ style.cssのパスを修正
 削除　　description
 転記　　CSS,JS　→　functions.php
 
-・gulp.jsのbrowserSync.initを以下に設定
-　proxy: "http://localhost:8888/dev/",
 ・ターミナルで以下を実行
-　npm gulp watch
+　npx gulp dev
 
 
 下層ページのパスはドメイン配下からのパスで記述できる（サーバにアップロードしている場合）
