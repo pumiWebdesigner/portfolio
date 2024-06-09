@@ -1,7 +1,14 @@
+・不要ファイル削除
+削除　　package-lock.json
+削除　　node_modules
+削除　　public
+削除　　退避ファイル
+
 ・devフォルダを作成し、以下を格納
 　package.json
 　gulpfile.js
 　srcフォルダ
+　※　worksフォルダは外だし
 
 ・gulp.jsの内容を置換　※　gulpfile.jsを起点にパスを決める
 削除　assets/css/
@@ -14,13 +21,28 @@
 　npm installを実行
 　npm gulp build
 
+・index.phpを以下の通り修正
+追記　<img → Ctrl + d →　Ctrl + Shift + P イメージサイズの追記
+追記　imglazy　loding=lazyの設定
+置換　<img src="./assets/img/ → <img src="<?php echo get_template_directory_uri() ?>/assets/img/
+置換　index.html　→　<?php echo esc_url(home_url('/')); ?>
+置換　./〇〇.html　→　<?php echo esc_url(home_url('/')); ?>〇〇/
+
 削除　　twitterｶｰﾄﾞ
 削除　　OGP
 削除　　favicon
 削除　　title
 削除　　description
 削除　　<!-- prettier-ignore -->
+※　CSS,JSは後でfunctions.phpに移送
 
+style.cssのパスを修正
+置換　../ → ./assets/
+
+必須ファイル作成
+作成　　header.php
+作成　　footer.php
+作成　　functions.php
 
 
 ・gulp.jsのbrowserSync.initを以下に設定
