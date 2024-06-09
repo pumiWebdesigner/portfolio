@@ -29,8 +29,8 @@
     var scrollDistance = 0; // #は初期値0
     if (id != "#") {
       // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
-      var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
-      var headerHeight = $(".l-header").outerHeight(); // ヘッダーの高さ（マージン含む）
+      var elementDistance = jQuery(id).offset().top; //画面最上部から要素の上端の距離
+      var headerHeight = jQuery(".l-header").outerHeight(); // ヘッダーの高さ（マージン含む）
       scrollDistance = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
     }
     return scrollDistance;
