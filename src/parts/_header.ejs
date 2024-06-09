@@ -38,11 +38,13 @@ const menus = [
       </h1>
       <!-- グローバルナビ -->
       <nav class="p-header__nav">
-        <%_ menus.forEach(menu => { _%>
-        <div class="p-header__nav--item">
-          <a class="p-header__link hover__underline--from-left" href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
-        </div>
-        <%_ }); _%>
+        <ul class="p-header__nav--list">
+          <%_ menus.forEach(menu => { _%>
+          <li>
+            <a href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
+          </li>
+          <%_ }); _%>
+        </ul>
       </nav>
       <!-- ハンバーガーメニュー -->
       <div class="p-header__hamburger--button">
@@ -55,11 +57,13 @@ const menus = [
     </div>
     <!-- ドロワーメニュー（ヘッダーコンテナの外） -->
     <nav class="p-drawer__nav">
-      <%_ menus.forEach(menu => { _%>
-      <div class="p-drawer__nav--item">
-        <a class="p-drawer__link" href="<%= menu.link %>"><%= menu.name %></a>
-      </div>
-      <%_ }); _%>
+      <ul class="p-drawer__nav--list">
+        <%_ menus.forEach(menu => { _%>
+        <li>
+          <a href="<%= menu.link %>"><%= menu.name %></a>
+        </li>
+        <%_ }); _%>
+      </ul>
     </nav>
   </div>
 </header>

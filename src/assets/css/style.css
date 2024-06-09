@@ -751,7 +751,13 @@ a {
           justify-content: space-between;
 }
 
-.p-header__nav {
+@media (width <= 767px) {
+  .p-header__nav {
+    display: none;
+  }
+}
+
+.p-header__nav--list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -762,25 +768,28 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (width <= 767px) {
-  .p-header__nav {
-    display: none;
-  }
-}
-
-.p-header__nav--item {
+.p-header__nav--list li {
   color: white;
   font-family: "Noto Sans JP";
   font-size: 1.5em;
 }
-
-.p-header__link {
+.p-header__nav--list a {
   padding: 0.2em 1em;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: linear-gradient(90deg, white, white);
+  background-repeat: no-repeat;
+  background-position: left bottom; /* X軸の起点 Y軸の起点 */
+  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
+  -webkit-transition: background-size 0.3s;
+  transition: background-size 0.3s; /* 線を伸ばすアニメーション実行時間を指定 */
 }
 @media (hover: hover) {
-  .p-header__link:hover {
+  .p-header__nav--list a:hover {
     opacity: 0.8;
   }
+}
+.p-header__nav--list a:hover {
+  background-size: 100% 2px; /* 線の横幅を100%にする */
 }
 
 @media (768px <= width) {
@@ -839,17 +848,16 @@ a {
   text-align: center;
 }
 
-.p-drawer__nav--item {
+.p-drawer__nav--list li {
   color: white;
   font-family: "Noto Sans JP";
   font-size: 30px;
   font-weight: 400;
 }
-.p-drawer__nav--item:first-child {
+.p-drawer__nav--list li:first-child {
   margin-top: 40px;
 }
-
-.p-drawer__link {
+.p-drawer__nav--list a {
   padding: 1em 1em;
   text-align: center;
   padding: 1em;
