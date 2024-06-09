@@ -10,12 +10,6 @@
 　srcフォルダ
 　※　worksフォルダは外だし
 
-・gulp.jsの内容を置換　※　gulpfile.jsを起点にパスを決める
-削除　assets/css/
-置換　./public/ → ../
-戻し　gulp.watch("../**/*.php", browserReload);
-置換　extname: ".html" → ".php"
-
 ・ターミナルで以下を実行
 　cd dev
 　npm installを実行
@@ -30,21 +24,23 @@
 置換　index.html　→　<?php echo esc_url(home_url('/')); ?>
 置換　./〇〇.html　→　<?php echo esc_url(home_url('/')); ?>〇〇/
 
-削除　　twitterｶｰﾄﾞ
-削除　　OGP
-削除　　favicon
-削除　　title
-削除　　description
-※　CSS,JSは後でfunctions.phpに移送
+
 
 style.cssのパスを修正
 置換　../ → ./assets/
+
 
 必須ファイル作成
 作成　　header.php
 作成　　footer.php
 作成　　functions.php
 
+削除　　twitterｶｰﾄﾞ
+削除　　OGP
+削除　　favicon
+削除　　title
+削除　　description
+転記　　CSS,JS　→　functions.php
 
 ・gulp.jsのbrowserSync.initを以下に設定
 　proxy: "http://localhost:8888/dev/",

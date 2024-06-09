@@ -77,10 +77,7 @@ function watch() {
 
 function browserInit(done) {
   browserSync.init({
-    server: {
-      baseDir: "../",
-    },
-    // proxy: "http://localhost:8888/dev/",
+    proxy: "http://portfolio.local/",
   });
   done();
 }

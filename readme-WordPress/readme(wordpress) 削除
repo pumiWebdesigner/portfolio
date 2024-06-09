@@ -1,0 +1,5 @@
+・gulp.jsの内容を置換　※　gulpfile.jsを起点にパスを決める
+削除　assets/css/
+置換　./public/ → ../
+戻し　gulp.watch("../**/*.php", browserReload);
+置換　extname: ".html" → ".php"
