@@ -573,7 +573,7 @@ th {
   right: 0;
   width: 16px;
   height: 16px;
-  background: url(../../img/header/poligon.svg) no-repeat center;
+  background: url(../img/header/poligon.svg) no-repeat center;
 }
 @media (width <= 767px) {
   .header__menu {
@@ -584,7 +584,7 @@ th {
   color: var(--Gray02, #b1b6af);
 }
 .header__menu.is-hover::after {
-  background: url(../../img/header/poligon-gray.svg) no-repeat center;
+  background: url(../img/header/poligon-gray.svg) no-repeat center;
 }
 @media (width <= 767px) {
   .header__menu {
@@ -938,14 +938,14 @@ th {
 
 .mv {
   margin-top: 69.5px;
-  background: url(../../img/mv/img_main_visual.png) no-repeat center top -3px/cover lightgray;
+  background: url(../img/mv/img_main_visual.png) no-repeat center top -3px/cover lightgray;
   width: 100%;
   height: 476px;
   position: relative;
 }
 @media (width <= 767px) {
   .mv {
-    background: url(../../img/mv/img_main_visual.png) no-repeat right -819px top 0px/cover lightgray;
+    background: url(../img/mv/img_main_visual.png) no-repeat right -819px top 0px/cover lightgray;
     margin-top: 48px;
     height: 742px;
   }
@@ -1022,7 +1022,7 @@ th {
 }
 
 .cta {
-  background: url(../../img/cta/CTA.png) no-repeat center/cover lightgray;
+  background: url(../img/cta/CTA.png) no-repeat center/cover lightgray;
   text-align: center;
 }
 
@@ -1215,7 +1215,7 @@ th {
   left: calc(100% - 8px);
   width: 29px;
   height: 18px;
-  background: url(../../img/cta/cta-triangle.svg) no-repeat center/contain;
+  background: url(../img/cta/cta-triangle.svg) no-repeat center/contain;
 }
 @media (width <= 767px) {
   .cta__button--step::after {
@@ -1257,7 +1257,7 @@ th {
   right: 0px;
   width: 24px;
   height: 24px;
-  background: url(../../img/cta/cta-arrow.svg) no-repeat center/contain;
+  background: url(../img/cta/cta-arrow.svg) no-repeat center/contain;
 }
 @media (hover: hover) {
   .cta__button--cta:hover {
@@ -1360,7 +1360,7 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../../img/realization/pr.png), 50%/cover no-repeat;
+  background: url(../img/realization/pr.png), 50%/cover no-repeat;
 }
 @media (width <= 767px) {
   .pr {
@@ -1588,7 +1588,7 @@ th {
 }
 
 .solution {
-  background: lightgray url(../../img/solution/img_background.png) center -11px/cover no-repeat;
+  background: lightgray url(../img/solution/img_background.png) center -11px/cover no-repeat;
   padding-bottom: 112px;
   position: relative;
 }
@@ -1652,7 +1652,7 @@ th {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 50px;
-  background: url(../../img/solution/check.svg) center/cover no-repeat;
+  background: url(../img/solution/check.svg) center/cover no-repeat;
 }
 @media (width <= 767px) {
   .solution__item {
@@ -1710,7 +1710,7 @@ th {
   position: absolute;
   right: -33.5px;
   bottom: -34px;
-  background: url(../../img/solution/hukidasi.svg) center/cover no-repeat;
+  background: url(../img/solution/hukidasi.svg) center/cover no-repeat;
 }
 @media (768px <= width <= 1023px) {
   .solution__label {
@@ -1730,7 +1730,7 @@ th {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    background: url(../../img/solution/hukidasi-sp.svg) center/cover no-repeat;
+    background: url(../img/solution/hukidasi-sp.svg) center/cover no-repeat;
   }
 }
 @media (width <= 767px) {
@@ -1751,7 +1751,7 @@ th {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    background: url(../../img/solution/hukidasi-sp.svg) center/contain no-repeat;
+    background: url(../img/solution/hukidasi-sp.svg) center/contain no-repeat;
   }
 }
 
@@ -2185,7 +2185,7 @@ th {
 }
 
 .features {
-  background: lightgray url(../../img/features/features.png) center/cover no-repeat;
+  background: lightgray url(../img/features/features.png) center/cover no-repeat;
   padding-bottom: 80px;
   position: relative;
   padding-top: 79px;
@@ -2606,12 +2606,12 @@ th {
 .faq__question--btn {
   width: 24px;
   height: 24px;
-  background: url(../../img/faq/plus.svg) no-repeat center center/cover;
+  background: url(../img/faq/plus.svg) no-repeat center center/cover;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .js-faq.is-open .faq__question--btn {
-  background: url(../../img/faq/minus.svg) no-repeat center center/cover;
+  background: url(../img/faq/minus.svg) no-repeat center center/cover;
 }
 
 .faq__btn {
@@ -2664,7 +2664,7 @@ th {
 .faq__btn--icon {
   width: 11.25px;
   height: 14.999px;
-  background: url(../../img/faq/arrow.svg) no-repeat center center/cover;
+  background: url(../img/faq/arrow.svg) no-repeat center center/cover;
 }
 
 body {
