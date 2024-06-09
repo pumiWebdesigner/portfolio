@@ -1,0 +1,88 @@
+@use "base";
+
+.footer {
+  padding: 48px 0 17px;
+  background-color: #f7f7f7;
+  @include base.mq(sp) {
+    padding: 40px 0 17px;
+  }
+  .footer__logo {
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 120px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .footer__links {
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+    @include base.mq(sp) {
+      display: block;
+    }
+  }
+
+  .footer__link {
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include base.mq(sp) {
+      text-align: center;
+      margin-right: 0;
+      &:last-child {
+        margin-top: 8px;
+      }
+    }
+    a {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+
+  .footer__sns {
+    padding-top: 46px;
+    display: flex;
+    justify-content: center;
+    @include base.mq(sp) {
+      padding-top: 32px;
+    }
+  }
+  li {
+    margin-right: 40px;
+    width: 22px;
+    height: 22px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease 0s;
+      display: inline-block;
+      width: 100%;
+      height: inherit;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    text-align: center;
+    i::before {
+      color: base.$color-main;
+      font-size: 22px;
+    }
+  }
+  .footer__copy {
+    margin-top: 24px;
+    font-size: 12px;
+    text-align: center;
+    color: #888888;
+    @include base.mq(sp) {
+      margin-top: 22px;
+    }
+  }
+}

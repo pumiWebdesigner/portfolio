@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "./global" as *;
+@use "./blocks" as *;
+
+// main {
+// font-family: "Jost", sans-serif;
+// font-family: "Noto Sans JP", sans-serif;
+// }
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--Gray01, #565956);
+  @include font(16, 500, 24, 0.64);
+}
+* {
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// <div class="selector">
+// <div class="testtest"></div>
+// </div>
+// .selector {
+//   background-color: red;
+//   height: 200px;
+//   margin-inline: auto;
+//   padding-inline: size-calc(16, 100);
+//   width: size-calc(16, 400);
+// }
+// .testtest {
+//   background-color: blue;
+//   width: 100%;
+//   height: 100%;
+// }

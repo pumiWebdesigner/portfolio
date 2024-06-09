@@ -1,0 +1,116 @@
+@use "base";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: #{map-get(base.$layer, header)};
+  height: base.$header-height-pc;
+  background: base.$color-background-base;
+  @include base.mq(sp) {
+    height: base.$header-height-sp;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.header__logo {
+  margin: 0;
+  line-height: 1;
+  img {
+    width: 120px;
+    vertical-align: top;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.header__nav {
+  margin-left: auto;
+  @include base.mq(sp) {
+    display: none;
+  }
+}
+
+.header__nav-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.header__nav-item {
+  margin-right: 48px;
+  height: base.$header-height-pc;
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    text-decoration: none;
+    color: base.$color-text-base;
+    transition: all 0.3s ease 0s;
+    display: block;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    height: inherit;
+    padding-top: 27px;
+    &:hover {
+      color: base.$color-main;
+    }
+  }
+}
+.drawer-hamburger {
+  width: 30px;
+  padding-top: 22px;
+  padding-right: base.$padding-sp;
+  @include base.mq(pc) {
+    display: none;
+  }
+}
+.drawer-hamburger-icon,
+.drawer-hamburger-icon::before,
+.drawer-hamburger-icon::after {
+  background-color: #3ea1d1;
+  @include base.mq(sp) {
+    background-color: base.$color-main;
+  }
+}
+.drawer-hamburger-icon::before {
+  top: -8px;
+}
+.drawer-hamburger-icon::after {
+  top: 8px;
+}
+.drawer-nav {
+  width: calc(270 / 375);
+  background: #3ea1d1;
+  margin-top: base.$header-height-sp;
+}
+.drawer-menu {
+  li {
+    text-align: right;
+    &:first-child {
+      padding-top: 26px;
+    }
+  }
+  a {
+    color: #fff;
+    padding: 20px 15px;
+  }
+}
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 0px;
+  .drawer-hamburger-icon {
+    height: 0;
+  }
+  .drawer-hamburger-icon::before,
+  .drawer-hamburger-icon::after {
+    top: 0px;
+    height: 2px;
+  }
+}

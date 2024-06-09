@@ -1,0 +1,103 @@
+@use "base";
+
+.header-logo {
+  .drawer-open & {
+    @include base.mq(sp) {
+      opacity: 0;
+    }
+  }
+}
+.drawer-hamburger {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+
+  @include base.mq(sp) {
+    display: block;
+    height: 26px;
+    left: -40px;
+    position: absolute;
+    top: 20px;
+    transition: right 0.3s linear;
+    width: 26px;
+  }
+}
+.drawer-bar {
+  @include base.mq(sp) {
+    background-color: #3e3e3e;
+    border-radius: 4px;
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    transition: 0.3s;
+    width: 26px;
+    z-index: 1;
+
+    &:nth-child(1) {
+      top: 2px;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 18px;
+    }
+  }
+
+  @include base.mq(sp) {
+    .drawer-open & {
+      background-color: #fff;
+
+      &:nth-child(1) {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        left: 100%;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+.drawer-background {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  .drawer-open & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.drawer-nav {
+  @include base.mq(sp) {
+    background: base.$color-white;
+    bottom: 0;
+    position: fixed;
+    right: -300px;
+    text-align: center;
+    top: 0;
+    transition: right 0.3s linear;
+    width: 300px;
+    z-index: 1;
+    .drawer-open & {
+      right: 0;
+    }
+  }
+}

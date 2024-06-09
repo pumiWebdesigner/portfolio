@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "../global" as *;
+
+.section {
+  text-align: center;
+  padding-block: 88px;
+  @include mq(sp) {
+    padding-block: 55px;
+  }
+}
+
+.section__inner {
+  max-width: 1440px;
+  padding-inline: clamp(
+    #{map.get($padding, sp-comp)}px,
+    calc(
+      #{map.get($padding, sp-comp)}px + (map.get($padding, pc-comp) - map.get($padding, sp-comp)) * ((100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp)))
+    ),
+    #{map.get($padding, pc-comp)}px
+  );
+  // calc(
+  //   #{map.get($padding, sp-comp)}px + (map.get($padding, pc-comp) - map.get($padding, sp-comp)) * ((100vw - #{map.get($width, sp-comp)}px) / (map.get($width, pc-comp) - map.get($width, sp-comp)))
+  // );
+  margin-inline: auto;
+  height: 100%;
+}
+.section__title--ja {
+  @include font(24, 700, 36, 0.96);
+  padding-bottom: 16px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 1px;
+    background: var(--Gray01, #565956);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.section__title--en {
+  font-family: Jost;
+  @include font(24, 600, 36, 0.96);
+  margin-top: 16px;
+}
