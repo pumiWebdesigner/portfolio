@@ -2,7 +2,7 @@
 @use "../global" as *;
 
 .solution {
-  background: lightgray url(../../img/solution/img_background.png) center -11px / cover no-repeat;
+  background: lightgray url(../img/solution/img_background.png) center -11px / cover no-repeat;
   padding-bottom: 112px;
   position: relative;
   @include mq(tab) {
@@ -47,7 +47,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 50px;
-    background: url(../../img/solution/check.svg) center / cover no-repeat;
+    background: url(../img/solution/check.svg) center / cover no-repeat;
   }
   @include mq(sp) {
     padding-top: calc(18px + 32px + 27px);
@@ -98,7 +98,7 @@
     right: -33.5px;
     bottom: -34px;
     // transform: translateX(-50%);
-    background: url(../../img/solution/hukidasi.svg) center / cover no-repeat;
+    background: url(../img/solution/hukidasi.svg) center / cover no-repeat;
   }
   @include mq(tab) {
     @include font(20, 700, 30, 0.8);
@@ -112,7 +112,7 @@
       bottom: -70px;
       left: 50%;
       transform: translateX(-50%);
-      background: url(../../img/solution/hukidasi-sp.svg) center / cover no-repeat;
+      background: url(../img/solution/hukidasi-sp.svg) center / cover no-repeat;
     }
   }
   @include mq(sp) {
@@ -127,7 +127,7 @@
       bottom: -70px;
       left: 50%;
       transform: translateX(-50%);
-      background: url(../../img/solution/hukidasi-sp.svg) center / contain no-repeat;
+      background: url(../img/solution/hukidasi-sp.svg) center / contain no-repeat;
     }
   }
 }

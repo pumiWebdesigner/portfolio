@@ -2,7 +2,7 @@
 @use "../global" as *;
 
 .cta {
-  background: url(../../img/cta/CTA.png) no-repeat center / cover lightgray;
+  background: url(../img/cta/CTA.png) no-repeat center / cover lightgray;
   text-align: center;
 }
 .cta__inner {
@@ -130,7 +130,7 @@
     width: 29px;
     height: 18px;
     // transform: rotate(89.832deg);
-    background: url(../../img/cta/cta-triangle.svg) no-repeat center / contain;
+    background: url(../img/cta/cta-triangle.svg) no-repeat center / contain;
   }
   @include mq(sp) {
     &::after {
@@ -162,7 +162,7 @@
       right: 0px;
       width: 24px;
       height: 24px;
-      background: url(../../img/cta/cta-arrow.svg) no-repeat center / contain;
+      background: url(../img/cta/cta-arrow.svg) no-repeat center / contain;
     }
   }
   transition: all 0.3s ease;

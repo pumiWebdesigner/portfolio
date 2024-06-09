@@ -75,7 +75,7 @@
     right: 0;
     width: 16px;
     height: 16px;
-    background: url(../../img/header/poligon.svg) no-repeat center;
+    background: url(../img/header/poligon.svg) no-repeat center;
     // transition: all 0.3s ease;
   }
   @include mq(sp) {
@@ -90,7 +90,7 @@
 
     &::after {
       // transform: translateY(-50%) rotate(180deg);
-      background: url(../../img/header/poligon-gray.svg) no-repeat center;
+      background: url(../img/header/poligon-gray.svg) no-repeat center;
     }
   }
   pointer-events: auto;

@@ -106,10 +106,10 @@
 .faq__question--btn {
   width: 24px;
   height: 24px;
-  background: url(../../img/faq/plus.svg) no-repeat center center / cover;
+  background: url(../img/faq/plus.svg) no-repeat center center / cover;
   transition: all 0.5s ease;
   .js-faq.is-open & {
-    background: url(../../img/faq/minus.svg) no-repeat center center / cover;
+    background: url(../img/faq/minus.svg) no-repeat center center / cover;
   }
 }
 
@@ -150,5 +150,5 @@
 .faq__btn--icon {
   width: 11.25px;
   height: 14.999px;
-  background: url(../../img/faq/arrow.svg) no-repeat center center / cover;
+  background: url(../img/faq/arrow.svg) no-repeat center center / cover;
 }

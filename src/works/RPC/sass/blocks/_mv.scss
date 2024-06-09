@@ -5,12 +5,12 @@
   // width: 100svh;
   // height: 100svh;
   margin-top: map.get($height, pc-header);
-  background: url(../../img/mv/img_main_visual.png) no-repeat center top -3px / cover lightgray;
+  background: url(../img/mv/img_main_visual.png) no-repeat center top -3px / cover lightgray;
   width: 100%;
   height: 476px;
   position: relative;
   @include mq(sp) {
-    background: url(../../img/mv/img_main_visual.png) no-repeat right -819px top 0px / cover lightgray;
+    background: url(../img/mv/img_main_visual.png) no-repeat right -819px top 0px / cover lightgray;
     margin-top: map.get($height, sp-header);
     height: 742px;
   }

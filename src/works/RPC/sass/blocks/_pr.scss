@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../../img/realization/pr.png), 50% / cover no-repeat;
+  background: url(../img/realization/pr.png), 50% / cover no-repeat;
 
   @include mq(sp) {
     gap: 16px;
