@@ -22,9 +22,11 @@
 　npm gulp build
 
 ・index.phpを以下の通り修正
+削除　　<!-- prettier-ignore -->
+
 追記　<img → Ctrl + d →　Ctrl + Shift + P イメージサイズの追記
 追記　imglazy　loding=lazyの設定
-置換　<img src="./assets/img/ → <img src="<?php echo get_template_directory_uri() ?>/assets/img/
+置換　./assets/ → <?php echo get_template_directory_uri() ?>/assets/
 置換　index.html　→　<?php echo esc_url(home_url('/')); ?>
 置換　./〇〇.html　→　<?php echo esc_url(home_url('/')); ?>〇〇/
 
@@ -33,7 +35,6 @@
 削除　　favicon
 削除　　title
 削除　　description
-削除　　<!-- prettier-ignore -->
 ※　CSS,JSは後でfunctions.phpに移送
 
 style.cssのパスを修正
