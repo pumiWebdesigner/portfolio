@@ -1,3 +1,10 @@
+webp変換	
+.jpg　→　.webp
+.png　→　.webp
+
+Jquery記載	
+$　→　jQuery
+
 ・gulp.jsの内容を置換　※　gulpfile.jsを起点にパスを決める
 削除　assets/css/
 置換　./public/ → ../

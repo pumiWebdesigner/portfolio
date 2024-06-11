@@ -28,34 +28,22 @@
     display: none;
   }
 }
-
 .p-header__nav--list {
   display: flex;
   justify-content: center;
   align-items: center;
-  li {
-    color: white;
-    font-family: "Noto Sans JP";
-    font-size: 1.5em;
-  }
-  a {
-    padding: 0.2em 1em;
-    @media (hover: hover) {
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-    // .hover__underline--from-left {
-    // アンダーラインだけど、改行しても下線を表示させるためにbackground-imageで実装
-    background-image: linear-gradient(90deg, white, white);
-    background-repeat: no-repeat;
-    background-position: left bottom; /* X軸の起点 Y軸の起点 */
-    background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
-    transition: background-size 0.3s; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+.p-header__nav--item {
+  color: white;
+  font-family: "Noto Sans JP";
+  font-size: 1.5em;
+}
 
+.p-header__nav--link {
+  padding: 0.2em 1em;
+  @media (hover: hover) {
     &:hover {
-      background-size: 100% 2px; /* 線の横幅を100%にする */
+      opacity: 0.8;
     }
-    // }
   }
 }

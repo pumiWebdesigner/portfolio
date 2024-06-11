@@ -20,21 +20,20 @@
   padding-inline: 15px;
 }
 
-.p-drawer__nav--list {
-  li {
-    color: white;
-    font-family: "Noto Sans JP";
-    font-size: 30px;
-    font-weight: 400;
+.p-drawer__nav--item {
+  color: white;
+  font-family: "Noto Sans JP";
+  font-size: 30px;
+  font-weight: 400;
 
-    &:first-child {
-      margin-top: 40px;
-    }
+  &:first-child {
+    margin-top: 40px;
   }
-  a {
-    padding: 1em 1em;
-    text-align: center;
-    padding: 1em;
-    text-transform: uppercase;
-  }
+}
+
+.p-drawer__nav--link {
+  padding: 1em 1em;
+  text-align: center;
+  padding: 1em;
+  // text-transform: uppercase;
 }

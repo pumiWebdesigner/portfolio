@@ -54,8 +54,8 @@ input[type="checkbox"] {
     // ボタンの場所
     padding-left: calc(24px + 8px);
     position: relative;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     // ボタン枠
     &::before {

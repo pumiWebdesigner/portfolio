@@ -766,23 +766,14 @@ a {
 	justify-content: center;
 }
 
-.p-header__nav--list li {
+.p-header__nav--item {
 	color: white;
 	font-family: "Noto Sans JP";
 	font-size: 1.5em;
 }
 
-.p-header__nav--list a {
-	background-image: linear-gradient(90deg, white, white);
-	background-position: left bottom; /* X軸の起点 Y軸の起点 */
-	background-repeat: no-repeat;
-	background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
+.p-header__nav--link {
 	padding: 0.2em 1em;
-	transition: background-size 0.3s; /* 線を伸ばすアニメーション実行時間を指定 */
-}
-
-.p-header__nav--list a:hover {
-	background-size: 100% 2px; /* 線の横幅を100%にする */
 }
 
 .p-footer {
@@ -820,22 +811,21 @@ a {
 	text-align: center;
 }
 
-.p-drawer__nav--list li {
+.p-drawer__nav--item {
 	color: white;
 	font-family: "Noto Sans JP";
 	font-size: 30px;
 	font-weight: 400;
 }
 
-.p-drawer__nav--list li:first-child {
+.p-drawer__nav--item:first-child {
 	margin-top: 40px;
 }
 
-.p-drawer__nav--list a {
+.p-drawer__nav--link {
 	padding: 1em 1em;
 	padding: 1em;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 .p-to-top {
@@ -1326,8 +1316,18 @@ a {
 	display: none;
 	font-size: 24px;
 	margin-top: 2rem;
+	opacity: 0;
 	padding: contact 20px;
 	text-align: center;
+	transform: translateY(20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.p-contact__message--success.show,
+.p-contact__message--error.show {
+	display: block;
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .p-contact__message--success {
@@ -1417,8 +1417,6 @@ input[type=checkbox] {
 
 input[type=radio] + span,
 input[type=checkbox] + span {
-	align-items: center;
-	display: flex;
 	font-size: 0.875rem;
 	font-weight: 500;
 	padding-left: 32px;
@@ -1776,7 +1774,7 @@ input[type=date] {
 	transform: translateY(4px);
 }
 
-.p-header__nav--list a:hover {
+.p-header__nav--link:hover {
 	opacity: 0.8;
 }
 

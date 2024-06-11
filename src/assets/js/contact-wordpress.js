@@ -8,31 +8,7 @@
   // 送信ボタンは初期値disabled
   submit.prop("disabled", true);
 
-  // form.submit(function () {
-  //   jQuery.ajax({
-  //     url: form.attr("action"),
-  //     data: form.serialize(),
-  //     type: "POST",
-  //     dataType: "xml",
-  //     statusCode: {
-  //       0: function () {
-  //         //送信に成功したときの処理
-  //         if (form.hasClass("js-contact")) {
-  //           window.location.href = "./thanks/contact.html";
-  //           alert("送信しました。");
-  //         } else if (form.hasClass("js-reservation")) {
-  //           window.location.href = "./thanks/reservation.html";
-  //           alert("予約しました。");
-  //         }
-  //       },
-  //       200: function () {
-  //         //送信に失敗したときの処理
-  //         window.location.href = "./index.html";
-  //       },
-  //     },
-  //   });
-  //   return false;
-  // });
+  // 送信実行時の処理はCONTACT FORM 7の設定で行う
 
   // required属性の付与
   form.find(".wpcf7-validates-as-required").attr("required", true);
@@ -44,11 +20,11 @@
     if (form.get(0).checkValidity()) {
       // 一旦バリデーションチェックOKにするけど、追加チェック次第で再度NGにする
       submit.prop("disabled", false);
-      if (window.location.href.includes("reservation")) {
-        if (jQuery('input[type="radio"]:checked').length === 0) submit.prop("disabled", true);
-        else if (jQuery('input[type="checkbox"]:checked').length === 0) submit.prop("disabled", true);
-        else if (jQuery(".js-select").val() === "ご連絡方法を選択ください。") submit.prop("disabled", true);
-      }
+      // if (window.location.href.includes("reservation")) {
+      if (jQuery('input[type="checkbox"]:checked').length === 0) submit.prop("disabled", true);
+      else if (jQuery(".js-select").val() === "ご連絡方法を選択ください。") submit.prop("disabled", true);
+      // else if (jQuery('input[type="radio"]:checked').length === 0) submit.prop("disabled", true);
+      // }
     } else {
       submit.prop("disabled", true);
     }
@@ -106,13 +82,14 @@
         }
       }
       // ラジオボタンのバリデーション
-      if ($this.hasClass("js-radio")) {
-        if (jQuery('input[type="radio"]:checked').length === 0) {
-          $errorMessage.text("初診・再診どちらか選んでください。").show();
-        } else {
-          $errorMessage.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
+      // 初期設定されており、選択されていたい状態に戻せないのでバリデーションチェックしない
+      // if ($this.hasClass("js-radio")) {
+      //   if (jQuery('input[type="radio"]:checked').length === 0) {
+      //     $errorMessage.text("初診・再診どちらか選んでください。").show();
+      //   } else {
+      //     $errorMessage.hide(); // 条件を満たす場合はエラーメッセージを隠す
+      //   }
+      // }
       // セレクトボックスのバリデーション
       if ($this.hasClass("js-select")) {
         if ($this.val() === "ご連絡方法を選択ください。") {

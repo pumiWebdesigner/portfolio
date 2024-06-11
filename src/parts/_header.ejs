@@ -40,9 +40,9 @@ const menus = [
       <nav class="p-header__nav">
         <ul class="p-header__nav--list">
           <%_ menus.forEach(menu => { _%>
-          <li>
-            <a href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
-          </li>
+          <div class="p-header__nav--item">
+            <a class="p-header__nav--link hover__underline--from-left" href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
+          </div>
           <%_ }); _%>
         </ul>
       </nav>
@@ -57,11 +57,11 @@ const menus = [
     </div>
     <!-- ドロワーメニュー（ヘッダーコンテナの外） -->
     <nav class="p-drawer__nav">
-      <ul class="p-drawer__nav--list">
+      <ul class="header__nav--list">
         <%_ menus.forEach(menu => { _%>
-        <li>
-          <a href="<%= menu.link %>"><%= menu.name %></a>
-        </li>
+        <div class="p-drawer__nav--item">
+          <a class="p-drawer__nav--link" href="<%= menu.link %>"><%= menu.name %></a>
+        </div>
         <%_ }); _%>
       </ul>
     </nav>

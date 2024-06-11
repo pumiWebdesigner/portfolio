@@ -1,0 +1,24 @@
+/* デフォルトのエラーメッセージを非表示にする */
+.wpcf7-not-valid-tip {
+  display: none;
+}
+/* デフォルトのradioボタンの左端マージンを0にする */
+.wpcf7-list-item.first {
+  margin-left: 0;
+}
+
+/* 送信後のメッセージを非表示にする */
+.wpcf7-response-output {
+  display: none;
+}
+
+/* フォーム全体を送信後非表示にする */
+.wpcf7 {
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.wpcf7.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
