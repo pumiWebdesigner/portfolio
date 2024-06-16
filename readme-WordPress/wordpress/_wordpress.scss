@@ -3,7 +3,7 @@
   display: none;
 }
 /* デフォルトのradioボタンの左端マージンを0にする */
-.wpcf7-list-item.first {
+.wpcf7-list-item {
   margin-left: 0;
 }
 
@@ -21,4 +21,8 @@
 .wpcf7.hide {
   opacity: 0;
   transform: translateY(20px);
+}
+
+.wpcf7-spinner {
+  display: none;
 }
