@@ -1036,6 +1036,15 @@ a {
           align-items: center;
   gap: 50px;
 }
+@media (width <= 767px) {
+  .p-modal__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
 
 .p-bg {
   background: url(../img/img_fv.webp) top center/cover no-repeat;
@@ -1332,10 +1341,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: #ddd solid 1px;
-}
-.p-contact__form--item:first-child {
-  border-top: #ddd solid 1px;
 }
 @media (width <= 767px) {
   .p-contact__form--item {
@@ -1570,7 +1575,7 @@ a {
   text-align: center;
   display: none;
   background: #fff;
-  padding: contact 20px;
+  padding: 20px;
   font-size: 24px;
   opacity: 0;
   -webkit-transform: translateY(20px);

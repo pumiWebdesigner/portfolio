@@ -494,42 +494,42 @@
 		<!-- wordPress化する時 -->
 		<!-- formタグをdivタグに置換え -->
 		<!-- inputタグもCONTACT7用に置換え -->
-		<section id="contact" class="l-section p-contact wow fadeInUp">
+		<section id="contact" class="l-section p-section p-contact wow fadeInUp">
 			<div class="l-inner">
 				<hgroup class="p-section__title">
 					<h2 class="p-section__title--main">Contact</h2>
 					<p class="p-section__title--sub">お問い合わせ</p>
 				</hgroup>
+				<div class="-section__contents">
+					<form id="js-form" class="p-contact__form" method="post" action="
+                https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
+                ">
+						<!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容）、送信ボタン -->
+						<!-- prettier-ignore -->
 
-				<form id="js-form" class="p-contact__form" method="post" action="
-              https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
-              ">
-					<!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容）、送信ボタン -->
-					<!-- prettier-ignore -->
+						<!-- テキスト（名前） -->
+						<div class="p-contact__form--item">
+							<div class="p-contact__form--title">
+								<label for="your-name" class="p-contact__form--title-text">お名前</label>
+								<span class="p-contact__form--require">必須</span>
+							</div>
+							<div class="p-contact__form--input">
+								<input class="js-text" type="text" id="your-name" placeholder="山田太郎" name="entry.530212225" required />
+								<div class="error-message"></div>
+							</div>
+						</div>
+						<!-- メールアドレス -->
+						<!-- prettier-ignore -->
 
-					<!-- テキスト（名前） -->
-					<div class="p-contact__form--item">
-						<div class="p-contact__form--title">
-							<label for="your-name" class="p-contact__form--title-text">お名前</label>
-							<span class="p-contact__form--require">必須</span>
-						</div>
-						<div class="p-contact__form--input">
-							<input class="js-text" type="text" id="your-name" placeholder="山田太郎" name="entry.530212225" required />
-							<div class="error-message"></div>
-						</div>
-					</div>
-					<!-- メールアドレス -->
-					<!-- prettier-ignore -->
-
-					<!-- メールアドレス -->
-					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-					<div class="p-contact__form--item">
-						<div class="p-contact__form--title">
-							<label for="email" class="p-contact__form--title-text">メールアドレス</label>
-							<span class="p-contact__form--require">必須</span>
-						</div>
-						<div class="p-contact__form--input">
-							<!-- <span class="wpcf7-form-control-wrap" data-name="emailAddress"
+						<!-- メールアドレス -->
+						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+						<div class="p-contact__form--item">
+							<div class="p-contact__form--title">
+								<label for="email" class="p-contact__form--title-text">メールアドレス</label>
+								<span class="p-contact__form--require">必須</span>
+							</div>
+							<div class="p-contact__form--input">
+								<!-- <span class="wpcf7-form-control-wrap" data-name="emailAddress"
         ><input
           size="40"
           class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email reserve__form--input js-mail"
@@ -543,25 +543,25 @@
           required="required"
       />
     </span> -->
-							<input class="js-mail" type="email" id="your-email" placeholder="info@example.com" name="emailAddress" required />
-							<div class="error-message"></div>
+								<input class="js-mail" type="email" id="your-email" placeholder="info@example.com" name="emailAddress" required />
+								<div class="error-message"></div>
+							</div>
 						</div>
-					</div>
-					<!-- ラジオボタン -->
-					<!-- prettier-ignore -->
+						<!-- ラジオボタン -->
+						<!-- prettier-ignore -->
 
-					<!-- ラジオボタン -->
-					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-					<div class="p-contact__form--item reserve__form--item-radio">
-						<div class="p-contact__form--title">
-							<!-- <div class="p-contact__form--title-text">初診/再診</div> -->
-							<div class="p-contact__form--title-text">お問い合わせ種類</div>
-							<!-- <label for="radio-button" class="p-contact__form--title-text">初診/再診</label> -->
-							<span class="p-contact__form--require">必須</span>
-						</div>
-						<div class="p-contact__form--input">
-							<!-- wrapperの構成が違ってたので、HTML用にクラスをコピーしてDIVタグ作成した -->
-							<!-- <span class="wpcf7-form-control-wrap" data-name="radio-button">
+						<!-- ラジオボタン -->
+						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+						<div class="p-contact__form--item reserve__form--item-radio">
+							<div class="p-contact__form--title">
+								<!-- <div class="p-contact__form--title-text">初診/再診</div> -->
+								<div class="p-contact__form--title-text">お問い合わせ種類</div>
+								<!-- <label for="radio-button" class="p-contact__form--title-text">初診/再診</label> -->
+								<span class="p-contact__form--require">必須</span>
+							</div>
+							<div class="p-contact__form--input">
+								<!-- wrapperの構成が違ってたので、HTML用にクラスをコピーしてDIVタグ作成した -->
+								<!-- <span class="wpcf7-form-control-wrap" data-name="radio-button">
         <span class="wpcf7-form-control wpcf7-radio reserve__form--radio-wrapper js-radio" id="radio-button">
           <span class="wpcf7-list-item first">
             <label>
@@ -577,35 +577,35 @@
           </span>
         </span>
       </span> -->
-							<div class="p-contact__form--radio-wrapper js-radio">
-								<label class="p-contact__field--radio">
-									<input type="radio" name="entry.716562788" value="ホームページ制作" required />
-									<span class="p-contact-radio-label">ホームページ制作</span>
-								</label>
-								<label class="p-contact__field--radio">
-									<input type="radio" name="entry.716562788" value="ホームページ修正" />
-									<span class="p-contact-radio-label">ホームページ修正</span>
-								</label>
-								<label class="p-contact__field--radio">
-									<input type="radio" name="entry.716562788" value="ホームページ相談" />
-									<span class="p-contact-radio-label">ホームページ相談</span>
-								</label>
+								<div class="p-contact__form--radio-wrapper js-radio">
+									<label class="p-contact__field--radio">
+										<input type="radio" name="entry.716562788" value="ホームページ制作" required />
+										<span class="p-contact-radio-label">ホームページ制作</span>
+									</label>
+									<label class="p-contact__field--radio">
+										<input type="radio" name="entry.716562788" value="ホームページ修正" />
+										<span class="p-contact-radio-label">ホームページ修正</span>
+									</label>
+									<label class="p-contact__field--radio">
+										<input type="radio" name="entry.716562788" value="ホームページ相談" />
+										<span class="p-contact-radio-label">ホームページ相談</span>
+									</label>
+								</div>
+								<div class="error-message"></div>
 							</div>
-							<div class="error-message"></div>
 						</div>
-					</div>
-					<!-- テキストアリア -->
-					<!-- prettier-ignore -->
+						<!-- テキストアリア -->
+						<!-- prettier-ignore -->
 
-					<!-- テキストアリア -->
-					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-					<div class="p-contact__form--item reserve__form--item-textarea">
-						<div class="p-contact__form--title">
-							<label for="message" class="p-contact__form--title-text"> お問い合わせ内容 </label>
-							<span class="p-contact__form--require">必須</span>
-						</div>
-						<div class="p-contact__form--input">
-							<!-- <span class="wpcf7-form-control-wrap" data-name="message">
+						<!-- テキストアリア -->
+						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+						<div class="p-contact__form--item reserve__form--item-textarea">
+							<div class="p-contact__form--title">
+								<label for="message" class="p-contact__form--title-text"> お問い合わせ内容 </label>
+								<span class="p-contact__form--require">必須</span>
+							</div>
+							<div class="p-contact__form--input">
+								<!-- <span class="wpcf7-form-control-wrap" data-name="message">
       <textarea
         cols="40"
         rows="5"
@@ -617,35 +617,36 @@
         required="required"
       ></textarea>
     </span> -->
-							<textarea class="js-text" id="your-message" placeholder="お問い合わせ内容をご入力ください。3営業日以内にご返信いたします。" name="entry.1269014493" required></textarea>
-							<div class="error-message"></div>
+								<textarea class="js-text" id="your-message" placeholder="お問い合わせ内容をご入力ください。3営業日以内にご返信いたします。" name="entry.1269014493" required></textarea>
+								<div class="error-message"></div>
+							</div>
 						</div>
-					</div>
-					<!-- チェックボックス -->
-					<!-- prettier-ignore -->
+						<!-- チェックボックス -->
+						<!-- prettier-ignore -->
 
-					<!-- チェックボックス -->
-					<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
-					<div class="p-contact__form--item p-contact__form--item-privacy">
-						<label class="p-contact__form--title p-contact__wrapper-privacy js-form--wrapper">
-							<input class="js-checkbox" type="checkbox" name="entry.2114229630" value="プライバシーポリシーに合意する" required aria-label="プライバシーポリシーに合意する" />
-							<span>
-								<a href="./policy.html" target="_blank""> プライバシーポリシー </a>
+						<!-- チェックボックス -->
+						<!-- wordPress化する時はinputタグをCONTACT7用に置換える -->
+						<div class="p-contact__form--item p-contact__form--item-privacy">
+							<label class="p-contact__form--title p-contact__wrapper-privacy js-form--wrapper">
+								<input class="js-checkbox" type="checkbox" name="entry.2114229630" value="プライバシーポリシーに合意する" required aria-label="プライバシーポリシーに合意する" />
+								<span>
+									<a href="./policy.html" target="_blank""> プライバシーポリシー </a>
       に合意する
     </span>
     <span class=" p-contact__form--require">必須</span>
-						</label>
-						<div class="error-message"></div>
+							</label>
+							<div class="error-message"></div>
 
-					</div>
-					<!-- 送信ボタン -->
-					<!-- prettier-ignore -->
+						</div>
+						<!-- 送信ボタン -->
+						<!-- prettier-ignore -->
 
-					<!-- 送信ボタン -->
-					<button id="js-submit" class="c-btn p-contact__btn" type="submit">上記の内容を送信する</button>
-					<!-- wordPress化する時は以下に置換えられる（CONTACT7用） -->
-					<!-- <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /> -->
-				</form>
+						<!-- 送信ボタン -->
+						<button id="js-submit" class="c-btn p-contact__btn" type="submit">上記の内容を送信する</button>
+						<!-- wordPress化する時は以下に置換えられる（CONTACT7用） -->
+						<!-- <input class="wpcf7-form-control wpcf7-submit has-spinner js-submit button contact__button" id="js-submit" type="submit" value="送信" disabled="" /> -->
+					</form>
+				</div>
 				<!-- 送信後のメッセージ -->
 				<!-- prettier-ignore -->
 

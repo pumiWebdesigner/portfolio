@@ -1,0 +1,40 @@
+<!-- prettier-ignore -->
+<%_
+_%>
+
+<!-- サイドバー -->
+<aside class="l-sidebar">
+  <!-- プロフィールの表示 -->
+  <div id="about-me" class="widget widget_about_me">
+    <h2 class="widget-title">プロフィール</h2>
+    <div class="profile-content">
+      <img src="./assets/img/pumi.webp" alt="プミ画像" />
+      <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pumi.webp" alt="プミ画像" /> -->
+      <p>ここにプロフィールの説明を記載します。名前、職業、趣味など。</p>
+    </div>
+  </div>
+
+  <!-- 最新記事の表示 -->
+  <div id="recent-posts" class="widget widget_recent_posts">
+    <h2 class="widget-title">最新記事</h2>
+    <ul>
+      <!-- 最新記事を5件表示する -->
+      <li><a href="#">最新記事のタイトル1</a></li>
+      <li><a href="#">最新記事のタイトル2</a></li>
+      <li><a href="#">最新記事のタイトル3</a></li>
+      <li><a href="#">最新記事のタイトル4</a></li>
+      <li><a href="#">最新記事のタイトル5</a></li>
+      <!-- <?php
+        // 最新記事を5件表示する
+        $recent_posts = wp_get_recent_posts(array(
+          'numberposts' =>
+            5, // 表示する記事数 'post_status' => 'publish' // 公開されている記事のみ )); foreach($recent_posts as $post) : ?>
+        <li>
+          <a href="<?php echo get_permalink($post['ID']); ?>">
+            <?php echo esc_html($post['post_title']); ?>
+          </a>
+        </li>
+      <?php endforeach; wp_reset_query(); ?> -->
+    </ul>
+  </div>
+</aside>

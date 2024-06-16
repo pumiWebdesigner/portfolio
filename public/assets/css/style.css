@@ -1192,16 +1192,11 @@ a {
 
 .p-contact__form--item {
 	align-items: center;
-	border-bottom: #ddd solid 1px;
 	display: flex;
 	gap: 60px;
 	padding-bottom: 27.5px;
 	padding-top: 28px;
 	text-align: left;
-}
-
-.p-contact__form--item:first-child {
-	border-top: #ddd solid 1px;
 }
 
 .p-contact__form--title {
@@ -1317,7 +1312,7 @@ a {
 	font-size: 24px;
 	margin-top: 2rem;
 	opacity: 0;
-	padding: contact 20px;
+	padding: 20px;
 	text-align: center;
 	transform: translateY(20px);
 	transition: opacity 0.5s ease, transform 0.5s ease;
@@ -1667,6 +1662,11 @@ strong.color-accent {
 
 .p-works__explanation {
 	padding-inline: 1rem;
+}
+
+.p-modal__buttons {
+	flex-direction: column;
+	gap: 20px;
 }
 
 .p-bg {

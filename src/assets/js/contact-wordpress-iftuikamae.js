@@ -4,7 +4,7 @@
 
   // form送信ボタン
   const submit = jQuery(".js-submit");
-  if (!form.length || !submit.length) return;
+
   // 送信ボタンは初期値disabled
   submit.prop("disabled", true);
 
@@ -15,12 +15,16 @@
 
   form.on("input change", function () {
     // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
-    // checkbox,selectは個別のバリデーションチェックを行う
+    // Radio,checkbox,selectは個別のバリデーションチェックを行う
 
     if (form.get(0).checkValidity()) {
       // 一旦バリデーションチェックOKにするけど、追加チェック次第で再度NGにする
       submit.prop("disabled", false);
+      // if (window.location.href.includes("reservation")) {
       if (jQuery('input[type="checkbox"]:checked').length === 0) submit.prop("disabled", true);
+      else if (jQuery(".js-select").val() === "ご連絡方法を選択ください。") submit.prop("disabled", true);
+      // else if (jQuery('input[type="radio"]:checked').length === 0) submit.prop("disabled", true);
+      // }
     } else {
       submit.prop("disabled", true);
     }
@@ -30,7 +34,6 @@
   // safari：✘ready,○load、✘blur,○change
   jQuery(window).on("load", function () {
     var $require = jQuery(".wpcf7-form [required]");
-    if ($require.length === 0) return;
     $require.on("change", function () {
       var $this = jQuery(this);
       // input要素が単体：input要素のnextにエラーメッセージ
@@ -80,7 +83,13 @@
       }
       // ラジオボタンのバリデーション
       // 初期設定されており、選択されていたい状態に戻せないのでバリデーションチェックしない
-
+      // if ($this.hasClass("js-radio")) {
+      //   if (jQuery('input[type="radio"]:checked').length === 0) {
+      //     $errorMessage.text("初診・再診どちらか選んでください。").show();
+      //   } else {
+      //     $errorMessage.hide(); // 条件を満たす場合はエラーメッセージを隠す
+      //   }
+      // }
       // セレクトボックスのバリデーション
       if ($this.hasClass("js-select")) {
         if ($this.val() === "ご連絡方法を選択ください。") {
@@ -97,13 +106,12 @@
     var jQuerycheckbox = jQuery(".js-checkbox");
     jQuerycheckbox.on("change", function () {
       var $this = jQuery(this);
-      // var $errorMessage = $this.closest(".wpcf7-form-control-wrap").next(".error-message"); //thisに対するエラーメッセージの要素
-      var $errorMessage = $this.closest(".js-form--wrapper").next(".error-message"); //thisに対するエラーメッセージの要素
+      var $errorMessage = $this.closest(".wpcf7-form-control-wrap").next(".error-message"); //thisに対するエラーメッセージの要素
 
       // チェックボックスのバリデーション
       if ($this.hasClass("js-checkbox")) {
         if (jQuery('input[type="checkbox"]:checked').length === 0) {
-          $errorMessage.text("チェックされておりません。").show();
+          $errorMessage.text("一つ以上の診療内容を選んでください。").show();
         } else {
           $errorMessage.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
@@ -129,20 +137,5 @@
     if (ua.indexOf("firefox") !== -1) {
       jQuery("body").addClass("firefox");
     }
-  });
-}
-
-{
-  document.addEventListener("DOMContentLoaded", function () {
-    const checkbox = document.querySelector('input[name="privacy-policy"]');
-    const privacySpan = document.querySelector(".privacy-span");
-    if (!checkbox || !privacySpan) return;
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        privacySpan.classList.add("checked");
-      } else {
-        privacySpan.classList.remove("checked");
-      }
-    });
   });
 }
