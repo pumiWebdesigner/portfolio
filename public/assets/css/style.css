@@ -678,14 +678,6 @@ a {
 	transform: translateX(-50%) rotate(calc(45deg + 90deg * 3));
 }
 
-.c-logo {
-	display: grid;
-	font-size: clamp(20px, 20px + 10 * (100vw - 375px) / 1065, 30px);
-	letter-spacing: 0.12em;
-	padding: 0.5em 1em;
-	place-items: center;
-}
-
 .c-img {
 	aspect-ratio: 3/2;
 	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -755,7 +747,11 @@ a {
 }
 
 .p-header__logo {
-	font-size: 1.5rem;
+	display: grid;
+	font-size: clamp(20px, 20px + 10 * (100vw - 375px) / 1065, 30px);
+	letter-spacing: 0.12em;
+	padding: 0.5em 1em;
+	place-items: center;
 }
 
 .p-header__container {
@@ -1731,14 +1727,14 @@ input[type=date] {
 
 @media (hover: hover) {
 
-.c-logo:hover {
-	opacity: 0.8;
-}
-
 .c-btn:hover {
 	box-shadow: revert;
 	opacity: 0.7;
 	transform: translateY(4px);
+}
+
+.p-header__logo:hover {
+	opacity: 0.8;
 }
 
 .p-header__nav--link:hover {

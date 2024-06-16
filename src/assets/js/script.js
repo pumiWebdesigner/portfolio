@@ -1,35 +1,31 @@
-{
-  // 基本的に使用するjsはここに記述する
-
+jQuery(document).ready(function ($) {
   // スムーズスクロール
   // aタグのクリック（ドロワー関連は専用処理あり）
-  jQuery('a[href*="#"]').on("click", function (e) {
+  jQuery('a[href^="#"]').on("click", function (e) {
     // aタグのhrefが遷移する先
     // .splitはその文字で区切って配列にする。[0]は＃より前、[1]は＃より後の文字列を取得する
-    var id = "#" + jQuery(this).attr("href").split("#")[1]; // スクロール先のhrefを取得
+    e.preventDefault(); // デフォルトのリンク動作を無効化
+    var href = jQuery(this).attr("href");
 
-    var targetElement = jQuery(id);
-    if (targetElement.length === 0) {
-      // 要素が存在しない場合は処理を中断
-      // 下層ページはaタグの通常の処理を行う
-      return;
-    }
-    e.preventDefault(); // aタグの通常の処理を止める
-
+    // ターゲット要素を取得
+    var targetElement = jQuery(href);
+    // ターゲット要素が存在する場合にスクロール処理を実行
     // 遷移する先とheaderの高さからスクロールする距離を計算
-    scrollDistance = calcDistance(targetElement);
+    var scrollDistance = calcDistance(targetElement);
+
     // スムーズスクロール
     smoothScroll(scrollDistance, 300);
+
     // ドロワーを閉じる
     if (jQuery(this).hasClass("js-drawer__nav--link")) {
       jQuery("body").removeClass("drawer-open");
     }
   });
+
   // 遷移する先とheaderの高さからスクロールする距離を計算
   function calcDistance(targetElement) {
     var scrollDistance = 0; // #は初期値0
-    if (targetElement !== "#") {
-      // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
+    if (targetElement.length > 0) {
       var elementDistance = targetElement.offset().top; //画面最上部から要素の上端の距離
       var headerHeight = jQuery(".l-header").outerHeight(); // ヘッダーの高さ（マージン含む）
       scrollDistance = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
@@ -66,4 +62,4 @@
   jQuery(".js-closeBtn").on("click", function () {
     window.close();
   });
-}
+});

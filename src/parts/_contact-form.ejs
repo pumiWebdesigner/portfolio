@@ -8,18 +8,14 @@ _%>
       <h2 class="p-section__title--main">Contact</h2>
       <p class="p-section__title--sub">お問い合わせ</p>
     </hgroup>
-    <form
-      id="js-form"
-      class="p-contact__form p-section__contents"
-      method="post"
-      action="
-                https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse
-                "
-    >
-      <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容）、送信ボタン -->
-      <%- include("../parts-contact/_contact-form__item-portfolio",{ path:".", }) -%>
-    </form>
-    <!-- 送信後のメッセージ -->
-    <%- include("../parts-contact/_contact-message",{ path:".", }) -%>
+    <div class="p-section__contents">
+      <form id="js-form" class="p-contact__form" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJq9RtyK_ZOIa4ehi92lMGJouvBIXhEBzSsltfstKmzat1Jg/formResponse">
+        <!-- フォーム項目_ポートフォリオ用（お名前、メールアドレス、お問い合わせ種類、お問い合わせ内容）、送信ボタン -->
+        <%- include("../parts-contact/_contact-form__item-portfolio",{ path:".", }) -%>
+      </form>
+
+      <!-- 送信後のメッセージ -->
+      <%- include("../parts-contact/_contact-message",{ path:".", }) -%>
+    </div>
   </div>
 </section>

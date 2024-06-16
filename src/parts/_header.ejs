@@ -32,16 +32,16 @@ const menus = [
     <!-- ロゴ、グローバルナビ、ハンバーガーメニュー -->
     <div class="p-header__container">
       <!-- ロゴ -->
-      <h1 class="c-logo">
+      <h1 class="p-header__logo">
         <a href="./index.html">Pumi's<br />Portfolio</a>
       </h1>
       <!-- グローバルナビ -->
       <nav class="p-header__nav">
         <ul class="p-header__nav--list">
           <%_ menus.forEach(menu => { _%>
-          <div class="p-header__nav--item">
+          <li class="p-header__nav--item">
             <a class="p-header__nav--link hover__underline--from-left" href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
-          </div>
+          </li>
           <%_ }); _%>
         </ul>
       </nav>
@@ -58,9 +58,9 @@ const menus = [
     <nav class="p-drawer__nav">
       <ul class="header__nav--list">
         <%_ menus.forEach(menu => { _%>
-        <div class="p-drawer__nav--item">
+        <li class="p-drawer__nav--item">
           <a class="p-drawer__nav--link" href="<%= menu.link %>"><%= menu.name %></a>
-        </div>
+        </li>
         <%_ }); _%>
       </ul>
     </nav>

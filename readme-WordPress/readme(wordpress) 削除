@@ -13,3 +13,6 @@ $　→　jQuery
 
 ・gulp.jsのbrowserSync.initを以下に設定
 　proxy: "http://localhost:8888/dev/",
+
+追記　<img → Ctrl + d →　Ctrl + Shift + P イメージサイズの追記
+追記　imglazy　loding=lazyの設定
