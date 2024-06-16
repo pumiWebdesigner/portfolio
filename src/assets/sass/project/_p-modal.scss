@@ -12,9 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: size-calc-clamp(10, 40, 375, 1440);
   @include mq(sp) {
     flex-direction: column;
-    gap: 20px;
   }
 }

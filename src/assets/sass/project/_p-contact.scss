@@ -6,60 +6,29 @@
   text-align: center;
 }
 
-.contact__message {
-  margin-top: 24px;
-  font-size: 12px;
-  line-height: 160%;
-  @include mq(pc) {
-    font-size: 16px;
-    margin-top: 32px;
-  }
-}
-
-.contact__fields {
-  max-width: 900px; //目検で決定
-  margin-inline: auto;
-  margin-top: 24px;
-  @include mq(pc) {
-    margin-top: 38px;
-  }
-}
-
-.p-contact__form {
-  margin-block: 4rem;
-}
-
 .p-contact__form--item {
   text-align: left;
-  padding-top: 28px;
-  padding-bottom: 27.5px;
+  padding-block: size-calc-clamp(14, 28, 375, 1440);
   display: flex;
-  gap: 60px;
   align-items: center;
-
+  gap: size-calc-clamp(10, 60, 375, 1440);
   @include mq(sp) {
     flex-direction: column;
     align-items: revert;
-  }
-  @include mq(sp) {
-    padding-top: 25px;
-    padding-bottom: 23.5px;
-    gap: 12px;
+    gap: size-calc-clamp(10, 30, 375, 1440);
   }
 }
 .p-contact__form--title {
   display: flex;
-  gap: 16px;
+  gap: size-calc-clamp(12, 16, 375, 1440);
   align-items: center;
   flex: 0 0 180px;
   @include mq(sp) {
-    gap: 12px;
     flex: revert;
   }
 }
 
 .p-contact__form--title-text {
-  @include font(16, 500, null, null);
   display: grid;
   place-items: center;
 }
@@ -70,13 +39,11 @@
   height: 23px;
   border-radius: 4px;
   white-space: nowrap;
-  @include font(12, 700, null, null);
+  font-size: 10px;
+  font-weight: 700;
   color: #fff;
   display: grid;
   place-items: center;
-  @include mq(sp) {
-    padding-top: 3px;
-  }
 }
 
 .p-contact__form--input,
@@ -85,20 +52,9 @@
   flex: 1;
 }
 
-.p-contact__form--item-radio {
-  padding-top: 41px;
-  padding-bottom: 40px;
-  @include mq(sp) {
-    padding-top: 25px;
-    padding-bottom: 28px;
-    .p-contact__form--require {
-      margin-left: 4px;
-    }
-  }
-}
 .p-contact__form--radio-wrapper {
   display: flex;
-  gap: 32px;
+  gap: size-calc-clamp(16, 32, 375, 1440);
   align-items: center;
   @include mq(sp) {
     margin-top: 12px;
@@ -106,61 +62,7 @@
     align-items: revert;
   }
 }
-.p-contact__form--item-checkbox {
-  padding-top: 31px;
-  padding-bottom: 23px;
-  .p-contact__form--require {
-    margin-top: -20px;
-  }
-  @include mq(sp) {
-    padding-top: 27px;
-    padding-bottom: 28px;
-    .p-contact__form--require {
-      margin-left: 4px;
-    }
-  }
-}
 
-.p-contact__form--title-text-top {
-  @include font(16, 500, null, null);
-}
-.p-contact__form--title-text-bottom {
-  margin-top: 6px;
-  @include font(11, 500, null, null);
-  color: #888;
-}
-.p-contact__form--checkbox-wrapper {
-  display: flex;
-  gap: 24px 32px;
-  align-items: center;
-  flex-wrap: wrap;
-  @include mq(sp) {
-    margin-top: 14px;
-    gap: 24px;
-  }
-}
-.p-contact__form--item-selectbox {
-  @include mq(sp) {
-    .p-contact__form--require {
-      margin-left: 4px;
-    }
-  }
-}
-.p-contact__form--item-date {
-  padding-top: 27px;
-}
-.p-contact__form--date-wrapper {
-  margin-top: 2px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.p-contact__form--item-textarea {
-  @include mq(sp) {
-    padding-top: 27px;
-    padding-bottom: 26px;
-  }
-}
 .p-contact__form--item-privacy {
   justify-content: center;
   flex-direction: column;
@@ -170,16 +72,10 @@
   flex: revert;
   justify-content: center;
   align-items: center;
-  // display: block;
-  // position: relative;
-  // margin-top: 21px;
-  // @include mq(pc) {
-  //   margin-top: 42px;
-  // }
 }
 
 .p-contact__btn {
-  margin-top: 2rem;
+  margin-top: 10px;
   &:disabled {
     cursor: not-allowed;
     border-color: transparent;
@@ -200,7 +96,7 @@
 .p-contact__message--error {
   margin-top: 2rem;
   text-align: center;
-  display: none;
+  display: none; /* 最初は非表示 */
   background: #fff;
   padding: 20px;
   font-size: 24px;
@@ -213,9 +109,11 @@
     transform: translateY(0);
   }
 }
+
 .p-contact__message--success {
   color: blue;
 }
+
 .p-contact__message--error {
   color: var(--accent);
 }

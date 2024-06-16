@@ -1,5 +1,9 @@
 @use "../global" as *;
 
+.u-hidden-all {
+  display: none !important;
+}
+
 .u-hidden-pc {
   // PC時に非表示
   @include mq(pc) {

@@ -25,13 +25,9 @@
 // swiper内では柔軟にボタンのサイズ変更できないので外だし
 .swiper-button-prev,
 .swiper-button-next {
-  width: 5%;
+  width: 7%;
   aspect-ratio: 1;
   height: auto;
-  // @include mq(sp) {
-  //   width: 2rem;
-  //   height: 2rem;
-  // }
   position: absolute;
   @media (hover: hover) {
     &:hover {
@@ -65,7 +61,7 @@
 .swiper-button-prev {
   left: 15px;
   &::after {
-    background: url(../img/swiper_prev.svg) center center / cover;
+    background: url(./assets/img/swiper_prev.svg) center center / cover;
   }
   @include mq(sp) {
     left: 0;
@@ -74,7 +70,7 @@
 .swiper-button-next {
   right: 15px;
   &::after {
-    background: url(../img/swiper_next.svg) center center / cover;
+    background: url(./assets/img/swiper_next.svg) center center / cover;
   }
   @include mq(sp) {
     right: 0;

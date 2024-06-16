@@ -2,19 +2,14 @@
 
 .p-to-top {
   position: fixed;
-  right: 2rem;
-  bottom: 2rem;
-  width: 52px;
-  height: 52px;
+  right: size-calc-clamp(20, 30, 375, 1440);
+  bottom: size-calc-clamp(20, 30, 375, 1440);
+  width: size-calc-clamp(50, 75, 375, 1440);
+  height: size-calc-clamp(50, 75, 375, 1440);
   z-index: var(--layer-totop);
   pointer-events: none;
   transition: opacity 0.5s;
   opacity: 0;
-
-  @include mq(sp) {
-    right: 1.5rem;
-    bottom: 1.5rem;
-  }
 
   .is-scroll & {
     pointer-events: auto;
@@ -23,7 +18,10 @@
   .drawer-open & {
     opacity: 0;
   }
-
+  a {
+    width: 100%;
+    height: 100%;
+  }
   svg {
     width: 100%;
     height: 100%;

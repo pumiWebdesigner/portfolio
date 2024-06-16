@@ -54,9 +54,11 @@ input[type="checkbox"] {
     // ボタンの場所
     padding-left: calc(24px + 8px);
     position: relative;
-    // display: flex;
-    // align-items: center;
-
+    display: flex;
+    align-items: center;
+    @include mq(sp) {
+      padding-left: calc(16px + 8px);
+    }
     // ボタン枠
     &::before {
       // ボタン枠の配置場所
@@ -78,6 +80,9 @@ input[type="checkbox"] {
       transform: translateY(-50%);
       left: 6px;
       opacity: 0; // 非チェック時はポチ丸が透明
+      @include mq(sp) {
+        left: 4px;
+      }
     }
   }
   &:hover,
@@ -108,6 +113,16 @@ input[type="radio"] {
       height: 12px;
       border-radius: 50%;
       background: var(--main);
+    }
+    @include mq(sp) {
+      &::before {
+        width: 16px;
+        height: 16px;
+      }
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 }
@@ -178,21 +193,5 @@ input[type="date"] {
 .error-message {
   display: none;
   color: var(--accent);
-  @include font(14, 500, null, null);
   margin-top: 8px;
 }
-// input[type="date"]::-webkit-calendar-picker-indicator {
-//   background: none;
-//   display: none;
-// }
-// input[type="date"] {
-//   color: transparent; /* 文字色を透明にする */
-//   // background: white url("path_to_custom_icon") no-repeat right; /* カスタムアイコンを使用 */
-//   cursor: pointer;
-// }
-
-// input[type="date"]::after {
-//   content: attr(date-placeholder);
-//   color: black; /* 入力がない時のプレースホルダーの色 */
-//   pointer-events: none;
-// }

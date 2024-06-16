@@ -26,21 +26,17 @@ async function importWebp() {
   return webpModule.default;
 }
 
-let webp;
-
 // gulp-webpのindex.jsに記載されていた対象拡張子 [".png", ".jpg", ".jpeg", ".tif", ".tiff", ".webp"];
 const webpExtensions = [".png", ".jpg", ".jpeg"];
-
+// 既にimport("gulp-webp")を実行済なら再度importさせないための変数
+let webp;
 async function copyImage() {
   if (!webp) {
-    // copyImage タスクを定義する非同期関数（既にimport済なら再度importしない）
     webp = await importWebp();
   }
   return (
     gulp
       .src("./src/assets/img/**/*")
-      //そのままの画像も格納
-      // .pipe(gulp.dest("../assets/img/"))
       //extname: ファイルの拡張子を取得,toLowerCase: 小文字に変換,拡張子が対象の拡張子に含まれているか確認
       .pipe(gulpIf((file) => webpExtensions.includes(file.extname.toLowerCase()), webp()))
       .pipe(gulp.dest("../assets/img/"))
@@ -67,7 +63,6 @@ function compileSass() {
 }
 
 function watch() {
-  gulp.watch("./src/**/*.html", gulp.series(formatHTML, browserReload)); // HTMLファイルの変更を監視
   gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload)); // Sassファイルの変更を監視
   gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload)); // jsファイルの変更を監視
   gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload)); // 画像ファイルの変更を監視
@@ -100,18 +95,6 @@ function minJS() {
     .pipe(gulp.dest("../assets/js/"));
 }
 
-function formatHTML() {
-  return gulp
-    .src("./src/**/*.html")
-    .pipe(
-      htmlBeautify({
-        indent_size: 2,
-        indent_with_tabs: true,
-      })
-    )
-    .pipe(gulp.dest("../"));
-}
-
 function compileEJS() {
   return gulp
     .src(["./src/**/*.ejs", "!./src/**/_*.ejs"])
@@ -130,20 +113,19 @@ function copyCss() {
   return gulp.src("./src/**/*.css").pipe(gulp.dest("../"));
 }
 
+///////////////exports//////////////////
+
 // wacthする前の初回出力ファイル作成
-exports.build = gulp.parallel(compileEJS, formatHTML, minJS, compileSass, copyImage, copyCss);
-// 初回以外の出力ファイル作成
+exports.build = gulp.parallel(compileEJS, minJS, compileSass, copyImage, copyCss);
 // ブラウザ表示、変更監視まとめて実行
-exports.dev = gulp.parallel(browserInit, watch);
-// exports.dev = gulp.series(browserInit, watch);
+// exports.dev = gulp.parallel(browserInit, watch);
+exports.dev = gulp.series(browserInit, watch);
 // 画面表示
 exports.browserInit = browserInit;
 // 変更監視
 exports.watch = watch;
 // 変更箇所の監視対象：EJS
 exports.compileEJS = compileEJS;
-// 変更箇所の監視対象：HTML
-exports.formatHTML = formatHTML;
 // 変更箇所の監視対象：SASS
 exports.compileSass = compileSass;
 // 変更箇所の監視対象：JS

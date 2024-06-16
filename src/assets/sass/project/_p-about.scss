@@ -5,56 +5,57 @@
 .p-about__contents {
   max-width: 1000px;
   margin-inline: auto;
+  @media screen and (max-width: 1280px) {
+    max-width: 800px;
+  }
 }
 .p-about__container {
   display: flex;
-  gap: 2vw;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   @media screen and (max-width: 1280px) {
     flex-direction: column-reverse;
-    margin-top: 3rem;
-    gap: revert;
+    gap: size-calc-clamp(20, 40, 375, 1440);
   }
 }
 .p-about__img {
   box-shadow: 0 4px 15px 0 rgba(black, 0.15);
   aspect-ratio: 1;
   height: auto;
-  width: 30vw;
+  width: 30%;
   @media screen and (max-width: 1280px) {
-    width: 70vw;
-    max-width: 400px;
+    width: size-calc-clamp(200, 350, 375, 1440);
   }
 }
 .p-about__text--contents {
+  width: 65%;
+  padding: size-calc-clamp(15, 30, 375, 1440);
+  background-color: white;
   @media screen and (max-width: 1280px) {
     width: revert;
-    padding: 2rem;
+    max-width: 700px;
   }
 }
 .p-about__text--main {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: size-calc-clamp(12, 18, 375, 1440);
 }
 .p-about__text--sub-title {
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: size-calc-clamp(12, 18, 375, 1440);
   font-weight: bold;
 }
 .p-about__text--sub-message {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: size-calc-clamp(12, 18, 375, 1440);
   padding-left: 1.5rem;
   position: relative;
   &::before {
     content: "";
     position: absolute;
     top: 0.6rem;
-    // 50%;
     left: 0.6rem;
     transform: translateY(-50%);
-
     width: 0.6rem;
     height: 0.6rem;
     background: var(--main);

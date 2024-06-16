@@ -6,11 +6,9 @@
   position: relative;
 }
 .p-works__explanation {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  @include mq(sp) {
-    padding-inline: 1rem;
-  }
+  margin-top: 1.5rem;
+  font-size: size-calc-clamp(12, 24, 375, 1440);
+
   p + p {
     margin-top: 1rem;
   }

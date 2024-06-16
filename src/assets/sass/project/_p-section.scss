@@ -14,15 +14,12 @@
 
 .p-section__title--main {
   letter-spacing: 0.1em;
-  font-size: 3rem;
+  font-size: size-calc-clamp(25, 50, 375, 1440);
 
   font-family: "Oswald", "Noto Sans JP", sans-serif;
   font-weight: 500;
-  @include mq(sp) {
-    font-size: 2rem;
-  }
+  padding-inline: size-calc-clamp(20, 40, 375, 1440);
   display: inline-block;
-  padding-inline: 2rem;
   position: relative;
   &::before,
   &::after {
@@ -42,16 +39,14 @@
 }
 .p-section__title--sub {
   display: block;
-  font-size: 1.5rem;
-  @include mq(sp) {
-    font-size: 1.2rem;
-  }
+  font-size: size-calc-clamp(16, 24, 375, 1440);
+  margin-top: size-calc-clamp(5, 10, 375, 1440);
 }
 .p-section__contents {
-  margin-top: 2rem;
+  margin-top: size-calc-clamp(20, 40, 375, 1440);
   background-color: var(--sub);
   box-shadow: 0 4px 15px 0 rgba(black, 0.15);
-  padding: 5%;
+  padding: size-calc-clamp(20, 40, 375, 1440);
 
   .p-section:nth-of-type(2n) & {
     background-color: #fff;

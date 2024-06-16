@@ -1,9 +1,9 @@
 @use "../global" as *;
 
 .l-inner {
+  max-width: var(--width-pc-comp);
   width: 100%;
   height: inherit;
-  max-width: 1440px;
   margin-inline: auto;
-  padding-inline: 5vw;
+  padding-inline: size-calc-clamp(16, 40, 375, 1440);
 }

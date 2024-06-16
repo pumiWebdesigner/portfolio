@@ -17,9 +17,6 @@
   color: white;
   text-align: center;
   font-family: "Noto Sans JP";
-  font-size: 20px;
+  font-size: size-calc-clamp(16, 20, 375, 1440);
   font-weight: 400;
-  @include mq(sp) {
-    font-size: 16px;
-  }
 }

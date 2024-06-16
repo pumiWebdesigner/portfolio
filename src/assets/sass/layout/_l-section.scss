@@ -1,7 +1,11 @@
 @use "../global" as *;
 
 .l-section {
-  margin-top: 4rem;
-  padding-block: 3rem 4rem;
+  // margin-top: 4rem;
+  // padding-block: 3rem 4rem;
+
+  // margin-top: size-calc-clamp(30, 60, 375, 1440);
+  padding-top: size-calc-clamp(30, 60, 375, 1440);
+  padding-bottom: size-calc-clamp(40, 80, 375, 1440);
   min-height: 300px;
 }
