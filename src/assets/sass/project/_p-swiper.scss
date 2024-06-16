@@ -61,7 +61,7 @@
 .swiper-button-prev {
   left: 15px;
   &::after {
-    background: url(./assets/img/swiper_prev.svg) center center / cover;
+    background: url(../img/swiper_prev.svg) center center / cover;
   }
   @include mq(sp) {
     left: 0;
@@ -70,7 +70,7 @@
 .swiper-button-next {
   right: 15px;
   &::after {
-    background: url(./assets/img/swiper_next.svg) center center / cover;
+    background: url(../img/swiper_next.svg) center center / cover;
   }
   @include mq(sp) {
     right: 0;

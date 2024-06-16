@@ -22,12 +22,12 @@
         // ブラウザからのgoogleformへのの場合は0となる（CORS制約）
         0: function () {
           form.slideUp();
-          jQuery("#js-success").slideDown();
+          jQuery("#js-success").addClass("show");
         },
         // CORS制約のため200が返ってくるのは異常
         200: function () {
           form.slideUp();
-          jQuery("#js-error").slideDown();
+          jQuery("#js-error").addClass("show");
         },
       },
     });
