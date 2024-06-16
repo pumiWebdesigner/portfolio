@@ -863,32 +863,32 @@ a {
 	object-fit: cover;
 }
 
-.dialog__wrapper {
+.p-dialog__wrapper {
 	border: none;
 	border-radius: 1.5rem;
 	padding: 2rem;
 	width: 90%;
 }
 
-.dialog__wrapper::backdrop {
+.p-dialog__wrapper::backdrop {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.dialog__img {
+.p-dialog__img {
 	flex: 0 1 48%;
 }
 
-.dialog__text {
+.p-dialog__text {
 	flex: 0 0 48%;
 	text-align: left;
 }
 
-.dialog__text dt {
+.p-dialog__text dt {
 	font-weight: 700;
 	margin-top: 1rem;
 }
 
-.dialog__text dd {
+.p-dialog__text dd {
 	font-weight: 500;
 	margin-left: 1rem;
 }
@@ -1769,7 +1769,7 @@ input[type=date] {
 
 @media (1024px <= width) {
 
-.dialog__container {
+.p-dialog__container {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;

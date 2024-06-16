@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "../global" as *;
 
-.dialog__wrapper {
+.p-dialog__wrapper {
   // 標準でdialogにはwidth,heightの最大値が設定されている。
   border: none;
   padding: 2rem;
@@ -11,7 +11,7 @@
     background-color: rgba(#000, 0.5);
   }
 }
-.dialog__container {
+.p-dialog__container {
   @include mq(pc) {
     display: flex;
     justify-content: space-between;
@@ -19,11 +19,11 @@
   }
 }
 
-.dialog__img {
+.p-dialog__img {
   flex: 0 1 48%;
   // aspect-ratio: 3 / 2;
 }
-.dialog__text {
+.p-dialog__text {
   // font-family: "Oswald", "Noto Sans JP", sans-serif;
   text-align: left;
   flex: 0 0 48%;
