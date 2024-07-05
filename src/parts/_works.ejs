@@ -9,7 +9,7 @@ const works = [
     season : "2024年3月～5月",
     time : "約2ヶ月（113時間）",
     message : "スクール卒業課題です。FigmaカンプからHTMLサイト作成し、WordPress化しました。カスタム投稿・カスタムフィールドを実装しており、サイト所有者によるブログ投稿やスタッフ追加が可能となります。表示速度を意識した画像圧縮やプラグイン導入を実施しました。",
-    link : "https://pumi-webcoder.com/"
+    link : "https://pumi-webcoder.com/minami-dental-clinic"
   },
   {
     name : "本サイト（ポートフォリオサイト）",
@@ -29,7 +29,7 @@ const works = [
     season : "2023年12月～2月（コーディングは1ヶ月）",
     time : "約2週間（32時間）",
     message : "デザイナー2名、コーダー（私含め）3人で共同開発した架空クリニックのHPです。GitHubを用いて共同開発し私はヘッダーとアニメーションを担当しました。レスポンシブやアニメーションについても、MTGにて認識合わせしながら開発を進めました。",
-    link : "./works/Lp-Team_H/index.html"
+    link : "https://pumi-webcoder.com/works/Lp-Team_H/index.html"
   },
   {
     name : "家具のレンタルサービスサイトLP",
@@ -39,7 +39,7 @@ const works = [
     season : "2024年3月",
     time : "約2週間（33時間）",
     message : "デイトラが開催した実案件チャレンジ企画の作成物です。メガメニューやアコーディオンの実装を行いました。",
-    link : "./works/RPC/index.html"
+    link : "https://pumi-webcoder.com/works/RPC/index.html"
   },
   {
     name : "尾道キャンペーンのLP",
@@ -49,7 +49,7 @@ const works = [
     season : "2023年11月",
     time : "2週間（38時間）",
     message : "スクール課題です。dialogタグやsummaryタグなど比較的新しい技術を取り入れながら実装しました。複数スライドの実装も行っております。",
-    link : "./works/LP-Onomichi_campaign/index.html"
+    link : "https://pumi-webcoder.com/works/LP-Onomichi_campaign/index.html"
   },
   {
     name : "ﾎﾟｰﾄﾌｫﾘｵｻｲﾄ",
@@ -59,7 +59,7 @@ const works = [
     season : "2023年9月",
     time : "5日（28時間）",
     message : "スクール課題です。ライブラリswiperを使ってスライダーを実装しました。また、ドロワーメニュー、アコーディオンメニューの制御をjQueryで実装しました。",
-    link : "./works/tokakuni/index.html"
+    link : "https://pumi-webcoder.com/works/tokakuni/index.html"
   },
   {
     name : "ｱｸｾｻﾘｼｮｯﾌﾟのLP",
@@ -69,7 +69,7 @@ const works = [
     season : "2023年9月",
     time : "3日（23時間）",
     message : "スクール課題です。wowやdrawerのライブラリを使って実装しています。",
-    link : "./works/soboron/index.html"
+    link : "https://pumi-webcoder.com/works/soboron/index.html"
   }
 ];
 _%>
@@ -88,12 +88,12 @@ _%>
           <div class="p-works__img c-img js-modal__btn--open">
             <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
           </div>
-          <dialog class="dialog__wrapper" aria-label="Dialog Box">
-            <div class="dialog__container">
-              <div class="dialog__img">
+          <dialog class="p-dialog__wrapper" aria-label="Dialog Box">
+            <div class="p-dialog__container">
+              <div class="p-dialog__img">
                 <img src="./assets/img/comp/<%= work.img %>" alt="<%= work.alt %>" />
               </div>
-              <div class="dialog__text">
+              <div class="p-dialog__text">
                 <dl>
                   <dt>スキル</dt>
                   <dd><%= work.skills %></dd>
